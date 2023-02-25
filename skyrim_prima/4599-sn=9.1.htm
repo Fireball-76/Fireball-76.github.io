@@ -1,0 +1,3358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:image" content="http://www.primagames.com/media/images/updatedlogo.jpg" />
+<title>
+	
+		Spells &gt; Gameplay - Prima Games</title>
+<link type="text/css" rel="stylesheet" href="joe.css" tppabs="http://www.primagames.com/media/css/joe.css" />
+<link type="text/css" rel="stylesheet" href="styles.css" tppabs="http://www.primagames.com/media/css/styles.css" />
+<link type="text/css" rel="stylesheet" href="jquery.fancybox-1.3.4.css" tppabs="http://www.primagames.com/media/css/jquery.fancybox-1.3.4.css" />
+<link type="text/css" rel="stylesheet" href="selectbox.css" tppabs="http://www.primagames.com/media/css/selectbox.css" />
+<link type="text/css" rel="stylesheet" href="jquery.rating.css" tppabs="http://www.primagames.com/media/css/jquery.rating.css" />
+<link type="text/css" rel="stylesheet" href="style.css" tppabs="http://www.primagames.com/media/forum/themes/IPB/style.css" />
+
+<script type="text/javascript" src="mt.js" tppabs="http://www.primagames.com/media/js/mt.js"></script>
+<script type="text/javascript" src="mtm.js" tppabs="http://www.primagames.com/media/js/mtm.js"></script>
+<script type="text/javascript" src="elSelect.js" tppabs="http://www.primagames.com/media/js/elSelect.js"></script>
+<script type="text/javascript" src="prima.js" tppabs="http://www.primagames.com/media/js/prima.js"></script>
+
+<script type='text/javascript' src="jquery.js" tppabs="http://www.primagames.com/media/js/jquery.js"></script>
+<script type='text/javascript' src="jqprima.js" tppabs="http://www.primagames.com/media/js/jqprima.js"></script>
+<script type='text/javascript' src="prima.tabs.js" tppabs="http://www.primagames.com/media/js/prima.tabs.js"></script>
+<script type='text/javascript' src="jquery.easing-1.3.pack.js" tppabs="http://www.primagames.com/media/js/fancybox-1.3.4/jquery.easing-1.3.pack.js"></script>
+<script type='text/javascript' src="jquery.mousewheel-3.0.4.pack.js" tppabs="http://www.primagames.com/media/js/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type='text/javascript' src="jquery.fancybox-1.3.4.js" tppabs="http://www.primagames.com/media/js/jquery.fancybox-1.3.4.js"></script>
+<script type='text/javascript' src="jquery.rating.js" tppabs="http://www.primagames.com/media/js/jquery.rating.js"></script>
+<script type='text/javascript' src="jquery.cycle.lite.js" tppabs="http://www.primagames.com/media/js/jquery.cycle.lite.js"></script>
+
+<script type='text/javascript' src="jquery.tablesorter.js" tppabs="http://www.primagames.com/media/js/jquery.tablesorter.js"></script>
+
+<script type='text/javascript' src="jquery-ui-1.8.16.min.js" tppabs="http://www.primagames.com/media/js/jquery-ui-1.8.16.min.js"></script>
+
+<script type="text/javascript" src="jwplayer.js" tppabs="http://www.primagames.com/media/js/jwplayer/jwplayer.js"></script>
+
+
+
+
+
+
+
+
+
+<script src="badgeville-current.js-key=9aba740a2e9897bce92109301bfd5c44&domain=primagames.com" tppabs="http://api.v2.badgeville.com/v2/badgeville-current.js?key=9aba740a2e9897bce92109301bfd5c44&domain=primagames.com"></script>
+
+
+
+<script>
+  Badgeville.setUser({
+    email: 'http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/fktrcfylh1982@yahoo.com',
+    display_name: 'fktrcfylh1982',
+    first_name: '',
+    last_name: '',
+    picture_url: 'avatar_placeholder.jpg'/*tpa=http://www.gravatar.com/avatar/49b82f5343d5552aec0c475cf069f954?d=http://www.primagames.com/media/images/avatar_placeholder.jpg*/,
+	site: 'http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/primagames.com'
+});
+
+
+
+
+Badgeville.ready(function() {
+	$(".total_points").text(Badgeville.Settings.user.points_all);
+	$(".week_points").text(Badgeville.Settings.user.points_week);
+});
+
+Badgeville.ready( function() { 
+  Badgeville.getAPI( 'user_badges', {id: Badgeville.Settings.user.id }, function( data ) { 
+    var displayed = 0; 
+    var target = Badgeville('.my_badges'); 
+    Badgeville.$.each( data.rewards, function() { 
+    if ( Badgeville.Objects.is( this, Badgeville.Objects.BADGE ) ) 
+       { Badgeville.Gears.reward( this ).appendTo(target); displayed++; } 
+       if ( displayed == 8 ) { return false; } 
+       }); 
+    }); 
+
+Badgeville.getAPI( 'user_levels', { id: Badgeville.Settings.user.id }, function( data ) {
+    fef = data;
+});
+
+Badgeville.Gears.levelStatus(Badgeville.Settings.user).appendTo(".level_status");
+
+Badgeville.Gears.currentLevel(Badgeville.Settings.user).appendTo(".current_level");
+
+ });
+
+</script>
+
+
+
+
+<script type='text/javascript'>
+
+
+function viewport()
+{
+var e = window
+, a = 'inner';
+if ( !( 'innerWidth' in window ) )
+{
+a = 'client';
+e = document.documentElement || document.body;
+}
+return { width : e[ a+'Width' ] , height : e[ a+'Height' ] }
+}
+
+$(document).ready(function() {
+	// Set up sortable tables
+	$(".tablesorter").each(function() {
+		// Add the correct row styling
+		table_instance = $(this);
+		table_instance.tablesorter();
+		table_instance.addClass("generic");
+		var i = 0;
+		table_instance.children("tbody").children("tr").each(function() {
+			row_instance = $(this);
+			i = i + 1;
+			if (i % 2 == 0)
+			{
+				row_instance.addClass("odd");
+			}
+		});
+	});
+
+	table_id = 0;
+
+	$(".tablesorter").each(function() {
+		// For a unique id for every sorted table on the page
+		table_id = table_id + 1;
+		$(this).attr("id", "tablesorter_" + table_id);
+
+		// Width of the table
+		this_width = $(this).width();
+
+
+		// If too wide, we need to generate a button to load the full table in an overlay
+		if (this_width > 435)
+		{
+			$(this).after("<br style='clear: both;'/><p><a href='#' class='tablesorter_enlarge' rel='" + table_id + "'><img src='olitable.png'/*tpa=http://www.primagames.com/media/images/olitable.png*/ alt='Click to enlarge table'/></a></p><br style='clear: both;'/>");
+			$(this).hide();
+		}
+
+		$(this).css("maxWidth", "95%");
+
+
+	});
+
+	$(".tablesorter_enlarge").live("click", function(e) {
+		e.preventDefault();
+
+		// Set up the overlay
+		$("body").append("<div id='tablesorter_overlay'><p class='tablesorter_overlay_close'><a href='#'>X</a></p></div>");
+		
+
+		// Get the current browser size and scroll position
+		viewport_width = viewport().width;
+		viewport_height = viewport().height;
+		
+		viewport_offsetx = window.pageXOffset;
+		viewport_offsety = window.pageYOffset;
+
+
+		$("#tablesorter_overlay").css("top", viewport_offsety);
+
+		table_instance = $("#tablesorter_" + $(this).attr("rel"));
+		table_instance.css("position", "absolute");
+
+
+		// Make a copy of this table so we'll have the original safe, and set it to be sorted. Add it to the overlay
+		new_table_instance = table_instance.clone().tablesorter();
+		new_table_instance.appendTo("#tablesorter_overlay");
+		new_table_instance.show();
+
+		if (new_table_instance.height() > $("#tablesorter_overlay").height())
+		{
+			// If the table is taller, set the overlay to same height
+			$("#tablesorter_overlay").height(new_table_instance.height());
+		}
+
+		// Move the overlay when the window is scrolled, if we try to scroll above the top
+
+		$(window).scroll(function() {
+
+			overlay_top = $("#tablesorter_overlay").offset().top;
+			overlay_bottom = $("#tablesorter_overlay").height();
+
+			viewport_bottom = window.pageYOffset + $(window).height();
+
+			if (window.pageYOffset < overlay_top)
+			{
+				$("#tablesorter_overlay").css("top", window.pageYOffset);
+			}
+
+		});
+
+	});
+
+	$(".tablesorter_overlay_close").live("click", function(e) {
+		e.preventDefault();
+		// Clean up by removing the entire overlay
+		$("#tablesorter_overlay").remove();
+	});
+
+});
+</script>
+
+
+<script type='text/javascript'>
+
+
+
+
+
+
+// Link the user will be taken to after logging in
+
+
+	
+		var _nextLink = "/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4599?sn=9.1";
+	
+
+var _loggedIn = true; 
+
+
+var _reportPK;
+
+</script>
+
+
+
+<script type="text/javascript">
+  var rpxJsHost = (("https:" == document.location.protocol) ? "https://" : "http://static./");
+  document.write(unescape("%3Cscript src='" + rpxJsHost +
+"rpxnow.com/js/lib/rpx.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  RPXNOW.overlay = true;
+  RPXNOW.language_preference = 'en';
+</script>
+
+<script>
+  window.tokenurl = 'http://www.primagames.com/janrain/login/';
+  window.realm = 'http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/login.primagames.com';
+</script>
+<script type='text/javascript' src="janrain.js" tppabs="http://www.primagames.com/media/js/janrain.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+  <div id="container">
+
+    <div id="header">
+      <h1><a href="javascript:if(confirm('http://www.primagames.com/  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/'" tppabs="http://www.primagames.com/" title="Prima games">Prima games</a></h1>
+      <div id="search_wrapper">
+        <form action="http://www.primagames.com/search" method="get"><input id="globalsearch" type="text" name="q" class="blankdefault" autocomplete="off" value="Search for strategy" /></form>
+      </div>
+
+
+<div id="search_dropdown">
+        <div class="wrap">
+
+
+
+		</div>
+      </div>
+
+
+      
+      <div id="nav_platforms">
+        <ul>
+          <li>Platforms:</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=PS3  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=PS3'" tppabs="http://www.primagames.com/games?platform=PS3">PS3</a> |</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=Xbox+360  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=Xbox+360'" tppabs="http://www.primagames.com/games?platform=Xbox+360">Xbox 360</a> |</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=Wii  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=Wii'" tppabs="http://www.primagames.com/games?platform=Wii">Wii</a> |</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=PC  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=PC'" tppabs="http://www.primagames.com/games?platform=PC">PC</a> |</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=DS  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=DS'" tppabs="http://www.primagames.com/games?platform=DS">DS</a> |</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=PSP  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=PSP'" tppabs="http://www.primagames.com/games?platform=PSP">PSP</a> |</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=iPhone  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=iPhone'" tppabs="http://www.primagames.com/games?platform=iPhone">iPhone</a> |</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=PS2  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=PS2'" tppabs="http://www.primagames.com/games?platform=PS2">PS2</a></li>
+        </ul>
+      </div>
+      
+      <div id="basket">
+        <div class="wrap">
+          <h4>Shopping cart</h4>
+          
+		  
+			<p>
+				0 items $0.00
+			</p>
+
+
+			
+
+		  
+        </div>
+      </div>
+      
+      <div id="head_logmenu">
+		
+        <p>Hi <a href="javascript:if(confirm('http://www.primagames.com/accounts/  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/'" tppabs="http://www.primagames.com/accounts/">fktrcfylh1982</a>! You are logged in | <a href="javascript:if(confirm('http://www.primagames.com/accounts/logout  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/logout'" tppabs="http://www.primagames.com/accounts/logout">Logout</a></p>
+        <p class="points"><span class='total_points'></span> <a href="javascript:if(confirm('http://www.primagames.com/points  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/points'" tppabs="http://www.primagames.com/points">Get more points</a></p>
+		
+      </div>
+      
+      <br class="clear" />
+      
+      <div id="nav_main">
+        <ul>
+          <li class="tagline">Strategy where, when and how you want it</li>
+          <li class="last"><a href="javascript:if(confirm('http://www.primagames.com/contact  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/contact'" tppabs="http://www.primagames.com/contact">Contact</a></li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games/shop  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/shop'" tppabs="http://www.primagames.com/games/shop">Shop</a></li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/blog/  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/blog/'" tppabs="http://www.primagames.com/blog/">Blog</a></li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/discussion  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/discussion'" tppabs="http://www.primagames.com/discussion">Discussion</a></li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/news  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/news'" tppabs="http://www.primagames.com/news">Latest news</a></li>
+          <li class="current"><a href="javascript:if(confirm('http://www.primagames.com/games  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games'" tppabs="http://www.primagames.com/games">Games</a></li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/'" tppabs="http://www.primagames.com/">Home</a></li>
+        </ul>
+      </div>
+    
+      <br class="clear" />
+    </div>
+    
+    <div id="content">
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+ <h1 class="nomarg">THE ELDER SCROLLS V: SKYRIM</h1>
+      <ul id="subnav" class="clearfix">
+        <li><a href="javascript:if(confirm('http://www.primagames.com/games/elder-scrolls-v-skyrim  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/elder-scrolls-v-skyrim'" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim">game</a> |</li>
+
+		
+		
+		<li class="current"><a href="javascript:if(confirm('http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides'" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides">official guides</a> |</li>
+		
+
+
+        <li><a href="javascript:if(confirm('http://www.primagames.com/games/elder-scrolls-v-skyrim/community  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/elder-scrolls-v-skyrim/community'" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/community">community</a> |</li>
+        <li><a href="javascript:if(confirm('http://www.primagames.com/games/elder-scrolls-v-skyrim/news  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/elder-scrolls-v-skyrim/news'" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/news">game news</a> |</li>
+        <li><a href="javascript:if(confirm('http://www.primagames.com/games/elder-scrolls-v-skyrim/cheats  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/elder-scrolls-v-skyrim/cheats'" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/cheats">cheats & achievements</a></li>
+      </ul>
+      
+	  
+
+
+
+	  
+	
+		  <div id="breadcrumb">
+			<p>You are here:  <a href="javascript:if(confirm('http://www.primagames.com/games  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games'" tppabs="http://www.primagames.com/games">Games</a> &gt; <a href="javascript:if(confirm('http://www.primagames.com/games/elder-scrolls-v-skyrim  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/elder-scrolls-v-skyrim'" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim">The Elder Scrolls V: Skyrim</a> &gt; <a href="javascript:if(confirm('http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides'" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides">Official Guides</a> &gt; <a href="232.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232">Elder Scrolls V: Skyrim</a>  </p> 
+		  </div>
+	
+
+
+		
+
+
+
+      <div class="container_wrap">
+      
+
+		
+<div class="one_q">
+          
+
+          <div class="email_alerts">
+            <h2>Get email alerts on this game</h2>
+            <div class="wrap">
+              <p>Sign-up to stay informed on the latest news, best interviews and exclusive content for The Elder Scrolls V: Skyrim</p>
+              <p class="red_button fleft"><a href="javascript:if(confirm('http://www.primagames.com/accounts/alerts/?add=elder-scrolls-v-skyrim  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/alerts/?add=elder-scrolls-v-skyrim'" tppabs="http://www.primagames.com/accounts/alerts/?add=elder-scrolls-v-skyrim" class="login_required">sign-up</a></p>
+            </div>
+          </div>
+          <div class="line">&nbsp;</div>
+
+          
+
+
+          
+
+		  
+
+		
+		  <div id="follow">
+            <div class="wrap">
+              <h3>Follow us</h3>
+              <p>
+              <a href="javascript:if(confirm('http://www.facebook.com/PrimaGames  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.facebook.com/PrimaGames'" tppabs="http://www.facebook.com/PrimaGames" target="_blank"><img alt="Facebook" src="facebook.jpg" tppabs="http://www.primagames.com/media/images/facebook.jpg" width="49" height="49" /></a>
+              <a href="javascript:if(confirm('http://www.youtube.com/user/PrimaGamesVideo  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.youtube.com/user/PrimaGamesVideo'" tppabs="http://www.youtube.com/user/PrimaGamesVideo" target="_blank"><img alt="Youtube" src="youtube_new.jpg" tppabs="http://www.primagames.com/media/images/youtube_new.jpg" width="49" height="49" /></a>
+              <a href="javascript:if(confirm('http://twitter.com/primagames  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://twitter.com/primagames'" tppabs="http://twitter.com/primagames" target="_blank"><img alt="Twitter" src="twitter.jpg" tppabs="http://www.primagames.com/media/images/twitter.jpg" width="49" height="49" /></a>
+              <a href="javascript:if(confirm('http://www.primagames.com/contact  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/contact'" tppabs="http://www.primagames.com/contact"><img alt="Email" src="email.jpg" tppabs="http://www.primagames.com/media/images/email.jpg" width="49" height="49" /></a>
+              </p>
+            </div>
+          </div>
+          
+          <div class="line">&nbsp;</div>
+          
+          <div class="content_box bluegrey">
+            <h2>Prima on Twitter</h2>
+            <div id="twitter_feed">
+              <div class="wrap">
+                <p><a href="javascript:if(confirm('http://twitter.com/primagames/  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://twitter.com/primagames/'" tppabs="http://twitter.com/primagames/" target='_blank'>Error fetching Twitter feed</a><br /><br /><small>2 hours ago</small></p>
+              </div>
+            </div>
+            <br class="clear" />
+          </div>
+          
+          <div class="line">&nbsp;</div>
+          
+		  
+		  
+          <div class="content_box redlgrey">
+            <h2>Prima points <a href="javascript:if(confirm('http://www.primagames.com/accounts/  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/'" tppabs="http://www.primagames.com/accounts/" class="right">My account &raquo;</a></h2>
+            <div class="wrap">
+              <div id="points_left">
+              
+                <div class="points_block">
+                  <dl class="list">
+                    <dt><h3><a href="">fktrcfylh1982</a></h3></dt>
+                    <dd>
+                      <div class="leftblock">
+                        <img src="avatar_placeholder.jpg" tppabs="http://www.gravatar.com/avatar/49b82f5343d5552aec0c475cf069f954?d=http://www.primagames.com/media/images/avatar_placeholder.jpg" width="42" height="42" />
+                      </div>
+                      <div class="rightblock">
+                        <p class="alltime"><span class="score total_points">0</span> <span class="title">all time</span></p>
+                        <p class="thisweek"><span class="score week_points">0</span> <span class="title">this week</span></p>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+                
+                <div class="points_block light">
+                  <h2>My Badges</h2>
+                  <div class="wrap my_badges my_badges_sidebar">
+
+				
+
+                  </div>
+                </div>
+              
+                <p><a href="javascript:if(confirm('http://www.primagames.com/points  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/points'" tppabs="http://www.primagames.com/points" class="red_button_full">Get more points</a></p>
+                       
+              </div>
+            </div>
+          </div>
+		  
+          
+          <div class="line">&nbsp;</div>
+
+
+          
+          <div class="content_box redwhite">
+            <h2>Best selling guides</h2>
+			<div id="best_selling_guides" rel="1" class="dynamic_block">	
+				
+	<div class="wrap">
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/saints-row-third/primaguides/191  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/saints-row-third/primaguides/191'" tppabs="http://www.primagames.com/games/saints-row-third/primaguides/191"><img alt="Saints Row: The Third" src="saints_row_third_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/saints_row_third_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/saints-row-third/primaguides/191  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/saints-row-third/primaguides/191'" tppabs="http://www.primagames.com/games/saints-row-third/primaguides/191">Saints Row: The Third</a></h3>
+                  <p>$24.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/saints-row-third/primaguides/191  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/saints-row-third/primaguides/191'" tppabs="http://www.primagames.com/games/saints-row-third/primaguides/191" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/191  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/191'" tppabs="http://www.primagames.com/accounts/cart/add/191" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/sims-3-pets/primaguides/209  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/sims-3-pets/primaguides/209'" tppabs="http://www.primagames.com/games/sims-3-pets/primaguides/209"><img alt="The Sims 3: Pets" src="sims3_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/sims3_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/sims-3-pets/primaguides/209  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/sims-3-pets/primaguides/209'" tppabs="http://www.primagames.com/games/sims-3-pets/primaguides/209">The Sims 3: Pets</a></h3>
+                  <p>$19.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/sims-3-pets/primaguides/209  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/sims-3-pets/primaguides/209'" tppabs="http://www.primagames.com/games/sims-3-pets/primaguides/209" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/209  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/209'" tppabs="http://www.primagames.com/accounts/cart/add/209" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/saints-row-third/primaguides/238  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/saints-row-third/primaguides/238'" tppabs="http://www.primagames.com/games/saints-row-third/primaguides/238"><img alt="Saints Row: The Third - Interactive Map Pack" src="9780307891976_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/9780307891976_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/saints-row-third/primaguides/238  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/saints-row-third/primaguides/238'" tppabs="http://www.primagames.com/games/saints-row-third/primaguides/238">Saints Row: The Third - Interactive Map Pack</a></h3>
+                  <p>$9.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/saints-row-third/primaguides/238  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/saints-row-third/primaguides/238'" tppabs="http://www.primagames.com/games/saints-row-third/primaguides/238" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/238  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/238'" tppabs="http://www.primagames.com/accounts/cart/add/238" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/assassins-creed-revelations/primaguides/244  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/assassins-creed-revelations/primaguides/244'" tppabs="http://www.primagames.com/games/assassins-creed-revelations/primaguides/244"><img alt="Assassin&#39;s Creed: Revelations - Map Pack" src="acr_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/acr_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/assassins-creed-revelations/primaguides/244  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/assassins-creed-revelations/primaguides/244'" tppabs="http://www.primagames.com/games/assassins-creed-revelations/primaguides/244">Assassin&#39;s Creed: Revelations - Map Pack</a></h3>
+                  <p>$9.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/assassins-creed-revelations/primaguides/244  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/assassins-creed-revelations/primaguides/244'" tppabs="http://www.primagames.com/games/assassins-creed-revelations/primaguides/244" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/244  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/244'" tppabs="http://www.primagames.com/accounts/cart/add/244" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/rage/primaguides/77  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/rage/primaguides/77'" tppabs="http://www.primagames.com/games/rage/primaguides/77"><img alt="Rage" src="rage_cover_1_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/rage_cover_1_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/rage/primaguides/77  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/rage/primaguides/77'" tppabs="http://www.primagames.com/games/rage/primaguides/77">Rage</a></h3>
+                  <p>$19.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/rage/primaguides/77  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/rage/primaguides/77'" tppabs="http://www.primagames.com/games/rage/primaguides/77" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/77  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/77'" tppabs="http://www.primagames.com/accounts/cart/add/77" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+              <br class="clear" />
+            </div>
+
+					<p class="center">
+
+					
+						&nbsp;&nbsp;&nbsp; 
+							1 - 5 of 9
+						&nbsp;&nbsp;&nbsp;
+					
+						<a href="#" class="homepage_next">Next &raquo;</a>
+					
+					
+					</p>  
+			</div>
+          </div>
+
+		            
+          <div class="line">&nbsp;</div>
+          <div class="content_box redwhite">
+            <h2>Top guide pre-orders</h2>
+			<div id="best_preorder_guides" rel="1" class="dynamic_block">	
+				
+	<div class="wrap">
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251'" tppabs="http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251"><img alt="Tom Clancy&#39;s Ghost Recon Future Soldier" src="future_solder_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/future_solder_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251'" tppabs="http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251">Tom Clancy&#39;s Ghost Recon Future Soldier</a></h3>
+                  <p>$19.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251'" tppabs="http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/251  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/251'" tppabs="http://www.primagames.com/accounts/cart/add/251" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/wwe-2012/primaguides/217  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/wwe-2012/primaguides/217'" tppabs="http://www.primagames.com/games/wwe-2012/primaguides/217"><img alt="WWE &#39;12" src="wwe_1_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/wwe_1_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/wwe-2012/primaguides/217  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/wwe-2012/primaguides/217'" tppabs="http://www.primagames.com/games/wwe-2012/primaguides/217">WWE &#39;12</a></h3>
+                  <p>$19.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/wwe-2012/primaguides/217  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/wwe-2012/primaguides/217'" tppabs="http://www.primagames.com/games/wwe-2012/primaguides/217" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/217  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/217'" tppabs="http://www.primagames.com/accounts/cart/add/217" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/mario-kart-7/primaguides/255  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/mario-kart-7/primaguides/255'" tppabs="http://www.primagames.com/games/mario-kart-7/primaguides/255"><img alt="Mario Kart 7" src="mario_kart_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/mario_kart_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/mario-kart-7/primaguides/255  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/mario-kart-7/primaguides/255'" tppabs="http://www.primagames.com/games/mario-kart-7/primaguides/255">Mario Kart 7</a></h3>
+                  <p>$19.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/mario-kart-7/primaguides/255  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/mario-kart-7/primaguides/255'" tppabs="http://www.primagames.com/games/mario-kart-7/primaguides/255" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/255  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/255'" tppabs="http://www.primagames.com/accounts/cart/add/255" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/super-mario-3d-land/primaguides/256  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/super-mario-3d-land/primaguides/256'" tppabs="http://www.primagames.com/games/super-mario-3d-land/primaguides/256"><img alt="Super Mario 3D Land" src="mario_land_3d_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/mario_land_3d_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/super-mario-3d-land/primaguides/256  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/super-mario-3d-land/primaguides/256'" tppabs="http://www.primagames.com/games/super-mario-3d-land/primaguides/256">Super Mario 3D Land</a></h3>
+                  <p>$19.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/super-mario-3d-land/primaguides/256  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/super-mario-3d-land/primaguides/256'" tppabs="http://www.primagames.com/games/super-mario-3d-land/primaguides/256" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/256  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/256'" tppabs="http://www.primagames.com/accounts/cart/add/256" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254'" tppabs="http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254"><img alt="Legend of Zelda: Skyward Sword" src="zelda_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/zelda_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254'" tppabs="http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254">Legend of Zelda: Skyward Sword</a></h3>
+                  <p>$24.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254'" tppabs="http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/254  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/254'" tppabs="http://www.primagames.com/accounts/cart/add/254" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+              <br class="clear" />
+            </div>
+
+					<p class="center">
+
+					
+						&nbsp;&nbsp;&nbsp; 
+							1 - 5 of 5
+						&nbsp;&nbsp;&nbsp;
+					
+					
+					</p>  
+			</div>
+          </div>
+
+
+          <div class="line">&nbsp;</div>
+          
+        </div> <!-- one_q end -->
+        
+                
+        <div class="three_q">
+          
+ 
+
+		  
+		  <ul class="guide_nav clearfix">
+            <li class=''><a href="introduction.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/introduction">Introduction</a></li>
+
+<li class=' current'><a href="gameplay.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay">Essentials</a></li>
+
+
+
+            <li class=''><a href="walkthrough.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough">Walkthrough</a></li>
+
+
+
+
+
+            <li class=''><a href="maps.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/maps">
+				
+					Maps
+				
+			</a></li>
+
+
+
+
+
+
+
+
+          </ul> 
+
+
+           
+          <div class="guide_content">
+            <div class="wrap clearfix">
+            	
+
+
+
+
+<div id="search_guide">
+        <form action="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/search" method="get"><input id="guidesearch" type="text" name="q" class="blankdefault" autocomplete="off" value="Search this guide"></form>
+      </div>
+	  <br style='clear: both;'/>
+
+
+              <div class="nextprev clearfix">
+                <div class="prev"></div>
+                <div class="title"></div>
+                <div class="next"><a href="4600.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4600">Next section</a> &gt;</div>
+              </div>
+              
+              <h2>9.1 Spells</h2>
+            
+              <div class="innernextprev clearfix">
+                <div class="prev"></div>
+                <div class="next"></div>
+              </div>
+            
+              <div class="guide_left box">
+                
+
+   
+
+				
+
+
+					
+						<p><img src="spells.jpg" tppabs="http://www.primagames.com/games/media/files/skyrim/spells.jpg" border="0" width="437" height="256" /></p>
+<p>Behold the charts and tables of Skyrim! The following pages deluge   you with information on the thousands of spells, weapons, armor sets,   and items that you can acquire during your adventure.</p>
+<p>If you&rsquo;re   interested in the properties of an item you haven&rsquo;t found yet, want to   compare it to another item, or simply want to see everything that is   possible to find, you&rsquo;ll find the information here.</p>
+<p>There are a few general rules you should be aware of before digging in:</p>
+<p>As described in the skills section of Training, many   skills, perks, and enchantments affect the damage you do with weapons,   the protection you receive from armor, and the cost of your spells.</p>
+<p>To   account for this, the game automatically calculates those effects and   applies them to the spells and items you see in game.</p>
+<p>The values listed   below are the base values for the item in question: you will rarely, if   ever, see these exact numbers because of the impact of your skills.  But  this list is still an effective way of comparing two items to gauge  the  relative differences between them.</p>
+<p>Some items, especially unique weapons and armor, are marked as being   Leveled. This means that the actual item you receive in game will be   dependent on your level, and may have better statistics and stronger   versions of the enchantments listed here.</p>
+<p>Some enchantments and effects are said to Stack with others. This   means that the benefits of those effects are cumulative; they combine to   give you a stronger result.</p>
+<h3>Table I: Spells</h3>
+<p>Spells are an essential tool for many characters, from Arch-mages who   have mastered the intricacies of all five Schools of Magic to those   that merely dabble in sorcery to suit their needs, such as a Thief who   relies on Invisibility, or a Warrior who invokes a healing spell to cure   his wounds. This section lists all of the spells available to you. You   will find or buy most of these in the form of Spell Tomes, although  you  may be taught a few of them directly.</p>
+<h4>Spell List Notes</h4>
+<p>Only spells that can be used by your character are included on this   list. It does not include Powers, such as a Vampire&rsquo;s Embrace of Shadows   or a Werewolf&rsquo;s Beast Form, or enemy spells or spell-like effects that   you can&rsquo;t acquire.</p>
+<p>All Destruction Spells have secondary effects based on their element,   regardless of whether those effects are listed in the spell   description.</p>
+<p>All Fire spells can light enemies on fire, causing your foes to take   additional damage for several seconds. This makes fire spells  especially  effective against foes with high health.</p>
+<p>All Frost spells do Stamina damage equal to their Health damage, and   slow targets by 50% for several seconds (the exact duration varies by   spell). This makes them especially effective against berserkers and   other foes who rely on power attacks, shield bashes, and other tactics   that depend on stamina.</p>
+<p>All Shock spells do Magicka damage equal to half their Health damage   (except where otherwise noted). This makes them ideal for crippling   enemy mages.</p>
+<h4>Spell List Key</h4>
+<p>Spell Name: The name of the spell as it appears in your Magic Menu.</p>
+<p>Level: The level of the spell (Novice - Master). Unique or   quest-based spells in each School of Magic are included in a &lsquo;Special&rsquo;   category at the bottom of the list.</p>
+<p>Standard Cost: The cost of the spell after taking the relevant spell   level perk, with the minimum skill required to do so. So Novice Spells   are displayed at Skill 15, Apprentice at 25, etc. This is the most   useful number, as it provides the most realistic basis for cost   comparison among spells.</p>
+<p>Base Cost: The cost of the spell at skill level 15, with no perks.</p>
+<p>Skill 100 Cost: The cost of the spell at skill level 100, after   taking all of the spell level perks. This is provided for comparison so   you can see how the costs diminish as you become more proficient.</p>
+<p>Description: The description of the spell as it appears in your Magic Menu.</p>
+<p>Notes and Restrictions: Lists any quests or other significant   limiting factors that govern when you can acquire the spell. Also   provides clarifications on how the spell works, and tips on using it   effectively.</p>
+<h4>Alteration</h4>
+<table class="tablesorter" style="width: 95%;" cellspacing="0" cellpadding="0">
+<thead> 
+<tr>
+<th valign="bottom">
+<p>Spell Name</p>
+</th> <th valign="bottom">
+<p>Level</p>
+</th> <th valign="bottom">
+<p>Standard Cost</p>
+</th> <th valign="bottom">
+<p>Base Cost</p>
+</th> <th valign="bottom">
+<p>Skill 100 Cost</p>
+</th> <th valign="bottom">
+<p>Description</p>
+</th> <th valign="bottom">
+<p>Notes and Restrictions</p>
+</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td valign="middle">
+<p>Candlelight</p>
+</td>
+<td valign="middle">
+<p>Novice</p>
+</td>
+<td valign="middle">
+<p>9</p>
+</td>
+<td valign="middle">
+<p>18</p>
+</td>
+<td valign="middle">
+<p>6</p>
+</td>
+<td valign="middle">
+<p>Creates a hovering light that lasts for 60s.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Oakflesh</p>
+</td>
+<td valign="middle">
+<p>Novice</p>
+</td>
+<td valign="middle">
+<p>45</p>
+</td>
+<td valign="middle">
+<p>91</p>
+</td>
+<td valign="middle">
+<p>30</p>
+</td>
+<td valign="middle">
+<p>Improves the caster's armor rating by 40 points for 60s.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Magelight</p>
+</td>
+<td valign="middle">
+<p>Apprentice</p>
+</td>
+<td valign="middle">
+<p>35</p>
+</td>
+<td valign="middle">
+<p>74</p>
+</td>
+<td valign="middle">
+<p>25</p>
+</td>
+<td valign="middle">
+<p>Ball of light that lasts 60s and sticks where it strikes.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Stoneflesh</p>
+</td>
+<td valign="middle">
+<p>Apprentice</p>
+</td>
+<td valign="middle">
+<p>81</p>
+</td>
+<td valign="middle">
+<p>171</p>
+</td>
+<td valign="middle">
+<p>57</p>
+</td>
+<td valign="middle">
+<p>Improves the caster's armor rating by 60 points for 60s.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Detect Life</p>
+</td>
+<td valign="middle">
+<p>Adept</p>
+</td>
+<td valign="middle">
+<p>37/s</p>
+</td>
+<td valign="middle">
+<p>88/s</p>
+</td>
+<td valign="middle">
+<p>29/s</p>
+</td>
+<td valign="middle">
+<p>Nearby living creatures, but not undead, machines, or daedra, can be seen through walls.</p>
+</td>
+<td valign="middle">
+<p>Excellent in stealth situations for keeping track of patrolling   guards. The color of the glow indicates whether the creature is hostile   towards you.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Ironflesh</p>
+</td>
+<td valign="middle">
+<p>Adept</p>
+</td>
+<td valign="middle">
+<p>98</p>
+</td>
+<td valign="middle">
+<p>235</p>
+</td>
+<td valign="middle">
+<p>79</p>
+</td>
+<td valign="middle">
+<p>Improves the caster's armor rating by 80 points for 60s.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Telekenesis</p>
+</td>
+<td valign="middle">
+<p>Adept</p>
+</td>
+<td valign="middle">
+<p>63/s</p>
+</td>
+<td valign="middle">
+<p>149/s</p>
+</td>
+<td valign="middle">
+<p>50/s</p>
+</td>
+<td valign="middle">
+<p>Can pull an object to you from a distance. Add it to your inventory or throw it.</p>
+</td>
+<td valign="middle">
+<p>Great for pulling items off pressure plates from a safe distance, or rearranging items (say, in your house).</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Waterbreathing</p>
+</td>
+<td valign="middle">
+<p>Adept</p>
+</td>
+<td valign="middle">
+<p>82</p>
+</td>
+<td valign="middle">
+<p>196</p>
+</td>
+<td valign="middle">
+<p>66</p>
+</td>
+<td valign="middle">
+<p>Can breathe water for 60s.</p>
+</td>
+<td valign="middle">
+<p>Watch for the glow around your body to fade, indicating that the   spell has worn off. When it does, you have the equivalent of a full   breath (as if you'd just surfaced) before you begin to drown.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Detect Dead</p>
+</td>
+<td valign="middle">
+<p>Expert</p>
+</td>
+<td valign="middle">
+<p>49/s</p>
+</td>
+<td valign="middle">
+<p>130/s</p>
+</td>
+<td valign="middle">
+<p>43/s</p>
+</td>
+<td valign="middle">
+<p>Nearby dead can be seen through walls.</p>
+</td>
+<td valign="middle">
+<p>This spell detects undead and corpses. Great for spotting Draugr lurking in dark catacombs.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Ebonyflesh</p>
+</td>
+<td valign="middle">
+<p>Expert</p>
+</td>
+<td valign="middle">
+<p>113</p>
+</td>
+<td valign="middle">
+<p>300</p>
+</td>
+<td valign="middle">
+<p>101</p>
+</td>
+<td valign="middle">
+<p>Improves the caster's armor rating by 100 points for 60s.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Paralyze</p>
+</td>
+<td valign="middle">
+<p>Expert</p>
+</td>
+<td valign="middle">
+<p>149</p>
+</td>
+<td valign="middle">
+<p>396</p>
+</td>
+<td valign="middle">
+<p>133</p>
+</td>
+<td valign="middle">
+<p>Targets that fail to resist are paralyzed for 10s.</p>
+</td>
+<td valign="middle">
+<p>Paralyzed creatures near a ledge will often fall to their deaths.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Dragonhide</p>
+</td>
+<td valign="middle">
+<p>Master</p>
+</td>
+<td valign="middle">
+<p>248</p>
+</td>
+<td valign="middle">
+<p>738</p>
+</td>
+<td valign="middle">
+<p>248</p>
+</td>
+<td valign="middle">
+<p>Caster ignores 80% of all physical damage for 30s.</p>
+</td>
+<td valign="middle">
+<p>Reward for College of Winterhold Radiant Quest: Alteration Ritual Spell.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Mass Paralysis</p>
+</td>
+<td valign="middle">
+<p>Master</p>
+</td>
+<td valign="middle">
+<p>278</p>
+</td>
+<td valign="middle">
+<p>826</p>
+</td>
+<td valign="middle">
+<p>278</p>
+</td>
+<td valign="middle">
+<p>All targets in the area that fail to resist are paralyzed for 15s.</p>
+</td>
+<td valign="middle">
+<p>Sold by Tolfdir, after completing College of Winterhold Radiant Quest: Alteration Ritual Spell.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Equilibrium</p>
+</td>
+<td valign="middle">
+<p>Special - Novice</p>
+</td>
+<td valign="middle">
+<p>0</p>
+</td>
+<td valign="middle">
+<p>0</p>
+</td>
+<td valign="middle">
+<p>0</p>
+</td>
+<td valign="middle">
+<p>Converts 25 points of health into magicka per second. Caster can be killed by this effect.</p>
+</td>
+<td valign="middle">
+<p>Can only be found in Labyrinthian Chasm, during College of   Winterhold Quest: The Staff of Magnus, in a side chamber. A risky spell,   but it is a fast, low-cost way to recover a lot of Magicka in a hurry.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Transmute</p>
+</td>
+<td valign="middle">
+<p>Special - Adept</p>
+</td>
+<td valign="middle">
+<p>37</p>
+</td>
+<td valign="middle">
+<p>88</p>
+</td>
+<td valign="middle">
+<p>29</p>
+</td>
+<td valign="middle">
+<p>Transmute one piece of unrefined Iron Ore to Silver, or Silver Ore to Gold, if the caster is carrying any.</p>
+</td>
+<td valign="middle">
+<p>This spell is sometimes sold by Enthir, though you can also find   copies in Halted Stream Camp, Ansilvund Burial Chamber, and Knifepoint   Ridge Mine. Cast this spell twice to transform a piece of Iron Ore (2   gold) to Gold Ore (50 gold). Profit!</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Conjuration</h4>
+<table class="tablesorter" cellspacing="0" cellpadding="0">
+<thead> 
+<tr>
+<th valign="bottom">
+<p>Spell Name</p>
+</th> <th valign="bottom">
+<p>Level</p>
+</th> <th valign="bottom">
+<p>Standard Cost</p>
+</th> <th valign="bottom">
+<p>Base Cost</p>
+</th> <th valign="bottom">
+<p>Skill 100 Cost</p>
+</th> <th valign="bottom">
+<p>Description</p>
+</th> <th valign="bottom">
+<p>Notes and Restrictions</p>
+</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td valign="middle">
+<p>Bound Sword</p>
+</td>
+<td valign="middle">
+<p>Novice</p>
+</td>
+<td valign="middle">
+<p>41</p>
+</td>
+<td valign="middle">
+<p>82</p>
+</td>
+<td valign="middle">
+<p>27</p>
+</td>
+<td valign="middle">
+<p>Creates a magic sword for 120s. Sheathe it to dispel.</p>
+</td>
+<td valign="middle">
+<p>Dualcasting this spell does not give you dual bound swords. If that's what you want, cast the spell seperately in each hand.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Conjure Familiar</p>
+</td>
+<td valign="middle">
+<p>Novice</p>
+</td>
+<td valign="middle">
+<p>47</p>
+</td>
+<td valign="middle">
+<p>94</p>
+</td>
+<td valign="middle">
+<p>31</p>
+</td>
+<td valign="middle">
+<p>Summons a Familiar for 60s wherever the caster is pointing.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Raise Zombie</p>
+</td>
+<td valign="middle">
+<p>Novice</p>
+</td>
+<td valign="middle">
+<p>45</p>
+</td>
+<td valign="middle">
+<p>90</p>
+</td>
+<td valign="middle">
+<p>30</p>
+</td>
+<td valign="middle">
+<p>Reanimate a weak dead body to fight for you for 60s.</p>
+</td>
+<td valign="middle">
+<p>Works on creatures up to Lv6.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Bound Battleaxe</p>
+</td>
+<td valign="middle">
+<p>Apprentice</p>
+</td>
+<td valign="middle">
+<p>70</p>
+</td>
+<td valign="middle">
+<p>149</p>
+</td>
+<td valign="middle">
+<p>50</p>
+</td>
+<td valign="middle">
+<p>Creates a magic battle axe for 120s. Sheathe it to dispel.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Conjure Flame Atronach</p>
+</td>
+<td valign="middle">
+<p>Apprentice</p>
+</td>
+<td valign="middle">
+<p>62</p>
+</td>
+<td valign="middle">
+<p>132</p>
+</td>
+<td valign="middle">
+<p>44</p>
+</td>
+<td valign="middle">
+<p>Summons a Flame Atronach for 60s wherever the caster is pointing.</p>
+</td>
+<td valign="middle">
+<p>Flame Atronachs do good ranged damage, but are fairly weak in melee.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Reanimate Corpse</p>
+</td>
+<td valign="middle">
+<p>Apprentice</p>
+</td>
+<td valign="middle">
+<p>60</p>
+</td>
+<td valign="middle">
+<p>127</p>
+</td>
+<td valign="middle">
+<p>42</p>
+</td>
+<td valign="middle">
+<p>Reanimate a more powerful dead body to fight for you for 60s.</p>
+</td>
+<td valign="middle">
+<p>Works on creatures up to Lv13.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Soul Trap</p>
+</td>
+<td valign="middle">
+<p>Apprentice</p>
+</td>
+<td valign="middle">
+<p>44</p>
+</td>
+<td valign="middle">
+<p>94</p>
+</td>
+<td valign="middle">
+<p>31</p>
+</td>
+<td valign="middle">
+<p>If a target dies within 60s, fills a soul gem.</p>
+</td>
+<td valign="middle">
+<p>This spell always places the soul into the smallest soul gem that   can hold it. But keep an eye on your soul gem inventory-- you don't   want to waste a Grand Soul Gem on a Skeever's soul. Remember that human   souls can only be captured in Black Soul Gems.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Banish Daedra</p>
+</td>
+<td valign="middle">
+<p>Adept</p>
+</td>
+<td valign="middle">
+<p>72</p>
+</td>
+<td valign="middle">
+<p>173</p>
+</td>
+<td valign="middle">
+<p>58</p>
+</td>
+<td valign="middle">
+<p>Weaker summoned daedra are sent back to Oblivion.</p>
+</td>
+<td valign="middle">
+<p>Only works on conjured daedra (not on 'permanent' ones, like  those  in some Warlock dungeons). Works on Daedra up to Lv15 (Familiars  and  Flame Atronachs). In addition to its stated effect, this spell will   also stagger any Daedra it hits, making it useful in buying you some   space against even higher-level foes.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Bound Bow</p>
+</td>
+<td valign="middle">
+<p>Adept</p>
+</td>
+<td valign="middle">
+<p>76</p>
+</td>
+<td valign="middle">
+<p>183</p>
+</td>
+<td valign="middle">
+<p>61</p>
+</td>
+<td valign="middle">
+<p>Creates a magic bow for 120s. Sheathe it to dispel.</p>
+</td>
+<td valign="middle">
+<p>In addition to the bow, this spell also creates bound arrows that last for the life of the bow.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Conjure Frost Atronach</p>
+</td>
+<td valign="middle">
+<p>Adept</p>
+</td>
+<td valign="middle">
+<p>79</p>
+</td>
+<td valign="middle">
+<p>189</p>
+</td>
+<td valign="middle">
+<p>63</p>
+</td>
+<td valign="middle">
+<p>Summons a Frost Atronach for 60s wherever the caster is pointing.</p>
+</td>
+<td valign="middle">
+<p>Frost Atronachs do good melee damage and have high health, but lack a ranged attack.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Revenant</p>
+</td>
+<td valign="middle">
+<p>Adept</p>
+</td>
+<td valign="middle">
+<p>68</p>
+</td>
+<td valign="middle">
+<p>162</p>
+</td>
+<td valign="middle">
+<p>54</p>
+</td>
+<td valign="middle">
+<p>Reanimate a powerful dead body to fight for you for 60s.</p>
+</td>
+<td valign="middle">
+<p>Works on creatures up to Lv21.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Command Daedra</p>
+</td>
+<td valign="middle">
+<p>Expert</p>
+</td>
+<td valign="middle">
+<p>80</p>
+</td>
+<td valign="middle">
+<p>214</p>
+</td>
+<td valign="middle">
+<p>72</p>
+</td>
+<td valign="middle">
+<p>Powerful summoned and raised creatures are put under your control.</p>
+</td>
+<td valign="middle">
+<p>Only works on conjured daedra (not on 'permanent' ones, like  those  in many Warlock dungeons). Works on Daedra up to Lv20 (Frost  Atronachs  and lower).</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Conjure Dremora Lord</p>
+</td>
+<td valign="middle">
+<p>Expert</p>
+</td>
+<td valign="middle">
+<p>118</p>
+</td>
+<td valign="middle">
+<p>316</p>
+</td>
+<td valign="middle">
+<p>106</p>
+</td>
+<td valign="middle">
+<p>Summons a Dremora Lord for 60s.</p>
+</td>
+<td valign="middle">
+<p>Dremora Lords are powerful melee combatants with a number of fire spells at their disposal.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Conjure Storm Atronach</p>
+</td>
+<td valign="middle">
+<p>Expert</p>
+</td>
+<td valign="middle">
+<p>107</p>
+</td>
+<td valign="middle">
+<p>284</p>
+</td>
+<td valign="middle">
+<p>95</p>
+</td>
+<td valign="middle">
+<p>Summons a Storm Atronach for 60s wherever the caster is pointing.</p>
+</td>
+<td valign="middle">
+<p>Storm Atronachs are powerful ranged combatants.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Dread Zombie</p>
+</td>
+<td valign="middle">
+<p>Expert</p>
+</td>
+<td valign="middle">
+<p>100</p>
+</td>
+<td valign="middle">
+<p>266</p>
+</td>
+<td valign="middle">
+<p>89</p>
+</td>
+<td valign="middle">
+<p>Reanimate a very powerful dead body to fight for you for 60s.</p>
+</td>
+<td valign="middle">
+<p>Works on creatures up to Lv30.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Expel Daedra</p>
+</td>
+<td valign="middle">
+<p>Expert</p>
+</td>
+<td valign="middle">
+<p>71</p>
+</td>
+<td valign="middle">
+<p>190</p>
+</td>
+<td valign="middle">
+<p>64</p>
+</td>
+<td valign="middle">
+<p>Powerful summoned daedra creatures are sent back to Oblivion.</p>
+</td>
+<td valign="middle">
+<p>Only works on conjured daedra (not on 'permanent' ones, like  those  in many Warlock dungeons). Works on Daedra up to Lv20 (Frost  Atronachs  and lower). Staggers any Daedra it hits.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Dead Thrall</p>
+</td>
+<td valign="middle">
+<p>Master</p>
+</td>
+<td valign="middle">
+<p>296</p>
+</td>
+<td valign="middle">
+<p>881</p>
+</td>
+<td valign="middle">
+<p>296</p>
+</td>
+<td valign="middle">
+<p>Reanimate a dead body permanently to fight for you. Only works on people.</p>
+</td>
+<td valign="middle">
+<p>Works on creatures up to Lv40.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Flame Thrall</p>
+</td>
+<td valign="middle">
+<p>Master</p>
+</td>
+<td valign="middle">
+<p>267</p>
+</td>
+<td valign="middle">
+<p>793</p>
+</td>
+<td valign="middle">
+<p>267</p>
+</td>
+<td valign="middle">
+<p>Summons a Flame Atronach permanently.</p>
+</td>
+<td valign="middle">
+<p>Reward for College of Winterhold Radiant Quest: Conjuration  Ritual  Spell. Thralls are stronger versions of the standard atronachs.  After  casting this spell, consider resting or waiting to recover your   magicka.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Frost Thrall</p>
+</td>
+<td valign="middle">
+<p>Master</p>
+</td>
+<td valign="middle">
+<p>326</p>
+</td>
+<td valign="middle">
+<p>969</p>
+</td>
+<td valign="middle">
+<p>326</p>
+</td>
+<td valign="middle">
+<p>Summons a Frost Atronach permanently.</p>
+</td>
+<td valign="middle">
+<p>Sold by Phinis, after completing College of Winterhold Radiant Quest: Conjuration Ritual Spell.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Storm Thrall</p>
+</td>
+<td valign="middle">
+<p>Master</p>
+</td>
+<td valign="middle">
+<p>356</p>
+</td>
+<td valign="middle">
+<p>1057</p>
+</td>
+<td valign="middle">
+<p>356</p>
+</td>
+<td valign="middle">
+<p>Summons a Storm Atronach permanently.</p>
+</td>
+<td valign="middle">
+<p>Sold by Phinis, after completing College of Winterhold Radiant Quest: Conjuration Ritual Spell.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Flaming Familiar</p>
+</td>
+<td valign="middle">
+<p>Special - Apprentice</p>
+</td>
+<td valign="middle">
+<p>24</p>
+</td>
+<td valign="middle">
+<p>50</p>
+</td>
+<td valign="middle">
+<p>17</p>
+</td>
+<td valign="middle">
+<p>Summons a Flaming Familiar which will charge into battle and explode.</p>
+</td>
+<td valign="middle">
+<p>Reward for Dungeon Quest: A Scroll for Anska. The Flaming  Familiar  will behave like a standard Familiar for a few seconds, then  explode  for 40 points of damage.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Summon Arniel's Shade</p>
+</td>
+<td valign="middle">
+<p>Special - Apprentice</p>
+</td>
+<td valign="middle">
+<p>0</p>
+</td>
+<td valign="middle">
+<p>0</p>
+</td>
+<td valign="middle">
+<p>0</p>
+</td>
+<td valign="middle">
+<p>Summons the Shade of Arniel Gane for 60s wherever the caster is pointing.</p>
+</td>
+<td valign="middle">
+<p>Reward for College of Winterhold Radiant Quest: Arniel's  Endeavor.  Arniel's Shade is physically weak, but a powerful spellcaster.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Summon Unbound Dremora</p>
+</td>
+<td valign="middle">
+<p>Special - Novice</p>
+</td>
+<td valign="middle">
+<p>88</p>
+</td>
+<td valign="middle">
+<p>176</p>
+</td>
+<td valign="middle">
+<p>59</p>
+</td>
+<td valign="middle">
+<p>Summons an unbound Dremora.</p>
+</td>
+<td valign="middle">
+<p>Quest spell for College of Winterhold Radiant Quest: Conjuration   Ritual Spell. Summons an Unbound Dremora in a specific location for the   quest. Otherwise, no effect.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Destruction</h4>
+<table class="tablesorter" cellspacing="0" cellpadding="0">
+<thead> 
+<tr>
+<th valign="bottom">
+<p>Spell Name</p>
+</th> <th valign="bottom">
+<p>Level</p>
+</th> <th valign="bottom">
+<p>Standard Cost</p>
+</th> <th valign="bottom">
+<p>Base Cost</p>
+</th> <th valign="bottom">
+<p>Skill 100 Cost</p>
+</th> <th valign="bottom">
+<p>Description</p>
+</th> <th valign="bottom">
+<p>Notes and Restrictions</p>
+</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td valign="middle">
+<p>Flames</p>
+</td>
+<td valign="middle">
+<p>Novice</p>
+</td>
+<td valign="middle">
+<p>6/s</p>
+</td>
+<td valign="middle">
+<p>13/s</p>
+</td>
+<td valign="middle">
+<p>4/s</p>
+</td>
+<td valign="middle">
+<p>A gout of fire that does 8 points per second. Targets on fire take extra damage.</p>
+</td>
+<td valign="middle">
+<p>Targets on fire take more damage because they're burning; the spell doesn't do bonus damage if they're burning.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Frostbite</p>
+</td>
+<td valign="middle">
+<p>Novice</p>
+</td>
+<td valign="middle">
+<p>7/s</p>
+</td>
+<td valign="middle">
+<p>14/s</p>
+</td>
+<td valign="middle">
+<p>4/s</p>
+</td>
+<td valign="middle">
+<p>A blast of cold that does 8 points of damage per second to Health and Stamina.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Sparks</p>
+</td>
+<td valign="middle">
+<p>Novice</p>
+</td>
+<td valign="middle">
+<p>8/s</p>
+</td>
+<td valign="middle">
+<p>16/s</p>
+</td>
+<td valign="middle">
+<p>5/s</p>
+</td>
+<td valign="middle">
+<p>Lightning that does 8 points of shock damage to Health and Magicka per second.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Fire Rune</p>
+</td>
+<td valign="middle">
+<p>Apprentice</p>
+</td>
+<td valign="middle">
+<p>98</p>
+</td>
+<td valign="middle">
+<p>207</p>
+</td>
+<td valign="middle">
+<p>69</p>
+</td>
+<td valign="middle">
+<p>Cast on a nearby surface, it explodes for 50 points of fire damage when enemies come near.</p>
+</td>
+<td valign="middle">
+<p>Runes last indefinately, but you can only place one at a time.  For  best results, place them in a corridor the enemy will have to use,  then  pull them towards you. In a pinch, you can also cast a rune  directly  under an enemy to trigger the explosion immediately, although  that's  less efficient than your other spells.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Firebolt</p>
+</td>
+<td valign="middle">
+<p>Apprentice</p>
+</td>
+<td valign="middle">
+<p>17</p>
+</td>
+<td valign="middle">
+<p>36</p>
+</td>
+<td valign="middle">
+<p>12</p>
+</td>
+<td valign="middle">
+<p>A blast of fire that does 25 points of damage. Targets on fire take extra damage.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Frost Rune</p>
+</td>
+<td valign="middle">
+<p>Apprentice</p>
+</td>
+<td valign="middle">
+<p>122</p>
+</td>
+<td valign="middle">
+<p>258</p>
+</td>
+<td valign="middle">
+<p>87</p>
+</td>
+<td valign="middle">
+<p>Cast on a nearby surface, it explodes for 50 points of frost damage when enemies come near.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Ice Spike</p>
+</td>
+<td valign="middle">
+<p>Apprentice</p>
+</td>
+<td valign="middle">
+<p>25</p>
+</td>
+<td valign="middle">
+<p>42</p>
+</td>
+<td valign="middle">
+<p>14</p>
+</td>
+<td valign="middle">
+<p>A spike of ice that does 25 points of frost damage to Health and Stamina.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Lightning Bolt</p>
+</td>
+<td valign="middle">
+<p>Apprentice</p>
+</td>
+<td valign="middle">
+<p>21</p>
+</td>
+<td valign="middle">
+<p>45</p>
+</td>
+<td valign="middle">
+<p>15</p>
+</td>
+<td valign="middle">
+<p>A bolt of lightning that does 25 points of shock damage to Health and half that to Magicka.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Lightning Rune</p>
+</td>
+<td valign="middle">
+<p>Apprentice</p>
+</td>
+<td valign="middle">
+<p>134</p>
+</td>
+<td valign="middle">
+<p>284</p>
+</td>
+<td valign="middle">
+<p>95</p>
+</td>
+<td valign="middle">
+<p>Cast on a nearby surface, it explodes for 50 points of shock damage when enemies come near.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Chain Lightning</p>
+</td>
+<td valign="middle">
+<p>Adept</p>
+</td>
+<td valign="middle">
+<p>57</p>
+</td>
+<td valign="middle">
+<p>137</p>
+</td>
+<td valign="middle">
+<p>46</p>
+</td>
+<td valign="middle">
+<p>Lightning bolt that does 40 points of shock damage to Health and half to Magicka, then leaps to a new target.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Fireball</p>
+</td>
+<td valign="middle">
+<p>Adept</p>
+</td>
+<td valign="middle">
+<p>40</p>
+</td>
+<td valign="middle">
+<p>117</p>
+</td>
+<td valign="middle">
+<p>39</p>
+</td>
+<td valign="middle">
+<p>A fiery explosion for 40 points of damage in a 15 foot radius. Targets on fire take extra damage.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Flame Cloak</p>
+</td>
+<td valign="middle">
+<p>Adept</p>
+</td>
+<td valign="middle">
+<p>107</p>
+</td>
+<td valign="middle">
+<p>254</p>
+</td>
+<td valign="middle">
+<p>85</p>
+</td>
+<td valign="middle">
+<p>For 60s, opponents in melee range take 8 points of fire damage per second. Targets on fire take extra damage.</p>
+</td>
+<td valign="middle">
+<p>Cloak spells are great if you expect to be in melee frequently,  or  prefer short-range spells (Flames, Wall of Flames, etc.), as they   significantly increase your damage output.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Frost Cloak</p>
+</td>
+<td valign="middle">
+<p>Adept</p>
+</td>
+<td valign="middle">
+<p>117</p>
+</td>
+<td valign="middle">
+<p>278</p>
+</td>
+<td valign="middle">
+<p>93</p>
+</td>
+<td valign="middle">
+<p>For 60s, opponents in melee range take 8 points of frost damage and Stamina damage per second.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Ice Storm</p>
+</td>
+<td valign="middle">
+<p>Adept</p>
+</td>
+<td valign="middle">
+<p>53</p>
+</td>
+<td valign="middle">
+<p>127</p>
+</td>
+<td valign="middle">
+<p>42</p>
+</td>
+<td valign="middle">
+<p>A freezing whirlwind that does 40 points of frost damage per second to Health and Stamina.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Lightning Cloak</p>
+</td>
+<td valign="middle">
+<p>Adept</p>
+</td>
+<td valign="middle">
+<p>137</p>
+</td>
+<td valign="middle">
+<p>326</p>
+</td>
+<td valign="middle">
+<p>110</p>
+</td>
+<td valign="middle">
+<p>For 60s, nearby opponents take 8 points of shock damage and half magicka damage.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Icy Spear</p>
+</td>
+<td valign="middle">
+<p>Expert</p>
+</td>
+<td valign="middle">
+<p>106</p>
+</td>
+<td valign="middle">
+<p>282</p>
+</td>
+<td valign="middle">
+<p>95</p>
+</td>
+<td valign="middle">
+<p>A spear of ice that does 60 points of frost damage to Health and Stamina.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Incinerate</p>
+</td>
+<td valign="middle">
+<p>Expert</p>
+</td>
+<td valign="middle">
+<p>98</p>
+</td>
+<td valign="middle">
+<p>262</p>
+</td>
+<td valign="middle">
+<p>88</p>
+</td>
+<td valign="middle">
+<p>A blast of fire that does 60 points of damage. Targets on fire take extra damage.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Thunderbolt</p>
+</td>
+<td valign="middle">
+<p>Expert</p>
+</td>
+<td valign="middle">
+<p>113</p>
+</td>
+<td valign="middle">
+<p>302</p>
+</td>
+<td valign="middle">
+<p>101</p>
+</td>
+<td valign="middle">
+<p>A Thunderbolt that does 60 points of shock damage to Health and half that to Magicka.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Wall of Flames</p>
+</td>
+<td valign="middle">
+<p>Expert</p>
+</td>
+<td valign="middle">
+<p>39/s</p>
+</td>
+<td valign="middle">
+<p>104/s</p>
+</td>
+<td valign="middle">
+<p>35/s</p>
+</td>
+<td valign="middle">
+<p>Sprayed on the ground, it creates a wall of fire that does 50 points of fire damage per second.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Wall of Frost</p>
+</td>
+<td valign="middle">
+<p>Expert</p>
+</td>
+<td valign="middle">
+<p>45/s</p>
+</td>
+<td valign="middle">
+<p>121/s</p>
+</td>
+<td valign="middle">
+<p>40/s</p>
+</td>
+<td valign="middle">
+<p>Sprayed on the ground, it creates a wall of frost that does 50 points of frost damage per second.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Wall of Storms</p>
+</td>
+<td valign="middle">
+<p>Expert</p>
+</td>
+<td valign="middle">
+<p>48/s</p>
+</td>
+<td valign="middle">
+<p>128/s</p>
+</td>
+<td valign="middle">
+<p>43/s</p>
+</td>
+<td valign="middle">
+<p>Sprayed on the ground, it creates a wall of lightning that does 50 points of shock damage per second.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Blizzard</p>
+</td>
+<td valign="middle">
+<p>Master</p>
+</td>
+<td valign="middle">
+<p>328</p>
+</td>
+<td valign="middle">
+<p>975</p>
+</td>
+<td valign="middle">
+<p>328</p>
+</td>
+<td valign="middle">
+<p>Targets take 20 points of frost damage for 10s, plus Stamina damage.</p>
+</td>
+<td valign="middle">
+<p>Sold by Faralda, after completing College of Winterhold Radiant   Quest: Destruction Ritual Spell. Damages everything in a large radius   around the caster for 10s.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Fire Storm</p>
+</td>
+<td valign="middle">
+<p>Master</p>
+</td>
+<td valign="middle">
+<p>423</p>
+</td>
+<td valign="middle">
+<p>1257</p>
+</td>
+<td valign="middle">
+<p>423</p>
+</td>
+<td valign="middle">
+<p>A 100 point firey explosion centered on the caster. Does more damage to closer targets.</p>
+</td>
+<td valign="middle">
+<p>Reward for College of Winterhold Radiant Quest: Destruction Ritual Spell. Does extra damage to things closer to the caster.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Lightning Storm</p>
+</td>
+<td valign="middle">
+<p>Master</p>
+</td>
+<td valign="middle">
+<p>41/s</p>
+</td>
+<td valign="middle">
+<p>122/s</p>
+</td>
+<td valign="middle">
+<p>41/s</p>
+</td>
+<td valign="middle">
+<p>Target takes 75 points of shock damage per second to Health, and half that to Magicka.</p>
+</td>
+<td valign="middle">
+<p>Sold by Faralda, after completing College of Winterhold Radiant   Quest: Destruction Ritual Spell. Not an area-of-effect spell, Lightning   Storm is a single concentrated bolt that does massive damage and   disintegrates targets.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Arniel's Convection</p>
+</td>
+<td valign="middle">
+<p>Special - Novice</p>
+</td>
+<td valign="middle">
+<p>1</p>
+</td>
+<td valign="middle">
+<p>1</p>
+</td>
+<td valign="middle">
+<p>1</p>
+</td>
+<td valign="middle">
+<p>Burns the target 1 points per second. Targets on fire take extra damage.</p>
+</td>
+<td valign="middle">
+<p>Quest spell for College of Winterhold Radiant Quest: Arniel's   Endeavor. Heats Dwarven Convectors for the quest. Otherwise, not   especially useful.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Vampiric Drain</p>
+</td>
+<td valign="middle">
+<p>Special - Novice</p>
+</td>
+<td valign="middle">
+<p>Varies</p>
+</td>
+<td valign="middle">
+<p>Varies</p>
+</td>
+<td valign="middle">
+<p>Varies</p>
+</td>
+<td valign="middle">
+<p>Absorb health from the target.</p>
+</td>
+<td valign="middle">
+<p>A spell unique to Vampires, Vampiric Drain both damages your foes and restores your own health.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Illusion</h4>
+<table class="tablesorter" cellspacing="0" cellpadding="0">
+<thead> 
+<tr>
+<th valign="bottom">
+<p>Spell Name</p>
+</th> <th valign="bottom">
+<p>Level</p>
+</th> <th valign="bottom">
+<p>Standard Cost</p>
+</th> <th valign="bottom">
+<p>Base Cost</p>
+</th> <th valign="bottom">
+<p>Skill 100 Cost</p>
+</th> <th valign="bottom">
+<p>Description</p>
+</th> <th valign="bottom">
+<p>Notes and Restrictions</p>
+</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td valign="middle">
+<p>Courage</p>
+</td>
+<td valign="middle">
+<p>Novice</p>
+</td>
+<td valign="middle">
+<p>17</p>
+</td>
+<td valign="middle">
+<p>35</p>
+</td>
+<td valign="middle">
+<p>11</p>
+</td>
+<td valign="middle">
+<p>Target won't flee for 60s and gets some extra health and stamina.</p>
+</td>
+<td valign="middle">
+<p>Best used to strengthen a follower. In a pinch, you can also use it as a cheap way to stop weak enemies from fleeing.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Clairvoyance</p>
+</td>
+<td valign="middle">
+<p>Novice</p>
+</td>
+<td valign="middle">
+<p>11/s</p>
+</td>
+<td valign="middle">
+<p>22/s</p>
+</td>
+<td valign="middle">
+<p>7/s</p>
+</td>
+<td valign="middle">
+<p>Shows the path to the current goal.</p>
+</td>
+<td valign="middle">
+<p>Clairvoyance isn't a spell you'll need very often, but it can be a real help if you get lost in a dungeon.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Fury</p>
+</td>
+<td valign="middle">
+<p>Novice</p>
+</td>
+<td valign="middle">
+<p>29</p>
+</td>
+<td valign="middle">
+<p>59</p>
+</td>
+<td valign="middle">
+<p>20</p>
+</td>
+<td valign="middle">
+<p>Creatures and people up to Lv6 will attack anything nearby for 30s.</p>
+</td>
+<td valign="middle">
+<p>Targets a single foe. Best cast at range, since they'll attack anyone nearby indiscriminately, including you.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Calm</p>
+</td>
+<td valign="middle">
+<p>Apprentice</p>
+</td>
+<td valign="middle">
+<p>61</p>
+</td>
+<td valign="middle">
+<p>129</p>
+</td>
+<td valign="middle">
+<p>43</p>
+</td>
+<td valign="middle">
+<p>Creatures and people up to Lv9 won't fight for 30s.</p>
+</td>
+<td valign="middle">
+<p>Targets a single foe.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Fear</p>
+</td>
+<td valign="middle">
+<p>Apprentice</p>
+</td>
+<td valign="middle">
+<p>64</p>
+</td>
+<td valign="middle">
+<p>135</p>
+</td>
+<td valign="middle">
+<p>45</p>
+</td>
+<td valign="middle">
+<p>Creatures and people up to Lv9 flee from combat for 30s.</p>
+</td>
+<td valign="middle">
+<p>Targets a single foe.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Muffle</p>
+</td>
+<td valign="middle">
+<p>Apprentice</p>
+</td>
+<td valign="middle">
+<p>60</p>
+</td>
+<td valign="middle">
+<p>127</p>
+</td>
+<td valign="middle">
+<p>42</p>
+</td>
+<td valign="middle">
+<p>You move more quietly for 180s.</p>
+</td>
+<td valign="middle">
+<p>Silences your movement. Important for stealthy characters, or anyone who wants to try sneaking around while wearing armor.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Frenzy</p>
+</td>
+<td valign="middle">
+<p>Adept</p>
+</td>
+<td valign="middle">
+<p>77</p>
+</td>
+<td valign="middle">
+<p>184</p>
+</td>
+<td valign="middle">
+<p>62</p>
+</td>
+<td valign="middle">
+<p>Creatures and people up to Lv14 will attack anyone nearby for 60s.</p>
+</td>
+<td valign="middle">
+<p>Targets a single foe.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Rally</p>
+</td>
+<td valign="middle">
+<p>Adept</p>
+</td>
+<td valign="middle">
+<p>42</p>
+</td>
+<td valign="middle">
+<p>100</p>
+</td>
+<td valign="middle">
+<p>33</p>
+</td>
+<td valign="middle">
+<p>Targets won't flee for 60s and get extra health and stamina.</p>
+</td>
+<td valign="middle">
+<p>Targets a single foe.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Invisibility</p>
+</td>
+<td valign="middle">
+<p>Expert</p>
+</td>
+<td valign="middle">
+<p>111</p>
+</td>
+<td valign="middle">
+<p>295</p>
+</td>
+<td valign="middle">
+<p>99</p>
+</td>
+<td valign="middle">
+<p>Caster is invisible for 30s. Activating an object or attacking will break the spell.</p>
+</td>
+<td valign="middle">
+<p>Another important spell for stealthy characters. Combined with   Muffle, you should be able to sneak by most foes without too much   difficulty.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Pacify</p>
+</td>
+<td valign="middle">
+<p>Expert</p>
+</td>
+<td valign="middle">
+<p>96</p>
+</td>
+<td valign="middle">
+<p>256</p>
+</td>
+<td valign="middle">
+<p>86</p>
+</td>
+<td valign="middle">
+<p>Creatures and people up to Lv20 won't fight for 60s.</p>
+</td>
+<td valign="middle">
+<p>Affects all foes in a small area.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Rout</p>
+</td>
+<td valign="middle">
+<p>Expert</p>
+</td>
+<td valign="middle">
+<p>104</p>
+</td>
+<td valign="middle">
+<p>278</p>
+</td>
+<td valign="middle">
+<p>93</p>
+</td>
+<td valign="middle">
+<p>Creatures and people up to level 20 flee from combat for 30s.</p>
+</td>
+<td valign="middle">
+<p>Affects all foes in a small area.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Call to Arms</p>
+</td>
+<td valign="middle">
+<p>Master</p>
+</td>
+<td valign="middle">
+<p>194</p>
+</td>
+<td valign="middle">
+<p>577</p>
+</td>
+<td valign="middle">
+<p>194</p>
+</td>
+<td valign="middle">
+<p>Targets have improved combat skills, health, and stamina for 10m.</p>
+</td>
+<td valign="middle">
+<p>Sold by Drevis, after completing College of Winterhold Radiant Quest: Illusion Ritual Spell. Affects all allies in a large area.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Harmony</p>
+</td>
+<td valign="middle">
+<p>Master</p>
+</td>
+<td valign="middle">
+<p>312</p>
+</td>
+<td valign="middle">
+<p>927</p>
+</td>
+<td valign="middle">
+<p>312</p>
+</td>
+<td valign="middle">
+<p>Creatures and people up to Lv25 nearby won't fight for 60s.</p>
+</td>
+<td valign="middle">
+<p>Sold by Drevis, after completing College of Winterhold Radiant Quest: Illusion Ritual Spell. Affects all foes in a large area.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Hysteria</p>
+</td>
+<td valign="middle">
+<p>Master</p>
+</td>
+<td valign="middle">
+<p>257</p>
+</td>
+<td valign="middle">
+<p>763</p>
+</td>
+<td valign="middle">
+<p>257</p>
+</td>
+<td valign="middle">
+<p>Creatures and people up to Lv25 flee from combat for 60s.</p>
+</td>
+<td valign="middle">
+<p>Sold by Drevis, after completing College of Winterhold Radiant Quest: Illusion Ritual Spell. Affects all foes in a large area.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Mayhem</p>
+</td>
+<td valign="middle">
+<p>Master</p>
+</td>
+<td valign="middle">
+<p>294</p>
+</td>
+<td valign="middle">
+<p>873</p>
+</td>
+<td valign="middle">
+<p>294</p>
+</td>
+<td valign="middle">
+<p>Creatures and people up to Lv25 will attack anyone nearby for 60s.</p>
+</td>
+<td valign="middle">
+<p>Reward for College of Winterhold Radiant Quest: Illusion Ritual Spell. Affects all foes in a large area.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Vision of the Tenth Eye</p>
+</td>
+<td valign="middle">
+<p>Special - Novice</p>
+</td>
+<td valign="middle">
+<p>0</p>
+</td>
+<td valign="middle">
+<p>0</p>
+</td>
+<td valign="middle">
+<p>0</p>
+</td>
+<td valign="middle">
+<p>See what others cannot.</p>
+</td>
+<td valign="middle">
+<p>Quest spell for College of Winterhold Radiant Quest: Illusion  Ritual  Spell. Reveals the location of the four Master Illusion Texts  needed  for the quest; otherwise useless.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Vision of the Tenth Eye</p>
+</td>
+<td valign="middle">
+<p>Special - Novice</p>
+</td>
+<td valign="middle">
+<p>0</p>
+</td>
+<td valign="middle">
+<p>0</p>
+</td>
+<td valign="middle">
+<p>0</p>
+</td>
+<td valign="middle">
+<p>See what others cannot.</p>
+</td>
+<td valign="middle">
+<p>Reveals the location of the four Master Illusion Texts in  Illusion  Ritual Spell. Otherwise useless. Mage's Guild Radiant Quest:  Illusion  Ritual Spell.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Restoration</h4>
+<table class="tablesorter" cellspacing="0" cellpadding="0">
+<thead> 
+<tr>
+<th valign="bottom">
+<p>Spell Name</p>
+</th> <th valign="bottom">
+<p>Level</p>
+</th> <th valign="bottom">
+<p>Standard Cost</p>
+</th> <th valign="bottom">
+<p>Base Cost</p>
+</th> <th valign="bottom">
+<p>Skill 100 Cost</p>
+</th> <th valign="bottom">
+<p>Description</p>
+</th> <th valign="bottom">
+<p>Notes and Restrictions</p>
+</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td valign="middle">
+<p>Healing</p>
+</td>
+<td valign="middle">
+<p>Novice</p>
+</td>
+<td valign="middle">
+<p>5/s</p>
+</td>
+<td valign="middle">
+<p>11/s</p>
+</td>
+<td valign="middle">
+<p>3/s</p>
+</td>
+<td valign="middle">
+<p>Heals the caster 10 points per second.</p>
+</td>
+<td valign="middle">
+<p>If someone is attacking you, Healing rarely heals enough to keep  you  from dying. Back away and let a follower or summoned creature step  in  to buy you some time.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Lesser Ward</p>
+</td>
+<td valign="middle">
+<p>Novice</p>
+</td>
+<td valign="middle">
+<p>15/s</p>
+</td>
+<td valign="middle">
+<p>30/s</p>
+</td>
+<td valign="middle">
+<p>10/s</p>
+</td>
+<td valign="middle">
+<p>Increases armor rating by 40 points and negates up to 40 points of spell damage or effects.</p>
+</td>
+<td valign="middle">
+<p>A Ward's armor bonus stacks with the Alteration line of 'flesh'   spells for an even stronger defense. Wards are far more effective   against spells, although they tie up a hand and cost more to maintain.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Fast Healing</p>
+</td>
+<td valign="middle">
+<p>Apprentice</p>
+</td>
+<td valign="middle">
+<p>30</p>
+</td>
+<td valign="middle">
+<p>65</p>
+</td>
+<td valign="middle">
+<p>21</p>
+</td>
+<td valign="middle">
+<p>Heals the caster 50 points.</p>
+</td>
+<td valign="middle">
+<p>Direct healing spells are less efficient than heal-over-time  spells,  but they're faster, and may be fast enough to pull you back from  the  brink of death in a close battle.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Healing Hands</p>
+</td>
+<td valign="middle">
+<p>Apprentice</p>
+</td>
+<td valign="middle">
+<p>10/s</p>
+</td>
+<td valign="middle">
+<p>22/s</p>
+</td>
+<td valign="middle">
+<p>7/s</p>
+</td>
+<td valign="middle">
+<p>Heals the target 10 points per second, but not undead, atronachs, or machines.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Steadfast Ward</p>
+</td>
+<td valign="middle">
+<p>Apprentice</p>
+</td>
+<td valign="middle">
+<p>24/s</p>
+</td>
+<td valign="middle">
+<p>51/s</p>
+</td>
+<td valign="middle">
+<p>17/s</p>
+</td>
+<td valign="middle">
+<p>Increases armor rating by 60 points and negates up to 60 points of spell damage or effects.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Turn Lesser Undead</p>
+</td>
+<td valign="middle">
+<p>Apprentice</p>
+</td>
+<td valign="middle">
+<p>35</p>
+</td>
+<td valign="middle">
+<p>74</p>
+</td>
+<td valign="middle">
+<p>24</p>
+</td>
+<td valign="middle">
+<p>Undead up to Lv6 flee for 30s.</p>
+</td>
+<td valign="middle">
+<p>Targets a single foe.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Close Wounds</p>
+</td>
+<td valign="middle">
+<p>Adept</p>
+</td>
+<td valign="middle">
+<p>46</p>
+</td>
+<td valign="middle">
+<p>111</p>
+</td>
+<td valign="middle">
+<p>37</p>
+</td>
+<td valign="middle">
+<p>Heals the caster 100 points.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Greater Ward</p>
+</td>
+<td valign="middle">
+<p>Adept</p>
+</td>
+<td valign="middle">
+<p>32/s</p>
+</td>
+<td valign="middle">
+<p>76/s</p>
+</td>
+<td valign="middle">
+<p>25/s</p>
+</td>
+<td valign="middle">
+<p>Increases armor rating by 80 points and negates up to 80 points of spell damage or effects.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Heal Other</p>
+</td>
+<td valign="middle">
+<p>Adept</p>
+</td>
+<td valign="middle">
+<p>29</p>
+</td>
+<td valign="middle">
+<p>71</p>
+</td>
+<td valign="middle">
+<p>24</p>
+</td>
+<td valign="middle">
+<p>Heals the target 75 points, but not undead, atronachs, or machines.</p>
+</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Repel Lesser Undead</p>
+</td>
+<td valign="middle">
+<p>Adept</p>
+</td>
+<td valign="middle">
+<p>42</p>
+</td>
+<td valign="middle">
+<p>101</p>
+</td>
+<td valign="middle">
+<p>34</p>
+</td>
+<td valign="middle">
+<p>All affected undead up to level 8 flee for 30s.</p>
+</td>
+<td valign="middle">
+<p>Affects all undead in the arc of fire.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Turn Undead</p>
+</td>
+<td valign="middle">
+<p>Adept</p>
+</td>
+<td valign="middle">
+<p>62</p>
+</td>
+<td valign="middle">
+<p>148</p>
+</td>
+<td valign="middle">
+<p>50</p>
+</td>
+<td valign="middle">
+<p>Undead up to Lv13 flee for 30s.</p>
+</td>
+<td valign="middle">
+<p>Targets a single foe.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Circle of Protection</p>
+</td>
+<td valign="middle">
+<p>Expert</p>
+</td>
+<td valign="middle">
+<p>56</p>
+</td>
+<td valign="middle">
+<p>151</p>
+</td>
+<td valign="middle">
+<p>50</p>
+</td>
+<td valign="middle">
+<p>Undead up to Lv30 entering the circle will flee.</p>
+</td>
+<td valign="middle">
+<p>Creates a warding circle around the location where the spell is cast.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Grand Healing</p>
+</td>
+<td valign="middle">
+<p>Expert</p>
+</td>
+<td valign="middle">
+<p>84</p>
+</td>
+<td valign="middle">
+<p>224</p>
+</td>
+<td valign="middle">
+<p>75</p>
+</td>
+<td valign="middle">
+<p>Heals everyone close to the caster 200 points.</p>
+</td>
+<td valign="middle">
+<p>Does not heal Daedra, Automatons, or Undead. But it can heal other enemies, so use this carefully.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Repel Undead</p>
+</td>
+<td valign="middle">
+<p>Expert</p>
+</td>
+<td valign="middle">
+<p>117</p>
+</td>
+<td valign="middle">
+<p>311</p>
+</td>
+<td valign="middle">
+<p>105</p>
+</td>
+<td valign="middle">
+<p>All affected undead up to Lv16 flee for 30s.</p>
+</td>
+<td valign="middle">
+<p>Affects all undead in the arc of fire.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Turn Greater Undead</p>
+</td>
+<td valign="middle">
+<p>Expert</p>
+</td>
+<td valign="middle">
+<p>88</p>
+</td>
+<td valign="middle">
+<p>235</p>
+</td>
+<td valign="middle">
+<p>79</p>
+</td>
+<td valign="middle">
+<p>Undead up to Lv21 flee for 30s.</p>
+</td>
+<td valign="middle">
+<p>Targets a single foe.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Bane of the Undead</p>
+</td>
+<td valign="middle">
+<p>Master</p>
+</td>
+<td valign="middle">
+<p>293</p>
+</td>
+<td valign="middle">
+<p>871</p>
+</td>
+<td valign="middle">
+<p>293</p>
+</td>
+<td valign="middle">
+<p>Sets undead up to Lv30 on fire and makes them flee for 30s.</p>
+</td>
+<td valign="middle">
+<p>Reward for College of Winterhold Radiant Quest: Restoration Ritual Spell. Affects all nearby undead in a large area.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>Guardian Circle</p>
+</td>
+<td valign="middle">
+<p>Master</p>
+</td>
+<td valign="middle">
+<p>212</p>
+</td>
+<td valign="middle">
+<p>632</p>
+</td>
+<td valign="middle">
+<p>212</p>
+</td>
+<td valign="middle">
+<p>Undead up to Lv35 entering the circle will flee. Caster heals 20 health per second inside it.</p>
+</td>
+<td valign="middle">
+<p>Sold by Colette, after completing College of Winterhold Radiant   Quest: Restoration Ritual Spell. Creates a warding circle around the   location where the spell is cast.</p>
+</td>
+</tr>
+</tbody>
+</table>
+					
+
+					
+
+                
+
+
+			  
+                
+              </div> <!-- guide_left end -->
+
+
+            
+
+            
+			  
+              
+              <div class="guide_right side">
+              
+
+
+				
+                <h4 class="first">Related gameplay</h4>
+                <ul>
+					
+						<li><a href="4540.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4540">Shouts and Powers</a></li>
+				    
+						<li><a href="4599.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4599">Spells</a></li>
+				    
+						<li><a href="4622.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4622">Spell Tomes</a></li>
+				    
+						<li><a href="4560.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4560">Enchanting</a></li>
+				    
+						<li><a href="4559.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4559">Alchemy</a></li>
+				    
+						<li><a href="4494.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4494">Skill Constellations Introduction</a></li>
+				    
+						<li><a href="4525.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4525">The Spellsword</a></li>
+				    
+						<li><a href="4521.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4521">The Mage</a></li>
+				    
+						<li><a href="4512.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4512">Magic Skills: The Path of Sorcery</a></li>
+				    
+                </ul>
+				
+
+                
+                <h4>Related Walkthroughs</h4>
+                <ul>
+					
+						<li><a href="4784.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4784">First Lessons</a></li>
+				    
+                </ul>
+				
+
+				
+
+				
+                
+
+				
+              
+              </div> <!-- guide_right end -->
+              
+
+              <div class="innernextprev clearfix">
+                <div class="prev"></div>
+                <div class="next"></div>
+              </div>
+
+              <div class="nextprev clearfix">
+                <div class="prev"></div>
+                <div class="title"></div>
+                <div class="next"><a href="4600.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4600">Next section</a> &gt;</div>
+              </div>
+                            
+              
+            </div>
+
+
+			
+
+          </div> <!-- guide_content end -->
+     
+
+
+     
+        </div> <!-- end three_q -->
+      
+
+      </div>
+      
+      
+      <br class="clear" />
+
+
+
+
+
+
+
+
+<div id="offsitefeature_lightbox">
+  <div id="lightbox">
+  
+    <div id="lightbox_container">
+  
+			<div id="loginbox">
+			            <span class="close"><a href='javascript:$.fancybox.close();'>close</a></span>
+						<iframe src='about:blank' style='width: 100%; height: 500px; margin-top: 35px;' id='offsitefeature_iframe'></iframe>
+			</div>
+      
+      
+  
+    </div> <!-- end lightbox_container -->
+    
+  </div> <!-- end lightbox -->
+</div> <!-- end #login_lightbox -->
+<a href='#offsitefeature_lightbox' id='offsitefeature_link'></a>
+
+
+
+
+	
+	</div> <!-- end content -->
+
+    <div id="footer">
+    
+      <div class="block">
+        <div class="wrap">
+          <h4>By console</h4>
+          <ul>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/?platform=PS3  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/?platform=PS3'" tppabs="http://www.primagames.com/games/?platform=PS3">PS3 Games Strategy Guides</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=Xbox+360  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=Xbox+360'" tppabs="http://www.primagames.com/games?platform=Xbox+360">Xbox 360 Games Strategy Guides</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=Wii  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=Wii'" tppabs="http://www.primagames.com/games?platform=Wii">Wii Games Strategy Guides</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=PC  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=PC'" tppabs="http://www.primagames.com/games?platform=PC">PC Games Strategy Guides</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=DS  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=DS'" tppabs="http://www.primagames.com/games?platform=DS">DS Strategy Guides</a></li>
+		  
+            <li><a href=" javascript:if(confirm('http://www.primagames.com/games?platform=PSP  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=PSP'" tppabs="http://www.primagames.com/games?platform=PSP">PSP Strategy Guides</a></li>
+		  
+          </ul>    
+        </div>
+      </div>
+      
+      <div class="block">
+        <div class="wrap">
+          <h4>Strategy guides</h4>
+          <ul>
+		  
+            <li><a href="232.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232">The Elder Scrolls V: Skyrim Strategy Guide</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/assassins-creed-revelations/primaguides/212  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/assassins-creed-revelations/primaguides/212'" tppabs="http://www.primagames.com/games/assassins-creed-revelations/primaguides/212">Assassin&#39;s Creed: Revelations Strategy Guide</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/saints-row-third/primaguides/191  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/saints-row-third/primaguides/191'" tppabs="http://www.primagames.com/games/saints-row-third/primaguides/191">Saints Row: The Third Strategy Guide</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/battlefield-3/primaguides/95  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/battlefield-3/primaguides/95'" tppabs="http://www.primagames.com/games/battlefield-3/primaguides/95">Battlefield 3 Strategy Guide</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254'" tppabs="http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254">Legend of Zelda: Skyward Sword Strategy Guide</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/mario-kart-7/primaguides/255  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/mario-kart-7/primaguides/255'" tppabs="http://www.primagames.com/games/mario-kart-7/primaguides/255">Mario Kart 7 Strategy Guide</a></li>
+		  
+            <li><a href="243.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/243">Elder Scrolls V: Skyrim Maps</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/rage/primaguides/77  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/rage/primaguides/77'" tppabs="http://www.primagames.com/games/rage/primaguides/77">Rage Strategy Guide</a></li>
+		  
+          </ul>    
+        </div>
+      </div>
+      
+      
+      <div class="block last">
+        <div class="wrap">
+          <h4>Top stories</h4>
+          <ul>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/need-speed-run/news/need-for-speed-the-run-screenshots-1420179  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/need-speed-run/news/need-for-speed-the-run-screenshots-1420179'" tppabs="http://www.primagames.com/games/need-speed-run/news/need-for-speed-the-run-screenshots-1420179">Need for Speed: The Run screenshots</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/assassins-creed-ii/news/previously-on-assassins-creed-trailer-112538  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/assassins-creed-ii/news/previously-on-assassins-creed-trailer-112538'" tppabs="http://www.primagames.com/games/assassins-creed-ii/news/previously-on-assassins-creed-trailer-112538">Previously on Assassin&#39;s Creed trailer</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/la-noire/news/la-forensic-brendan-mcnamara-on-la-noire-1420971  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/la-noire/news/la-forensic-brendan-mcnamara-on-la-noire-1420971'" tppabs="http://www.primagames.com/games/la-noire/news/la-forensic-brendan-mcnamara-on-la-noire-1420971">L.A. Forensic: Brendan McNamara on L.A. Noire</a></li>
+		  
+          </ul>
+          <h4>Blog Articles</h4>
+          <ul>   
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/blog/skyrim-official-strategy-guide-blog-2-sanity-sappi  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/blog/skyrim-official-strategy-guide-blog-2-sanity-sappi'" tppabs="http://www.primagames.com/blog/skyrim-official-strategy-guide-blog-2-sanity-sappi">Skyrim Official Strategy Guide Blog #2: Sanity-Sapping Mapping</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/blog/something-to-shout-about-1  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/blog/something-to-shout-about-1'" tppabs="http://www.primagames.com/blog/something-to-shout-about-1">Skyrim Official Strategy Guide Blog #1: Something to Shout About</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/blog/battlefield-3-game-changers  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/blog/battlefield-3-game-changers'" tppabs="http://www.primagames.com/blog/battlefield-3-game-changers">Battlefield 3: Game Changers</a></li>
+		  
+          </ul>
+          
+        </div>
+      </div>
+      
+      <div class="line">&nbsp;</div>
+      
+      <ul class="fnav">
+        <li><a href="javascript:if(confirm('http://www.primagames.com/pages/terms-of-use  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/pages/terms-of-use'" tppabs="http://www.primagames.com/pages/terms-of-use">Terms of Service</a> | </li>
+        <li><a href="javascript:if(confirm('http://www.primagames.com/pages/privacy-policy  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/pages/privacy-policy'" tppabs="http://www.primagames.com/pages/privacy-policy">Privacy Policy</a> | </li>
+        <li><a href="javascript:if(confirm('http://www.primagames.com/pages/about-us  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/pages/about-us'" tppabs="http://www.primagames.com/pages/about-us">About Prima Games</a> | </li>
+        
+        <li><a href="javascript:if(confirm('http://www.primagames.com/pages/frequently-asked-questions  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/pages/frequently-asked-questions'" tppabs="http://www.primagames.com/pages/frequently-asked-questions">Frequently Asked Questions</a> |</li>
+		<li><a href="javascript:if(confirm('http://www.primagames.com/pages/contact-us  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/pages/contact-us'" tppabs="http://www.primagames.com/pages/contact-us">Contact Us</a></li>
+
+        <li class="right"><a href="javascript:if(confirm('http://www.mediaclash.co.uk/  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.mediaclash.co.uk/'" tppabs="http://www.mediaclash.co.uk/" target="_blank">Website by MediaClash</a></li>
+      </ul>
+    
+    </div> <!-- end footer -->
+
+  </div> <!-- end container -->
+
+
+
+
+
+	<div id="cart_lightbox">
+  <div id="lightbox">
+  
+    <div id="lightbox_container">
+      <div id="cartbox">
+        <div class="wrap clearfix">
+          <span class="close"><a href='javascript:$.fancybox.close();'>close</a></span>
+          <h3>Your Cart</h3>
+
+
+
+
+		  <div class="cart_subtotal">
+            <p><span>Sub total:</span> $0</p>
+          </div>
+          
+          <a class="checkout" href="javascript:if(confirm('http://www.primagames.com/accounts/cart/checkout  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/checkout'" tppabs="http://www.primagames.com/accounts/cart/checkout">continue to checkout</a>
+          
+        </div>
+      </div> <!-- end cartbox -->
+	</div>
+  </div>
+</div>
+
+	
+		
+		
+	
+
+
+
+<div id="report_lightbox">
+  <div id="lightbox">
+  
+    <div id="lightbox_container">
+  
+      <div id="loginbox">
+        <div class="wrap">
+          <div class="vert_line clearfix">
+            <span class="close"><a href='javascript:$.fancybox.close();'>close</a></span>
+            <div class="leftside" style="width: 500px;">
+			<form action="javascript:if(confirm('http://www.primagames.com/accounts/report?content_type=&content_pk=&ajax=true  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/report?content_type=&content_pk=&ajax=true'" tppabs="http://www.primagames.com/accounts/report?content_type=&content_pk=&ajax=true" method="post">
+				
+				
+				<input type="hidden" name="content_type" value="" id="report_content_type"/>
+				<input type="hidden" name="content_pk" value="" id="report_content_pk"/>
+
+
+
+				<input type='hidden' name='ajax' value='true'/>
+              <h3>Report this content</h3>
+			  <p class='errors'></p>
+              <label>Please enter a brief reason for your report:</label>
+              <textarea name="reason" style="color: #000; font-size: 13px; padding: 5px; padding: 10px; width: 250px; height: 150px;"></textarea>
+
+				<br style='clear: both;'/>
+
+              <button type="submit" style='float: left;'>Submit report</button>
+			</form>
+            </div>
+        </div>
+      </div> <!-- end loginbox -->
+      
+      
+  
+    </div> <!-- end lightbox_container -->
+    
+  </div> <!-- end lightbox -->
+</div> <!-- end #login_lightbox -->
+</div>
+
+
+
+
+
+
+
+<script type="text/javascript" charset="utf-8">
+  var is_ssl = ("https:" == document.location.protocol);
+  var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
+  document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  var feedback_widget_options = {};
+
+  feedback_widget_options.display = "overlay";  
+  feedback_widget_options.company = "primagamesonline";
+  feedback_widget_options.placement = "left";
+  feedback_widget_options.color = "#222";
+  feedback_widget_options.style = "idea";
+  
+  
+  
+  
+  
+  
+  
+
+  var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
+</script>
+
+
+
+<!-- SiteCatalyst Code version: H.17.
+Copyright 1997-2008 Omniture, Inc. More info available at http://www.omniture.com --> <script language="JavaScript" type="text/javascript" src="s_code.js" tppabs="http://www.randomhouse.com/js/s_code.js"></script>
+<script language="JavaScript" type="text/javascript"><!-- /*If your site resides on its own domain (i.e. www.owndomain.com), the hompage should be given a custom page name below. Other pages should omit it. */ s.pageName="";
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/ var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><a href="javascript:if(confirm('http://www.omniture.com/  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.omniture.com/'" tppabs="http://www.omniture.com/" title="Web Analytics"><img src="0.gif" tppabs="http://code.randomhouse.com/b/ss/ranhrollup/1/H.17--NS/0"
+height="1" width="1" border="0" alt="" /></a></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.17. -->
+
+</body>
+</html>

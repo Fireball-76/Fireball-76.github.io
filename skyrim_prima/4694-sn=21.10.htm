@@ -1,0 +1,1121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:image" content="http://www.primagames.com/media/images/updatedlogo.jpg" />
+<title>
+	
+		Lights Out &gt; Walkthrough - Prima Games</title>
+<link type="text/css" rel="stylesheet" href="joe.css" tppabs="http://www.primagames.com/media/css/joe.css" />
+<link type="text/css" rel="stylesheet" href="styles.css" tppabs="http://www.primagames.com/media/css/styles.css" />
+<link type="text/css" rel="stylesheet" href="jquery.fancybox-1.3.4.css" tppabs="http://www.primagames.com/media/css/jquery.fancybox-1.3.4.css" />
+<link type="text/css" rel="stylesheet" href="selectbox.css" tppabs="http://www.primagames.com/media/css/selectbox.css" />
+<link type="text/css" rel="stylesheet" href="jquery.rating.css" tppabs="http://www.primagames.com/media/css/jquery.rating.css" />
+<link type="text/css" rel="stylesheet" href="style.css" tppabs="http://www.primagames.com/media/forum/themes/IPB/style.css" />
+
+<script type="text/javascript" src="mt.js" tppabs="http://www.primagames.com/media/js/mt.js"></script>
+<script type="text/javascript" src="mtm.js" tppabs="http://www.primagames.com/media/js/mtm.js"></script>
+<script type="text/javascript" src="elSelect.js" tppabs="http://www.primagames.com/media/js/elSelect.js"></script>
+<script type="text/javascript" src="prima.js" tppabs="http://www.primagames.com/media/js/prima.js"></script>
+
+<script type='text/javascript' src="jquery.js" tppabs="http://www.primagames.com/media/js/jquery.js"></script>
+<script type='text/javascript' src="jqprima.js" tppabs="http://www.primagames.com/media/js/jqprima.js"></script>
+<script type='text/javascript' src="prima.tabs.js" tppabs="http://www.primagames.com/media/js/prima.tabs.js"></script>
+<script type='text/javascript' src="jquery.easing-1.3.pack.js" tppabs="http://www.primagames.com/media/js/fancybox-1.3.4/jquery.easing-1.3.pack.js"></script>
+<script type='text/javascript' src="jquery.mousewheel-3.0.4.pack.js" tppabs="http://www.primagames.com/media/js/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type='text/javascript' src="jquery.fancybox-1.3.4.js" tppabs="http://www.primagames.com/media/js/jquery.fancybox-1.3.4.js"></script>
+<script type='text/javascript' src="jquery.rating.js" tppabs="http://www.primagames.com/media/js/jquery.rating.js"></script>
+<script type='text/javascript' src="jquery.cycle.lite.js" tppabs="http://www.primagames.com/media/js/jquery.cycle.lite.js"></script>
+
+<script type='text/javascript' src="jquery.tablesorter.js" tppabs="http://www.primagames.com/media/js/jquery.tablesorter.js"></script>
+
+<script type='text/javascript' src="jquery-ui-1.8.16.min.js" tppabs="http://www.primagames.com/media/js/jquery-ui-1.8.16.min.js"></script>
+
+<script type="text/javascript" src="jwplayer.js" tppabs="http://www.primagames.com/media/js/jwplayer/jwplayer.js"></script>
+
+
+
+
+
+
+
+
+
+<script src="badgeville-current.js-key=9aba740a2e9897bce92109301bfd5c44&domain=primagames.com" tppabs="http://api.v2.badgeville.com/v2/badgeville-current.js?key=9aba740a2e9897bce92109301bfd5c44&domain=primagames.com"></script>
+
+
+
+<script>
+  Badgeville.setUser({
+    email: 'http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/fktrcfylh1982@yahoo.com',
+    display_name: 'fktrcfylh1982',
+    first_name: '',
+    last_name: '',
+    picture_url: 'avatar_placeholder.jpg'/*tpa=http://www.gravatar.com/avatar/49b82f5343d5552aec0c475cf069f954?d=http://www.primagames.com/media/images/avatar_placeholder.jpg*/,
+	site: 'http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/primagames.com'
+});
+
+
+
+
+Badgeville.ready(function() {
+	$(".total_points").text(Badgeville.Settings.user.points_all);
+	$(".week_points").text(Badgeville.Settings.user.points_week);
+});
+
+Badgeville.ready( function() { 
+  Badgeville.getAPI( 'user_badges', {id: Badgeville.Settings.user.id }, function( data ) { 
+    var displayed = 0; 
+    var target = Badgeville('.my_badges'); 
+    Badgeville.$.each( data.rewards, function() { 
+    if ( Badgeville.Objects.is( this, Badgeville.Objects.BADGE ) ) 
+       { Badgeville.Gears.reward( this ).appendTo(target); displayed++; } 
+       if ( displayed == 8 ) { return false; } 
+       }); 
+    }); 
+
+Badgeville.getAPI( 'user_levels', { id: Badgeville.Settings.user.id }, function( data ) {
+    fef = data;
+});
+
+Badgeville.Gears.levelStatus(Badgeville.Settings.user).appendTo(".level_status");
+
+Badgeville.Gears.currentLevel(Badgeville.Settings.user).appendTo(".current_level");
+
+ });
+
+</script>
+
+
+
+
+<script type='text/javascript'>
+
+
+function viewport()
+{
+var e = window
+, a = 'inner';
+if ( !( 'innerWidth' in window ) )
+{
+a = 'client';
+e = document.documentElement || document.body;
+}
+return { width : e[ a+'Width' ] , height : e[ a+'Height' ] }
+}
+
+$(document).ready(function() {
+	// Set up sortable tables
+	$(".tablesorter").each(function() {
+		// Add the correct row styling
+		table_instance = $(this);
+		table_instance.tablesorter();
+		table_instance.addClass("generic");
+		var i = 0;
+		table_instance.children("tbody").children("tr").each(function() {
+			row_instance = $(this);
+			i = i + 1;
+			if (i % 2 == 0)
+			{
+				row_instance.addClass("odd");
+			}
+		});
+	});
+
+	table_id = 0;
+
+	$(".tablesorter").each(function() {
+		// For a unique id for every sorted table on the page
+		table_id = table_id + 1;
+		$(this).attr("id", "tablesorter_" + table_id);
+
+		// Width of the table
+		this_width = $(this).width();
+
+
+		// If too wide, we need to generate a button to load the full table in an overlay
+		if (this_width > 435)
+		{
+			$(this).after("<br style='clear: both;'/><p><a href='#' class='tablesorter_enlarge' rel='" + table_id + "'><img src='olitable.png'/*tpa=http://www.primagames.com/media/images/olitable.png*/ alt='Click to enlarge table'/></a></p><br style='clear: both;'/>");
+			$(this).hide();
+		}
+
+		$(this).css("maxWidth", "95%");
+
+
+	});
+
+	$(".tablesorter_enlarge").live("click", function(e) {
+		e.preventDefault();
+
+		// Set up the overlay
+		$("body").append("<div id='tablesorter_overlay'><p class='tablesorter_overlay_close'><a href='#'>X</a></p></div>");
+		
+
+		// Get the current browser size and scroll position
+		viewport_width = viewport().width;
+		viewport_height = viewport().height;
+		
+		viewport_offsetx = window.pageXOffset;
+		viewport_offsety = window.pageYOffset;
+
+
+		$("#tablesorter_overlay").css("top", viewport_offsety);
+
+		table_instance = $("#tablesorter_" + $(this).attr("rel"));
+		table_instance.css("position", "absolute");
+
+
+		// Make a copy of this table so we'll have the original safe, and set it to be sorted. Add it to the overlay
+		new_table_instance = table_instance.clone().tablesorter();
+		new_table_instance.appendTo("#tablesorter_overlay");
+		new_table_instance.show();
+
+		if (new_table_instance.height() > $("#tablesorter_overlay").height())
+		{
+			// If the table is taller, set the overlay to same height
+			$("#tablesorter_overlay").height(new_table_instance.height());
+		}
+
+		// Move the overlay when the window is scrolled, if we try to scroll above the top
+
+		$(window).scroll(function() {
+
+			overlay_top = $("#tablesorter_overlay").offset().top;
+			overlay_bottom = $("#tablesorter_overlay").height();
+
+			viewport_bottom = window.pageYOffset + $(window).height();
+
+			if (window.pageYOffset < overlay_top)
+			{
+				$("#tablesorter_overlay").css("top", window.pageYOffset);
+			}
+
+		});
+
+	});
+
+	$(".tablesorter_overlay_close").live("click", function(e) {
+		e.preventDefault();
+		// Clean up by removing the entire overlay
+		$("#tablesorter_overlay").remove();
+	});
+
+});
+</script>
+
+
+<script type='text/javascript'>
+
+
+
+
+
+
+// Link the user will be taken to after logging in
+
+
+	
+		var _nextLink = "/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4694?sn=21.10";
+	
+
+var _loggedIn = true; 
+
+
+var _reportPK;
+
+</script>
+
+
+
+<script type="text/javascript">
+  var rpxJsHost = (("https:" == document.location.protocol) ? "https://" : "http://static./");
+  document.write(unescape("%3Cscript src='" + rpxJsHost +
+"rpxnow.com/js/lib/rpx.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  RPXNOW.overlay = true;
+  RPXNOW.language_preference = 'en';
+</script>
+
+<script>
+  window.tokenurl = 'http://www.primagames.com/janrain/login/';
+  window.realm = 'http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/login.primagames.com';
+</script>
+<script type='text/javascript' src="janrain.js" tppabs="http://www.primagames.com/media/js/janrain.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+  <div id="container">
+
+    <div id="header">
+      <h1><a href="javascript:if(confirm('http://www.primagames.com/  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/'" tppabs="http://www.primagames.com/" title="Prima games">Prima games</a></h1>
+      <div id="search_wrapper">
+        <form action="http://www.primagames.com/search" method="get"><input id="globalsearch" type="text" name="q" class="blankdefault" autocomplete="off" value="Search for strategy" /></form>
+      </div>
+
+
+<div id="search_dropdown">
+        <div class="wrap">
+
+
+
+		</div>
+      </div>
+
+
+      
+      <div id="nav_platforms">
+        <ul>
+          <li>Platforms:</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=PS3  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=PS3'" tppabs="http://www.primagames.com/games?platform=PS3">PS3</a> |</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=Xbox+360  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=Xbox+360'" tppabs="http://www.primagames.com/games?platform=Xbox+360">Xbox 360</a> |</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=Wii  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=Wii'" tppabs="http://www.primagames.com/games?platform=Wii">Wii</a> |</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=PC  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=PC'" tppabs="http://www.primagames.com/games?platform=PC">PC</a> |</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=DS  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=DS'" tppabs="http://www.primagames.com/games?platform=DS">DS</a> |</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=PSP  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=PSP'" tppabs="http://www.primagames.com/games?platform=PSP">PSP</a> |</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=iPhone  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=iPhone'" tppabs="http://www.primagames.com/games?platform=iPhone">iPhone</a> |</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=PS2  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=PS2'" tppabs="http://www.primagames.com/games?platform=PS2">PS2</a></li>
+        </ul>
+      </div>
+      
+      <div id="basket">
+        <div class="wrap">
+          <h4>Shopping cart</h4>
+          
+		  
+			<p>
+				0 items $0.00
+			</p>
+
+
+			
+
+		  
+        </div>
+      </div>
+      
+      <div id="head_logmenu">
+		
+        <p>Hi <a href="javascript:if(confirm('http://www.primagames.com/accounts/  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/'" tppabs="http://www.primagames.com/accounts/">fktrcfylh1982</a>! You are logged in | <a href="javascript:if(confirm('http://www.primagames.com/accounts/logout  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/logout'" tppabs="http://www.primagames.com/accounts/logout">Logout</a></p>
+        <p class="points"><span class='total_points'></span> <a href="javascript:if(confirm('http://www.primagames.com/points  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/points'" tppabs="http://www.primagames.com/points">Get more points</a></p>
+		
+      </div>
+      
+      <br class="clear" />
+      
+      <div id="nav_main">
+        <ul>
+          <li class="tagline">Strategy where, when and how you want it</li>
+          <li class="last"><a href="javascript:if(confirm('http://www.primagames.com/contact  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/contact'" tppabs="http://www.primagames.com/contact">Contact</a></li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games/shop  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/shop'" tppabs="http://www.primagames.com/games/shop">Shop</a></li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/blog/  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/blog/'" tppabs="http://www.primagames.com/blog/">Blog</a></li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/discussion  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/discussion'" tppabs="http://www.primagames.com/discussion">Discussion</a></li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/news  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/news'" tppabs="http://www.primagames.com/news">Latest news</a></li>
+          <li class="current"><a href="javascript:if(confirm('http://www.primagames.com/games  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games'" tppabs="http://www.primagames.com/games">Games</a></li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/'" tppabs="http://www.primagames.com/">Home</a></li>
+        </ul>
+      </div>
+    
+      <br class="clear" />
+    </div>
+    
+    <div id="content">
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+ <h1 class="nomarg">THE ELDER SCROLLS V: SKYRIM</h1>
+      <ul id="subnav" class="clearfix">
+        <li><a href="javascript:if(confirm('http://www.primagames.com/games/elder-scrolls-v-skyrim  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/elder-scrolls-v-skyrim'" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim">game</a> |</li>
+
+		
+		
+		<li class="current"><a href="javascript:if(confirm('http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides'" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides">official guides</a> |</li>
+		
+
+
+        <li><a href="javascript:if(confirm('http://www.primagames.com/games/elder-scrolls-v-skyrim/community  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/elder-scrolls-v-skyrim/community'" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/community">community</a> |</li>
+        <li><a href="javascript:if(confirm('http://www.primagames.com/games/elder-scrolls-v-skyrim/news  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/elder-scrolls-v-skyrim/news'" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/news">game news</a> |</li>
+        <li><a href="javascript:if(confirm('http://www.primagames.com/games/elder-scrolls-v-skyrim/cheats  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/elder-scrolls-v-skyrim/cheats'" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/cheats">cheats & achievements</a></li>
+      </ul>
+      
+	  
+
+
+
+	  
+	
+		  <div id="breadcrumb">
+			<p>You are here:  <a href="javascript:if(confirm('http://www.primagames.com/games  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games'" tppabs="http://www.primagames.com/games">Games</a> &gt; <a href="javascript:if(confirm('http://www.primagames.com/games/elder-scrolls-v-skyrim  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/elder-scrolls-v-skyrim'" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim">The Elder Scrolls V: Skyrim</a> &gt; <a href="javascript:if(confirm('http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides'" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides">Official Guides</a> &gt; <a href="232.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232">Elder Scrolls V: Skyrim</a>  </p> 
+		  </div>
+	
+
+
+		
+
+
+
+      <div class="container_wrap">
+      
+
+		
+<div class="one_q">
+          
+
+          <div class="email_alerts">
+            <h2>Get email alerts on this game</h2>
+            <div class="wrap">
+              <p>Sign-up to stay informed on the latest news, best interviews and exclusive content for The Elder Scrolls V: Skyrim</p>
+              <p class="red_button fleft"><a href="javascript:if(confirm('http://www.primagames.com/accounts/alerts/?add=elder-scrolls-v-skyrim  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/alerts/?add=elder-scrolls-v-skyrim'" tppabs="http://www.primagames.com/accounts/alerts/?add=elder-scrolls-v-skyrim" class="login_required">sign-up</a></p>
+            </div>
+          </div>
+          <div class="line">&nbsp;</div>
+
+          
+
+
+          
+
+		  
+
+		
+		  <div id="follow">
+            <div class="wrap">
+              <h3>Follow us</h3>
+              <p>
+              <a href="javascript:if(confirm('http://www.facebook.com/PrimaGames  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.facebook.com/PrimaGames'" tppabs="http://www.facebook.com/PrimaGames" target="_blank"><img alt="Facebook" src="facebook.jpg" tppabs="http://www.primagames.com/media/images/facebook.jpg" width="49" height="49" /></a>
+              <a href="javascript:if(confirm('http://www.youtube.com/user/PrimaGamesVideo  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.youtube.com/user/PrimaGamesVideo'" tppabs="http://www.youtube.com/user/PrimaGamesVideo" target="_blank"><img alt="Youtube" src="youtube_new.jpg" tppabs="http://www.primagames.com/media/images/youtube_new.jpg" width="49" height="49" /></a>
+              <a href="javascript:if(confirm('http://twitter.com/primagames  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://twitter.com/primagames'" tppabs="http://twitter.com/primagames" target="_blank"><img alt="Twitter" src="twitter.jpg" tppabs="http://www.primagames.com/media/images/twitter.jpg" width="49" height="49" /></a>
+              <a href="javascript:if(confirm('http://www.primagames.com/contact  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/contact'" tppabs="http://www.primagames.com/contact"><img alt="Email" src="email.jpg" tppabs="http://www.primagames.com/media/images/email.jpg" width="49" height="49" /></a>
+              </p>
+            </div>
+          </div>
+          
+          <div class="line">&nbsp;</div>
+          
+          <div class="content_box bluegrey">
+            <h2>Prima on Twitter</h2>
+            <div id="twitter_feed">
+              <div class="wrap">
+                <p><a href="javascript:if(confirm('http://twitter.com/primagames/status/136495435027189761  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://twitter.com/primagames/status/136495435027189761'" tppabs="http://twitter.com/primagames/status/136495435027189761" target='_blank'>Did you pick up your #AssassinsCreed Revelations yet? Make sure to check out our online eGuide to get every achvmt! http://t.co/n3V524ji</a><br /><br /><small>about an hour ago</small></p>
+              </div>
+            </div>
+            <br class="clear" />
+          </div>
+          
+          <div class="line">&nbsp;</div>
+          
+		  
+		  
+          <div class="content_box redlgrey">
+            <h2>Prima points <a href="javascript:if(confirm('http://www.primagames.com/accounts/  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/'" tppabs="http://www.primagames.com/accounts/" class="right">My account &raquo;</a></h2>
+            <div class="wrap">
+              <div id="points_left">
+              
+                <div class="points_block">
+                  <dl class="list">
+                    <dt><h3><a href="">fktrcfylh1982</a></h3></dt>
+                    <dd>
+                      <div class="leftblock">
+                        <img src="avatar_placeholder.jpg" tppabs="http://www.gravatar.com/avatar/49b82f5343d5552aec0c475cf069f954?d=http://www.primagames.com/media/images/avatar_placeholder.jpg" width="42" height="42" />
+                      </div>
+                      <div class="rightblock">
+                        <p class="alltime"><span class="score total_points">0</span> <span class="title">all time</span></p>
+                        <p class="thisweek"><span class="score week_points">0</span> <span class="title">this week</span></p>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+                
+                <div class="points_block light">
+                  <h2>My Badges</h2>
+                  <div class="wrap my_badges my_badges_sidebar">
+
+				
+
+                  </div>
+                </div>
+              
+                <p><a href="javascript:if(confirm('http://www.primagames.com/points  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/points'" tppabs="http://www.primagames.com/points" class="red_button_full">Get more points</a></p>
+                       
+              </div>
+            </div>
+          </div>
+		  
+          
+          <div class="line">&nbsp;</div>
+
+
+          
+          <div class="content_box redwhite">
+            <h2>Best selling guides</h2>
+			<div id="best_selling_guides" rel="1" class="dynamic_block">	
+				
+	<div class="wrap">
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/saints-row-third/primaguides/191  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/saints-row-third/primaguides/191'" tppabs="http://www.primagames.com/games/saints-row-third/primaguides/191"><img alt="Saints Row: The Third" src="saints_row_third_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/saints_row_third_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/saints-row-third/primaguides/191  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/saints-row-third/primaguides/191'" tppabs="http://www.primagames.com/games/saints-row-third/primaguides/191">Saints Row: The Third</a></h3>
+                  <p>$24.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/saints-row-third/primaguides/191  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/saints-row-third/primaguides/191'" tppabs="http://www.primagames.com/games/saints-row-third/primaguides/191" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/191  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/191'" tppabs="http://www.primagames.com/accounts/cart/add/191" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/sims-3-pets/primaguides/209  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/sims-3-pets/primaguides/209'" tppabs="http://www.primagames.com/games/sims-3-pets/primaguides/209"><img alt="The Sims 3: Pets" src="sims3_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/sims3_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/sims-3-pets/primaguides/209  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/sims-3-pets/primaguides/209'" tppabs="http://www.primagames.com/games/sims-3-pets/primaguides/209">The Sims 3: Pets</a></h3>
+                  <p>$19.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/sims-3-pets/primaguides/209  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/sims-3-pets/primaguides/209'" tppabs="http://www.primagames.com/games/sims-3-pets/primaguides/209" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/209  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/209'" tppabs="http://www.primagames.com/accounts/cart/add/209" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/saints-row-third/primaguides/238  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/saints-row-third/primaguides/238'" tppabs="http://www.primagames.com/games/saints-row-third/primaguides/238"><img alt="Saints Row: The Third - Interactive Map Pack" src="9780307891976_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/9780307891976_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/saints-row-third/primaguides/238  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/saints-row-third/primaguides/238'" tppabs="http://www.primagames.com/games/saints-row-third/primaguides/238">Saints Row: The Third - Interactive Map Pack</a></h3>
+                  <p>$9.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/saints-row-third/primaguides/238  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/saints-row-third/primaguides/238'" tppabs="http://www.primagames.com/games/saints-row-third/primaguides/238" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/238  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/238'" tppabs="http://www.primagames.com/accounts/cart/add/238" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/assassins-creed-revelations/primaguides/244  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/assassins-creed-revelations/primaguides/244'" tppabs="http://www.primagames.com/games/assassins-creed-revelations/primaguides/244"><img alt="Assassin&#39;s Creed: Revelations - Map Pack" src="acr_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/acr_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/assassins-creed-revelations/primaguides/244  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/assassins-creed-revelations/primaguides/244'" tppabs="http://www.primagames.com/games/assassins-creed-revelations/primaguides/244">Assassin&#39;s Creed: Revelations - Map Pack</a></h3>
+                  <p>$9.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/assassins-creed-revelations/primaguides/244  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/assassins-creed-revelations/primaguides/244'" tppabs="http://www.primagames.com/games/assassins-creed-revelations/primaguides/244" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/244  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/244'" tppabs="http://www.primagames.com/accounts/cart/add/244" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/rage/primaguides/77  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/rage/primaguides/77'" tppabs="http://www.primagames.com/games/rage/primaguides/77"><img alt="Rage" src="rage_cover_1_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/rage_cover_1_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/rage/primaguides/77  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/rage/primaguides/77'" tppabs="http://www.primagames.com/games/rage/primaguides/77">Rage</a></h3>
+                  <p>$19.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/rage/primaguides/77  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/rage/primaguides/77'" tppabs="http://www.primagames.com/games/rage/primaguides/77" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/77  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/77'" tppabs="http://www.primagames.com/accounts/cart/add/77" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+              <br class="clear" />
+            </div>
+
+					<p class="center">
+
+					
+						&nbsp;&nbsp;&nbsp; 
+							1 - 5 of 9
+						&nbsp;&nbsp;&nbsp;
+					
+						<a href="#" class="homepage_next">Next &raquo;</a>
+					
+					
+					</p>  
+			</div>
+          </div>
+
+		            
+          <div class="line">&nbsp;</div>
+          <div class="content_box redwhite">
+            <h2>Top guide pre-orders</h2>
+			<div id="best_preorder_guides" rel="1" class="dynamic_block">	
+				
+	<div class="wrap">
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251'" tppabs="http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251"><img alt="Tom Clancy&#39;s Ghost Recon Future Soldier" src="future_solder_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/future_solder_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251'" tppabs="http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251">Tom Clancy&#39;s Ghost Recon Future Soldier</a></h3>
+                  <p>$19.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251'" tppabs="http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/251  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/251'" tppabs="http://www.primagames.com/accounts/cart/add/251" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/wwe-2012/primaguides/217  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/wwe-2012/primaguides/217'" tppabs="http://www.primagames.com/games/wwe-2012/primaguides/217"><img alt="WWE &#39;12" src="wwe_1_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/wwe_1_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/wwe-2012/primaguides/217  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/wwe-2012/primaguides/217'" tppabs="http://www.primagames.com/games/wwe-2012/primaguides/217">WWE &#39;12</a></h3>
+                  <p>$19.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/wwe-2012/primaguides/217  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/wwe-2012/primaguides/217'" tppabs="http://www.primagames.com/games/wwe-2012/primaguides/217" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/217  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/217'" tppabs="http://www.primagames.com/accounts/cart/add/217" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/mario-kart-7/primaguides/255  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/mario-kart-7/primaguides/255'" tppabs="http://www.primagames.com/games/mario-kart-7/primaguides/255"><img alt="Mario Kart 7" src="mario_kart_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/mario_kart_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/mario-kart-7/primaguides/255  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/mario-kart-7/primaguides/255'" tppabs="http://www.primagames.com/games/mario-kart-7/primaguides/255">Mario Kart 7</a></h3>
+                  <p>$19.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/mario-kart-7/primaguides/255  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/mario-kart-7/primaguides/255'" tppabs="http://www.primagames.com/games/mario-kart-7/primaguides/255" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/255  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/255'" tppabs="http://www.primagames.com/accounts/cart/add/255" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/super-mario-3d-land/primaguides/256  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/super-mario-3d-land/primaguides/256'" tppabs="http://www.primagames.com/games/super-mario-3d-land/primaguides/256"><img alt="Super Mario 3D Land" src="mario_land_3d_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/mario_land_3d_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/super-mario-3d-land/primaguides/256  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/super-mario-3d-land/primaguides/256'" tppabs="http://www.primagames.com/games/super-mario-3d-land/primaguides/256">Super Mario 3D Land</a></h3>
+                  <p>$19.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/super-mario-3d-land/primaguides/256  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/super-mario-3d-land/primaguides/256'" tppabs="http://www.primagames.com/games/super-mario-3d-land/primaguides/256" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/256  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/256'" tppabs="http://www.primagames.com/accounts/cart/add/256" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254'" tppabs="http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254"><img alt="Legend of Zelda: Skyward Sword" src="zelda_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/zelda_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254'" tppabs="http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254">Legend of Zelda: Skyward Sword</a></h3>
+                  <p>$24.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254'" tppabs="http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/254  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/254'" tppabs="http://www.primagames.com/accounts/cart/add/254" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+              <br class="clear" />
+            </div>
+
+					<p class="center">
+
+					
+						&nbsp;&nbsp;&nbsp; 
+							1 - 5 of 5
+						&nbsp;&nbsp;&nbsp;
+					
+					
+					</p>  
+			</div>
+          </div>
+
+
+          <div class="line">&nbsp;</div>
+          
+        </div> <!-- one_q end -->
+        
+                
+        <div class="three_q">
+          
+ 
+
+		  
+		  <ul class="guide_nav clearfix">
+            <li class=''><a href="introduction.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/introduction">Introduction</a></li>
+
+<li class=''><a href="gameplay.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay">Essentials</a></li>
+
+
+
+            <li class=' current'><a href="walkthrough.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough">Walkthrough</a></li>
+
+
+
+
+
+            <li class=''><a href="maps.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/maps">
+				
+					Maps
+				
+			</a></li>
+
+
+
+
+
+
+
+
+          </ul> 
+
+
+           
+          <div class="guide_content">
+            <div class="wrap clearfix">
+            	
+
+
+
+
+<div id="search_guide">
+        <form action="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/search" method="get"><input id="guidesearch" type="text" name="q" class="blankdefault" autocomplete="off" value="Search this guide"></form>
+      </div>
+	  <br style='clear: both;'/>
+
+
+              <div class="nextprev clearfix">
+                <div class="prev">&lt; <a href="4693.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4693">Previous section</a></div>
+                <div class="title"></div>
+                <div class="next"><a href="4696.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4696">Next section</a> &gt;</div>
+              </div>
+              
+              <h2>20.10 Lights Out</h2>
+            
+              <div class="innernextprev clearfix">
+                <div class="prev"></div>
+                <div class="next"></div>
+              </div>
+            
+              <div class="guide_left box">
+                
+
+   
+
+				
+
+
+					
+						<div class="caution">
+<h3>Minor Spoilers</h3>
+</div>
+<p><strong>Prerequisites:</strong> None</p>
+<p><strong>Intersecting Quests: </strong>None</p>
+<p><strong>Locations: </strong>Broken Oar Grotto, East Empire Company Warehouse, Solitude, Solitude Lighthouse, Wreck of the Icerunner</p>
+<p><strong>Characters:</strong> Deeja, Jaree-Ra, Ma&rsquo;zaka</p>
+<p><strong>Enemies: </strong>Bandit, Blackblood Marauder</p>
+<p><strong>Objectives:</strong> Put out the fire in Solitude Lighthouse, Return to Jaree-Ra, Find Deeja at the Wreck of the Icerunner, Defeat Deeja, Find out where Jaree-Ra&rsquo;s bandits took the loot, Travel to Broken Oar Grotto, Defeat Jaree-Ra</p>
+<h4>Snuffing the Lights of Solitude</h4>
+<div class="gameplay_image">
+<div class="enlarge"><a target="_blank">Please click to enlarge</a></div>
+<img src="ms07-001.jpg" tppabs="http://www.primagames.com/games/media/files/skyrim/ms07-001.jpg" border="0" width="437" /></div>
+<p>When you visit Solitude, be on the lookout for a shady Argonian character who usually lurks outside of Angeline&rsquo;s Aromatics, close to one of the city gates. He sometimes beckons you over. Step up to him and ask what he wants.</p>
+<p>He explains that he and his sister Deeja are treasure hunters. With the advent of the war, and as Solitude is one of the Empire&rsquo;s major ports, the Solitude Lighthouse serves a vital purpose keeping ships safe in the treacherous waters of the Northern Coast.</p>
+<p>Now, if the lighthouse went dark, one of the cargo ships that Jaree-Ra has had his eye on&mdash;the Icerunner&mdash;could run aground and yield some sizable plunder. Are you in?</p>
+<div class="gameplay_image">
+<div class="enlarge"><a target="_blank">Please click to enlarge</a></div>
+<img src="ms07-002.jpg" tppabs="http://www.primagames.com/games/media/files/skyrim/ms07-002.jpg" border="0" width="437" /></div>
+<p>If you are, agree to put out the lighthouse fire. You can also ask about the ship&rsquo;s crew or turn him over to the guards, but neither helps your success with this quest.</p>
+<p><strong>Objective:</strong> Put out the fire in Solitude Lighthouse<br /><strong>Target:</strong> The top of Solitude Lighthouse</p>
+<div class="gameplay_image">
+<div class="enlarge"><a target="_blank">Please click to enlarge</a></div>
+<img src="ms07-004.jpg" tppabs="http://www.primagames.com/games/media/files/skyrim/ms07-004.jpg" border="0" width="437" /></div>
+<p>Beyond the giant arch of Solitude on the cusp of the Northern Coast is the Solitude Lighthouse. Climb the stairs in the exterior, being careful not to alert the lighthouse keeper, Ma&rsquo;zaka. Although he sometimes confines himself inside his quarters within the Lighthouse, he may be wandering the building.</p>
+<p>Simply avoid him, or if you encounter Ma&rsquo;zaka, kill him or sneak up the tower so you&rsquo;re not spotted. Ma&rsquo;zaka won&rsquo;t spot that the Lighthouse fire is out until it is too late and the ship Jaree-Ra was eyeing runs aground.</p>
+<p>Once atop the Lighthouse tower, snuff the flames (there isn&rsquo;t any special equipment needed for this).</p>
+<p><strong>Objective: </strong>Return to Jaree-Ra <br /><strong>Target: </strong>Jaree-Ra, near the East Empire Company Warehouse</p>
+<h4>Scuttled and Plundered!</h4>
+<div class="gameplay_image">
+<div class="enlarge"><a target="_blank">Please click to enlarge</a></div>
+<img src="ms07-005.jpg" tppabs="http://www.primagames.com/games/media/files/skyrim/ms07-005.jpg" border="0" width="437" /></div>
+<p>Find Jaree-Ra on the docks outside the East Empire Company Warehouse. Speak to him: Your actions have already caused the Icerunner to run aground on the shoals across the bay. Jaree-Ra has already dispatched his sister and his gang, the Blackblood Marauders, to strip the ship of valuables. You are to join them.</p>
+<p><strong>Objective:</strong> Find Deeja at the Wreck of the Icerunner<br /><strong>Target:</strong> Deeja, inside the Wreck of the Icerunner</p>
+<div class="tip">
+<h3>Tip</h3>
+<p>The Icerunner runs aground only during this quest; you cannot stumble upon it until you have extinguished the beacon for Jaree-Ra.</p>
+</div>
+<p>You can wade, swim, or Fast-Travel to a nearby location and clamber across the rugged terrain to the ship that has scraped the jagged rocks along the coast. As you draw near, you can see Blackblood Marauders are already stripping the cargo from the vessel. The corpses suggest that the ship&rsquo;s former crew have already been dealt with.</p>
+<p>&nbsp;</p>
+<div class="gameplay_image">
+<div class="enlarge"><a target="_blank">Please click to enlarge</a></div>
+<img src="ms07-006.jpg" tppabs="http://www.primagames.com/games/media/files/skyrim/ms07-006.jpg" border="0" width="437" /></div>
+<p>You can talk to one of the Marauders, who tells you Deeja is expecting you down in the hold of the ship. Enter the ship, and head south along the main corridor, opening the second door on your left.</p>
+<p>Wind your way down the steps to the waterlogged hold. Now head north to a storage alcove where Deeja is checking the contents of a large treasure chest.</p>
+<p>Deeja says she&rsquo;s supposed to give you a cut of the loot. But as most of the loot has already been moved, she has another offering: a quick death!</p>
+<p><strong>Objective:</strong> Defeat Deeja<br /><strong>Objective:</strong> Find out where Jaree-Ra&rsquo;s bandits took the loot</p>
+<p>The Argonian shouldn&rsquo;t be too terrifying an opponent for you; quickly cut her down and then search her still-twitching corpse. The note from Jaree-Ra refers to both the &ldquo;fool who did our work at the lighthouse&rdquo; and the location of the plundered loot: Broken Oar Grotto.</p>
+<p>Battle the remaining Blackblood Marauders who attempt to halt your progress from the Icerunner, and fight your way onto the exterior deck; expect to dispatch about five before the ship is empty of double-crossing cutthroats!</p>
+<p><strong>Objective:</strong> Travel to Broken Oar Grotto</p>
+<p><strong>Objective:</strong> Defeat Jaree-Ra<br /><strong>Target:</strong> Broken Oar Grotto</p>
+<p>When you get back outside, you&rsquo;ll notice that the rowboats loaded up with loot are already gone, as are most of the Marauders. Only one remains on the shore, with the boat that would have carried the last few stragglers away. Deal with him.</p>
+<div class="tip">
+<h3>Tip</h3>
+<p>An Alternate Path&mdash;Violence Is Golden: Did you suspect something was amiss when you arrived on the Icerunner&rsquo;s deck? Couldn&rsquo;t keep your hands off the rowboats loaded with treasure, could you?</p>
+<p>Or did you &ldquo;accidentally&rdquo; impale one of the Marauders on your blade? Then there&rsquo;s an alternate method of continuing: If you attack any Marauders or steal any of their loot, all the folks on the Icerunner turn hostile.</p>
+<p>You&rsquo;ll have to fight your way down to Deeja to claim the note from her corpse to continue this quest! The best part of this plan is that although you have a harder fight on your hands, your reward is greater, as the Marauders never leave with the loot, so you can claim it for yourself, either now or once the quest concludes!</p>
+</div>
+<h4>Seeing the Light</h4>
+<div class="gameplay_image">
+<div class="enlarge"><a target="_blank">Please click to enlarge</a></div>
+<img src="ms07-007.jpg" tppabs="http://www.primagames.com/games/media/files/skyrim/ms07-007.jpg" border="0" width="437" /></div>
+<p>Optimally Fast-Travel to Solitude Lighthouse and walk west along the Northern Coast, as the Broken Oar Grotto is nearby. There&rsquo;s a scuttled boat and two recently moored rowboats at the entrance.</p>
+<p>Enter the smuggler&rsquo;s hideout, fashioned from wood and cavern pathways, and maneuver through this large and looming place. Prepare for protracted combat at long and short ranges with Blackblood Marauders.</p>
+<div class="tip">
+<h3>Tip</h3>
+<p>Remember to locate the levers to lower the bridge sections to make your traversing a little easier. There are occasional oil lamps to strike and cause a ground fire, too. Better yet, simply submerge yourself and swim along the inlet (ideally while shrouding yourself using magic) to reach the rickety unloading building at the grotto&rsquo;s far end.</p>
+</div>
+<div class="gameplay_image">
+<div class="enlarge"><a target="_blank">Please click to enlarge</a></div>
+<img src="ms07-008.jpg" tppabs="http://www.primagames.com/games/media/files/skyrim/ms07-008.jpg" border="0" width="437" /></div>
+<p>Farther into the grotto, Marauders guard a rickety building used for unloading ill-gotten gains. The end of the grotto, where a sunken ship decomposes in the turquoise water, is where Jaree-Ra is counting his loot.</p>
+<p>Battle up the wooden ramps to the top of the dock structure, and slay the dishonorable lizard with whatever death-dealing implements you consider most suitable. Then scour the Broken Oar Grotto for any remaining foes and any valuables you can scavenge.</p>
+<div class="tip">
+<h3>Tip</h3>
+<p>Fallen into the water? Then use the half-submerged jetty steps throughout this grotto to reach dry land. Fighting foes? Then utilize the jagged rock walls and passageways to hide in, if you&rsquo;re becoming overwhelmed.</p>
+</div>
+<h4>Quest Conclusion</h4>
+<p>Consult the Atlas chapter for any valuables you can scavenge from the Wreck of the Icerunner or Broken Oar Grotto. Expect no other rewards.</p>
+					
+
+					
+
+                
+
+
+			  
+                
+              </div> <!-- guide_left end -->
+
+
+            
+
+            
+			  
+              
+              <div class="guide_right side">
+              
+
+
+				
+
+                
+                <h4>Related Walkthroughs</h4>
+                <ul>
+					
+						<li><a href="4711.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4711">The White Phial</a></li>
+				    
+						<li><a href="4710.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4710">Unfathomable Depths</a></li>
+				    
+						<li><a href="4709.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4709">A Blade in the Dark</a></li>
+				    
+						<li><a href="4708.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4708">Rising at Dawn</a></li>
+				    
+						<li><a href="4707.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4707">Rise in the East</a></li>
+				    
+						<li><a href="4706.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4706">The Horn of Jurgen Windcaller</a></li>
+				    
+						<li><a href="4705.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4705">The Way of the Voice</a></li>
+				    
+						<li><a href="4704.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4704">A Return to Your Roots</a></li>
+				    
+						<li><a href="4702.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4702">Dragon Rising</a></li>
+				    
+						<li><a href="4701.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4701">Promises to Keep</a></li>
+				    
+						<li><a href="4700.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4700">Bleak Falls Barrow</a></li>
+				    
+						<li><a href="4699.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4699">Missing in Action</a></li>
+				    
+						<li><a href="4698.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4698">Before the Storm</a></li>
+				    
+						<li><a href="4696.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4696">The Man Who Cried Wolf</a></li>
+				    
+						<li><a href="4695.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4695">Unbound</a></li>
+				    
+						<li><a href="4694.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4694">Lights Out</a></li>
+				    
+						<li><a href="4693.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4693">Laid to Rest</a></li>
+				    
+						<li><a href="4691.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4691">Kyne&#39;s Sacred Trials</a></li>
+				    
+						<li><a href="4690.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4690">In my Time of Need</a></li>
+				    
+						<li><a href="4687.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4687">The Forsworn Conspiracy</a></li>
+				    
+						<li><a href="4686.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4686">Forbidden Legend</a></li>
+				    
+						<li><a href="4685.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4685">Blood on the Ice</a></li>
+				    
+						<li><a href="4684.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4684">Overview</a></li>
+				    
+                </ul>
+				
+
+				
+
+				
+                
+
+				
+              
+              </div> <!-- guide_right end -->
+              
+
+              <div class="innernextprev clearfix">
+                <div class="prev"></div>
+                <div class="next"></div>
+              </div>
+
+              <div class="nextprev clearfix">
+                <div class="prev">&lt; <a href="4693.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4693">Previous section</a></div>
+                <div class="title"></div>
+                <div class="next"><a href="4696.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough/4696">Next section</a> &gt;</div>
+              </div>
+                            
+              
+            </div>
+
+
+			
+
+          </div> <!-- guide_content end -->
+     
+
+
+     
+        </div> <!-- end three_q -->
+      
+
+      </div>
+      
+      
+      <br class="clear" />
+
+
+
+
+
+
+
+
+<div id="offsitefeature_lightbox">
+  <div id="lightbox">
+  
+    <div id="lightbox_container">
+  
+			<div id="loginbox">
+			            <span class="close"><a href='javascript:$.fancybox.close();'>close</a></span>
+						<iframe src='about:blank' style='width: 100%; height: 500px; margin-top: 35px;' id='offsitefeature_iframe'></iframe>
+			</div>
+      
+      
+  
+    </div> <!-- end lightbox_container -->
+    
+  </div> <!-- end lightbox -->
+</div> <!-- end #login_lightbox -->
+<a href='#offsitefeature_lightbox' id='offsitefeature_link'></a>
+
+
+
+
+	
+	</div> <!-- end content -->
+
+    <div id="footer">
+    
+      <div class="block">
+        <div class="wrap">
+          <h4>By console</h4>
+          <ul>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/?platform=PS3  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/?platform=PS3'" tppabs="http://www.primagames.com/games/?platform=PS3">PS3 Games Strategy Guides</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=Xbox+360  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=Xbox+360'" tppabs="http://www.primagames.com/games?platform=Xbox+360">Xbox 360 Games Strategy Guides</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=Wii  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=Wii'" tppabs="http://www.primagames.com/games?platform=Wii">Wii Games Strategy Guides</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=PC  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=PC'" tppabs="http://www.primagames.com/games?platform=PC">PC Games Strategy Guides</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=DS  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=DS'" tppabs="http://www.primagames.com/games?platform=DS">DS Strategy Guides</a></li>
+		  
+            <li><a href=" javascript:if(confirm('http://www.primagames.com/games?platform=PSP  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=PSP'" tppabs="http://www.primagames.com/games?platform=PSP">PSP Strategy Guides</a></li>
+		  
+          </ul>    
+        </div>
+      </div>
+      
+      <div class="block">
+        <div class="wrap">
+          <h4>Strategy guides</h4>
+          <ul>
+		  
+            <li><a href="232.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232">The Elder Scrolls V: Skyrim Strategy Guide</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/assassins-creed-revelations/primaguides/212  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/assassins-creed-revelations/primaguides/212'" tppabs="http://www.primagames.com/games/assassins-creed-revelations/primaguides/212">Assassin&#39;s Creed: Revelations Strategy Guide</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/saints-row-third/primaguides/191  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/saints-row-third/primaguides/191'" tppabs="http://www.primagames.com/games/saints-row-third/primaguides/191">Saints Row: The Third Strategy Guide</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/battlefield-3/primaguides/95  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/battlefield-3/primaguides/95'" tppabs="http://www.primagames.com/games/battlefield-3/primaguides/95">Battlefield 3 Strategy Guide</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254'" tppabs="http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254">Legend of Zelda: Skyward Sword Strategy Guide</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/mario-kart-7/primaguides/255  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/mario-kart-7/primaguides/255'" tppabs="http://www.primagames.com/games/mario-kart-7/primaguides/255">Mario Kart 7 Strategy Guide</a></li>
+		  
+            <li><a href="243.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/243">Elder Scrolls V: Skyrim Maps</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/rage/primaguides/77  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/rage/primaguides/77'" tppabs="http://www.primagames.com/games/rage/primaguides/77">Rage Strategy Guide</a></li>
+		  
+          </ul>    
+        </div>
+      </div>
+      
+      
+      <div class="block last">
+        <div class="wrap">
+          <h4>Top stories</h4>
+          <ul>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/need-speed-run/news/need-for-speed-the-run-screenshots-1420179  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/need-speed-run/news/need-for-speed-the-run-screenshots-1420179'" tppabs="http://www.primagames.com/games/need-speed-run/news/need-for-speed-the-run-screenshots-1420179">Need for Speed: The Run screenshots</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/assassins-creed-ii/news/previously-on-assassins-creed-trailer-112538  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/assassins-creed-ii/news/previously-on-assassins-creed-trailer-112538'" tppabs="http://www.primagames.com/games/assassins-creed-ii/news/previously-on-assassins-creed-trailer-112538">Previously on Assassin&#39;s Creed trailer</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/la-noire/news/la-forensic-brendan-mcnamara-on-la-noire-1420971  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/la-noire/news/la-forensic-brendan-mcnamara-on-la-noire-1420971'" tppabs="http://www.primagames.com/games/la-noire/news/la-forensic-brendan-mcnamara-on-la-noire-1420971">L.A. Forensic: Brendan McNamara on L.A. Noire</a></li>
+		  
+          </ul>
+          <h4>Blog Articles</h4>
+          <ul>   
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/blog/skyrim-official-strategy-guide-blog-2-sanity-sappi  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/blog/skyrim-official-strategy-guide-blog-2-sanity-sappi'" tppabs="http://www.primagames.com/blog/skyrim-official-strategy-guide-blog-2-sanity-sappi">Skyrim Official Strategy Guide Blog #2: Sanity-Sapping Mapping</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/blog/something-to-shout-about-1  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/blog/something-to-shout-about-1'" tppabs="http://www.primagames.com/blog/something-to-shout-about-1">Skyrim Official Strategy Guide Blog #1: Something to Shout About</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/blog/battlefield-3-game-changers  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/blog/battlefield-3-game-changers'" tppabs="http://www.primagames.com/blog/battlefield-3-game-changers">Battlefield 3: Game Changers</a></li>
+		  
+          </ul>
+          
+        </div>
+      </div>
+      
+      <div class="line">&nbsp;</div>
+      
+      <ul class="fnav">
+        <li><a href="javascript:if(confirm('http://www.primagames.com/pages/terms-of-use  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/pages/terms-of-use'" tppabs="http://www.primagames.com/pages/terms-of-use">Terms of Service</a> | </li>
+        <li><a href="javascript:if(confirm('http://www.primagames.com/pages/privacy-policy  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/pages/privacy-policy'" tppabs="http://www.primagames.com/pages/privacy-policy">Privacy Policy</a> | </li>
+        <li><a href="javascript:if(confirm('http://www.primagames.com/pages/about-us  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/pages/about-us'" tppabs="http://www.primagames.com/pages/about-us">About Prima Games</a> | </li>
+        
+        <li><a href="javascript:if(confirm('http://www.primagames.com/pages/frequently-asked-questions  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/pages/frequently-asked-questions'" tppabs="http://www.primagames.com/pages/frequently-asked-questions">Frequently Asked Questions</a> |</li>
+		<li><a href="javascript:if(confirm('http://www.primagames.com/pages/contact-us  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/pages/contact-us'" tppabs="http://www.primagames.com/pages/contact-us">Contact Us</a></li>
+
+        <li class="right"><a href="javascript:if(confirm('http://www.mediaclash.co.uk/  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.mediaclash.co.uk/'" tppabs="http://www.mediaclash.co.uk/" target="_blank">Website by MediaClash</a></li>
+      </ul>
+    
+    </div> <!-- end footer -->
+
+  </div> <!-- end container -->
+
+
+
+
+
+	<div id="cart_lightbox">
+  <div id="lightbox">
+  
+    <div id="lightbox_container">
+      <div id="cartbox">
+        <div class="wrap clearfix">
+          <span class="close"><a href='javascript:$.fancybox.close();'>close</a></span>
+          <h3>Your Cart</h3>
+
+
+
+
+		  <div class="cart_subtotal">
+            <p><span>Sub total:</span> $0</p>
+          </div>
+          
+          <a class="checkout" href="javascript:if(confirm('http://www.primagames.com/accounts/cart/checkout  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/checkout'" tppabs="http://www.primagames.com/accounts/cart/checkout">continue to checkout</a>
+          
+        </div>
+      </div> <!-- end cartbox -->
+	</div>
+  </div>
+</div>
+
+	
+		
+		
+	
+
+
+
+<div id="report_lightbox">
+  <div id="lightbox">
+  
+    <div id="lightbox_container">
+  
+      <div id="loginbox">
+        <div class="wrap">
+          <div class="vert_line clearfix">
+            <span class="close"><a href='javascript:$.fancybox.close();'>close</a></span>
+            <div class="leftside" style="width: 500px;">
+			<form action="javascript:if(confirm('http://www.primagames.com/accounts/report?content_type=&content_pk=&ajax=true  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/report?content_type=&content_pk=&ajax=true'" tppabs="http://www.primagames.com/accounts/report?content_type=&content_pk=&ajax=true" method="post">
+				
+				
+				<input type="hidden" name="content_type" value="" id="report_content_type"/>
+				<input type="hidden" name="content_pk" value="" id="report_content_pk"/>
+
+
+
+				<input type='hidden' name='ajax' value='true'/>
+              <h3>Report this content</h3>
+			  <p class='errors'></p>
+              <label>Please enter a brief reason for your report:</label>
+              <textarea name="reason" style="color: #000; font-size: 13px; padding: 5px; padding: 10px; width: 250px; height: 150px;"></textarea>
+
+				<br style='clear: both;'/>
+
+              <button type="submit" style='float: left;'>Submit report</button>
+			</form>
+            </div>
+        </div>
+      </div> <!-- end loginbox -->
+      
+      
+  
+    </div> <!-- end lightbox_container -->
+    
+  </div> <!-- end lightbox -->
+</div> <!-- end #login_lightbox -->
+</div>
+
+
+
+
+
+
+
+<script type="text/javascript" charset="utf-8">
+  var is_ssl = ("https:" == document.location.protocol);
+  var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
+  document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  var feedback_widget_options = {};
+
+  feedback_widget_options.display = "overlay";  
+  feedback_widget_options.company = "primagamesonline";
+  feedback_widget_options.placement = "left";
+  feedback_widget_options.color = "#222";
+  feedback_widget_options.style = "idea";
+  
+  
+  
+  
+  
+  
+  
+
+  var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
+</script>
+
+
+
+<!-- SiteCatalyst Code version: H.17.
+Copyright 1997-2008 Omniture, Inc. More info available at http://www.omniture.com --> <script language="JavaScript" type="text/javascript" src="s_code.js" tppabs="http://www.randomhouse.com/js/s_code.js"></script>
+<script language="JavaScript" type="text/javascript"><!-- /*If your site resides on its own domain (i.e. www.owndomain.com), the hompage should be given a custom page name below. Other pages should omit it. */ s.pageName="";
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/ var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><a href="javascript:if(confirm('http://www.omniture.com/  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.omniture.com/'" tppabs="http://www.omniture.com/" title="Web Analytics"><img src="0.gif" tppabs="http://code.randomhouse.com/b/ss/ranhrollup/1/H.17--NS/0"
+height="1" width="1" border="0" alt="" /></a></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.17. -->
+
+</body>
+</html>

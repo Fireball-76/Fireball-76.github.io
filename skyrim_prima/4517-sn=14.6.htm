@@ -1,0 +1,5175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:image" content="http://www.primagames.com/media/images/updatedlogo.jpg" />
+<title>
+	
+		Appendix VI: Skill Books &gt; Gameplay - Prima Games</title>
+<link type="text/css" rel="stylesheet" href="joe.css" tppabs="http://www.primagames.com/media/css/joe.css" />
+<link type="text/css" rel="stylesheet" href="styles.css" tppabs="http://www.primagames.com/media/css/styles.css" />
+<link type="text/css" rel="stylesheet" href="jquery.fancybox-1.3.4.css" tppabs="http://www.primagames.com/media/css/jquery.fancybox-1.3.4.css" />
+<link type="text/css" rel="stylesheet" href="selectbox.css" tppabs="http://www.primagames.com/media/css/selectbox.css" />
+<link type="text/css" rel="stylesheet" href="jquery.rating.css" tppabs="http://www.primagames.com/media/css/jquery.rating.css" />
+<link type="text/css" rel="stylesheet" href="style.css" tppabs="http://www.primagames.com/media/forum/themes/IPB/style.css" />
+
+<script type="text/javascript" src="mt.js" tppabs="http://www.primagames.com/media/js/mt.js"></script>
+<script type="text/javascript" src="mtm.js" tppabs="http://www.primagames.com/media/js/mtm.js"></script>
+<script type="text/javascript" src="elSelect.js" tppabs="http://www.primagames.com/media/js/elSelect.js"></script>
+<script type="text/javascript" src="prima.js" tppabs="http://www.primagames.com/media/js/prima.js"></script>
+
+<script type='text/javascript' src="jquery.js" tppabs="http://www.primagames.com/media/js/jquery.js"></script>
+<script type='text/javascript' src="jqprima.js" tppabs="http://www.primagames.com/media/js/jqprima.js"></script>
+<script type='text/javascript' src="prima.tabs.js" tppabs="http://www.primagames.com/media/js/prima.tabs.js"></script>
+<script type='text/javascript' src="jquery.easing-1.3.pack.js" tppabs="http://www.primagames.com/media/js/fancybox-1.3.4/jquery.easing-1.3.pack.js"></script>
+<script type='text/javascript' src="jquery.mousewheel-3.0.4.pack.js" tppabs="http://www.primagames.com/media/js/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type='text/javascript' src="jquery.fancybox-1.3.4.js" tppabs="http://www.primagames.com/media/js/jquery.fancybox-1.3.4.js"></script>
+<script type='text/javascript' src="jquery.rating.js" tppabs="http://www.primagames.com/media/js/jquery.rating.js"></script>
+<script type='text/javascript' src="jquery.cycle.lite.js" tppabs="http://www.primagames.com/media/js/jquery.cycle.lite.js"></script>
+
+<script type='text/javascript' src="jquery.tablesorter.js" tppabs="http://www.primagames.com/media/js/jquery.tablesorter.js"></script>
+
+<script type='text/javascript' src="jquery-ui-1.8.16.min.js" tppabs="http://www.primagames.com/media/js/jquery-ui-1.8.16.min.js"></script>
+
+<script type="text/javascript" src="jwplayer.js" tppabs="http://www.primagames.com/media/js/jwplayer/jwplayer.js"></script>
+
+
+
+
+
+
+
+
+
+<script src="badgeville-current.js-key=9aba740a2e9897bce92109301bfd5c44&domain=primagames.com" tppabs="http://api.v2.badgeville.com/v2/badgeville-current.js?key=9aba740a2e9897bce92109301bfd5c44&domain=primagames.com"></script>
+
+
+
+<script>
+  Badgeville.setUser({
+    email: 'http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/fktrcfylh1982@yahoo.com',
+    display_name: 'fktrcfylh1982',
+    first_name: '',
+    last_name: '',
+    picture_url: 'avatar_placeholder.jpg'/*tpa=http://www.gravatar.com/avatar/49b82f5343d5552aec0c475cf069f954?d=http://www.primagames.com/media/images/avatar_placeholder.jpg*/,
+	site: 'http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/primagames.com'
+});
+
+
+
+
+Badgeville.ready(function() {
+	$(".total_points").text(Badgeville.Settings.user.points_all);
+	$(".week_points").text(Badgeville.Settings.user.points_week);
+});
+
+Badgeville.ready( function() { 
+  Badgeville.getAPI( 'user_badges', {id: Badgeville.Settings.user.id }, function( data ) { 
+    var displayed = 0; 
+    var target = Badgeville('.my_badges'); 
+    Badgeville.$.each( data.rewards, function() { 
+    if ( Badgeville.Objects.is( this, Badgeville.Objects.BADGE ) ) 
+       { Badgeville.Gears.reward( this ).appendTo(target); displayed++; } 
+       if ( displayed == 8 ) { return false; } 
+       }); 
+    }); 
+
+Badgeville.getAPI( 'user_levels', { id: Badgeville.Settings.user.id }, function( data ) {
+    fef = data;
+});
+
+Badgeville.Gears.levelStatus(Badgeville.Settings.user).appendTo(".level_status");
+
+Badgeville.Gears.currentLevel(Badgeville.Settings.user).appendTo(".current_level");
+
+ });
+
+</script>
+
+
+
+
+<script type='text/javascript'>
+
+
+function viewport()
+{
+var e = window
+, a = 'inner';
+if ( !( 'innerWidth' in window ) )
+{
+a = 'client';
+e = document.documentElement || document.body;
+}
+return { width : e[ a+'Width' ] , height : e[ a+'Height' ] }
+}
+
+$(document).ready(function() {
+	// Set up sortable tables
+	$(".tablesorter").each(function() {
+		// Add the correct row styling
+		table_instance = $(this);
+		table_instance.tablesorter();
+		table_instance.addClass("generic");
+		var i = 0;
+		table_instance.children("tbody").children("tr").each(function() {
+			row_instance = $(this);
+			i = i + 1;
+			if (i % 2 == 0)
+			{
+				row_instance.addClass("odd");
+			}
+		});
+	});
+
+	table_id = 0;
+
+	$(".tablesorter").each(function() {
+		// For a unique id for every sorted table on the page
+		table_id = table_id + 1;
+		$(this).attr("id", "tablesorter_" + table_id);
+
+		// Width of the table
+		this_width = $(this).width();
+
+
+		// If too wide, we need to generate a button to load the full table in an overlay
+		if (this_width > 435)
+		{
+			$(this).after("<br style='clear: both;'/><p><a href='#' class='tablesorter_enlarge' rel='" + table_id + "'><img src='olitable.png'/*tpa=http://www.primagames.com/media/images/olitable.png*/ alt='Click to enlarge table'/></a></p><br style='clear: both;'/>");
+			$(this).hide();
+		}
+
+		$(this).css("maxWidth", "95%");
+
+
+	});
+
+	$(".tablesorter_enlarge").live("click", function(e) {
+		e.preventDefault();
+
+		// Set up the overlay
+		$("body").append("<div id='tablesorter_overlay'><p class='tablesorter_overlay_close'><a href='#'>X</a></p></div>");
+		
+
+		// Get the current browser size and scroll position
+		viewport_width = viewport().width;
+		viewport_height = viewport().height;
+		
+		viewport_offsetx = window.pageXOffset;
+		viewport_offsety = window.pageYOffset;
+
+
+		$("#tablesorter_overlay").css("top", viewport_offsety);
+
+		table_instance = $("#tablesorter_" + $(this).attr("rel"));
+		table_instance.css("position", "absolute");
+
+
+		// Make a copy of this table so we'll have the original safe, and set it to be sorted. Add it to the overlay
+		new_table_instance = table_instance.clone().tablesorter();
+		new_table_instance.appendTo("#tablesorter_overlay");
+		new_table_instance.show();
+
+		if (new_table_instance.height() > $("#tablesorter_overlay").height())
+		{
+			// If the table is taller, set the overlay to same height
+			$("#tablesorter_overlay").height(new_table_instance.height());
+		}
+
+		// Move the overlay when the window is scrolled, if we try to scroll above the top
+
+		$(window).scroll(function() {
+
+			overlay_top = $("#tablesorter_overlay").offset().top;
+			overlay_bottom = $("#tablesorter_overlay").height();
+
+			viewport_bottom = window.pageYOffset + $(window).height();
+
+			if (window.pageYOffset < overlay_top)
+			{
+				$("#tablesorter_overlay").css("top", window.pageYOffset);
+			}
+
+		});
+
+	});
+
+	$(".tablesorter_overlay_close").live("click", function(e) {
+		e.preventDefault();
+		// Clean up by removing the entire overlay
+		$("#tablesorter_overlay").remove();
+	});
+
+});
+</script>
+
+
+<script type='text/javascript'>
+
+
+
+
+
+
+// Link the user will be taken to after logging in
+
+
+	
+		var _nextLink = "/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4517?sn=14.6";
+	
+
+var _loggedIn = true; 
+
+
+var _reportPK;
+
+</script>
+
+
+
+<script type="text/javascript">
+  var rpxJsHost = (("https:" == document.location.protocol) ? "https://" : "http://static./");
+  document.write(unescape("%3Cscript src='" + rpxJsHost +
+"rpxnow.com/js/lib/rpx.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  RPXNOW.overlay = true;
+  RPXNOW.language_preference = 'en';
+</script>
+
+<script>
+  window.tokenurl = 'http://www.primagames.com/janrain/login/';
+  window.realm = 'http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/login.primagames.com';
+</script>
+<script type='text/javascript' src="janrain.js" tppabs="http://www.primagames.com/media/js/janrain.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+  <div id="container">
+
+    <div id="header">
+      <h1><a href="javascript:if(confirm('http://www.primagames.com/  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/'" tppabs="http://www.primagames.com/" title="Prima games">Prima games</a></h1>
+      <div id="search_wrapper">
+        <form action="http://www.primagames.com/search" method="get"><input id="globalsearch" type="text" name="q" class="blankdefault" autocomplete="off" value="Search for strategy" /></form>
+      </div>
+
+
+<div id="search_dropdown">
+        <div class="wrap">
+
+
+
+		</div>
+      </div>
+
+
+      
+      <div id="nav_platforms">
+        <ul>
+          <li>Platforms:</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=PS3  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=PS3'" tppabs="http://www.primagames.com/games?platform=PS3">PS3</a> |</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=Xbox+360  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=Xbox+360'" tppabs="http://www.primagames.com/games?platform=Xbox+360">Xbox 360</a> |</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=Wii  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=Wii'" tppabs="http://www.primagames.com/games?platform=Wii">Wii</a> |</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=PC  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=PC'" tppabs="http://www.primagames.com/games?platform=PC">PC</a> |</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=DS  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=DS'" tppabs="http://www.primagames.com/games?platform=DS">DS</a> |</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=PSP  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=PSP'" tppabs="http://www.primagames.com/games?platform=PSP">PSP</a> |</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=iPhone  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=iPhone'" tppabs="http://www.primagames.com/games?platform=iPhone">iPhone</a> |</li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=PS2  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=PS2'" tppabs="http://www.primagames.com/games?platform=PS2">PS2</a></li>
+        </ul>
+      </div>
+      
+      <div id="basket">
+        <div class="wrap">
+          <h4>Shopping cart</h4>
+          
+		  
+			<p>
+				0 items $0.00
+			</p>
+
+
+			
+
+		  
+        </div>
+      </div>
+      
+      <div id="head_logmenu">
+		
+        <p>Hi <a href="javascript:if(confirm('http://www.primagames.com/accounts/  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/'" tppabs="http://www.primagames.com/accounts/">fktrcfylh1982</a>! You are logged in | <a href="javascript:if(confirm('http://www.primagames.com/accounts/logout  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/logout'" tppabs="http://www.primagames.com/accounts/logout">Logout</a></p>
+        <p class="points"><span class='total_points'></span> <a href="javascript:if(confirm('http://www.primagames.com/points  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/points'" tppabs="http://www.primagames.com/points">Get more points</a></p>
+		
+      </div>
+      
+      <br class="clear" />
+      
+      <div id="nav_main">
+        <ul>
+          <li class="tagline">Strategy where, when and how you want it</li>
+          <li class="last"><a href="javascript:if(confirm('http://www.primagames.com/contact  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/contact'" tppabs="http://www.primagames.com/contact">Contact</a></li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/games/shop  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/shop'" tppabs="http://www.primagames.com/games/shop">Shop</a></li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/blog/  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/blog/'" tppabs="http://www.primagames.com/blog/">Blog</a></li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/discussion  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/discussion'" tppabs="http://www.primagames.com/discussion">Discussion</a></li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/news  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/news'" tppabs="http://www.primagames.com/news">Latest news</a></li>
+          <li class="current"><a href="javascript:if(confirm('http://www.primagames.com/games  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games'" tppabs="http://www.primagames.com/games">Games</a></li>
+          <li><a href="javascript:if(confirm('http://www.primagames.com/  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/'" tppabs="http://www.primagames.com/">Home</a></li>
+        </ul>
+      </div>
+    
+      <br class="clear" />
+    </div>
+    
+    <div id="content">
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+ <h1 class="nomarg">THE ELDER SCROLLS V: SKYRIM</h1>
+      <ul id="subnav" class="clearfix">
+        <li><a href="javascript:if(confirm('http://www.primagames.com/games/elder-scrolls-v-skyrim  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/elder-scrolls-v-skyrim'" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim">game</a> |</li>
+
+		
+		
+		<li class="current"><a href="javascript:if(confirm('http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides'" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides">official guides</a> |</li>
+		
+
+
+        <li><a href="javascript:if(confirm('http://www.primagames.com/games/elder-scrolls-v-skyrim/community  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/elder-scrolls-v-skyrim/community'" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/community">community</a> |</li>
+        <li><a href="javascript:if(confirm('http://www.primagames.com/games/elder-scrolls-v-skyrim/news  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/elder-scrolls-v-skyrim/news'" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/news">game news</a> |</li>
+        <li><a href="javascript:if(confirm('http://www.primagames.com/games/elder-scrolls-v-skyrim/cheats  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/elder-scrolls-v-skyrim/cheats'" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/cheats">cheats & achievements</a></li>
+      </ul>
+      
+	  
+
+
+
+	  
+	
+		  <div id="breadcrumb">
+			<p>You are here:  <a href="javascript:if(confirm('http://www.primagames.com/games  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games'" tppabs="http://www.primagames.com/games">Games</a> &gt; <a href="javascript:if(confirm('http://www.primagames.com/games/elder-scrolls-v-skyrim  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/elder-scrolls-v-skyrim'" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim">The Elder Scrolls V: Skyrim</a> &gt; <a href="javascript:if(confirm('http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides'" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides">Official Guides</a> &gt; <a href="232.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232">Elder Scrolls V: Skyrim</a>  </p> 
+		  </div>
+	
+
+
+		
+
+
+
+      <div class="container_wrap">
+      
+
+		
+<div class="one_q">
+          
+
+          <div class="email_alerts">
+            <h2>Get email alerts on this game</h2>
+            <div class="wrap">
+              <p>Sign-up to stay informed on the latest news, best interviews and exclusive content for The Elder Scrolls V: Skyrim</p>
+              <p class="red_button fleft"><a href="javascript:if(confirm('http://www.primagames.com/accounts/alerts/?add=elder-scrolls-v-skyrim  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/alerts/?add=elder-scrolls-v-skyrim'" tppabs="http://www.primagames.com/accounts/alerts/?add=elder-scrolls-v-skyrim" class="login_required">sign-up</a></p>
+            </div>
+          </div>
+          <div class="line">&nbsp;</div>
+
+          
+
+
+          
+
+		  
+
+		
+		  <div id="follow">
+            <div class="wrap">
+              <h3>Follow us</h3>
+              <p>
+              <a href="javascript:if(confirm('http://www.facebook.com/PrimaGames  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.facebook.com/PrimaGames'" tppabs="http://www.facebook.com/PrimaGames" target="_blank"><img alt="Facebook" src="facebook.jpg" tppabs="http://www.primagames.com/media/images/facebook.jpg" width="49" height="49" /></a>
+              <a href="javascript:if(confirm('http://www.youtube.com/user/PrimaGamesVideo  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.youtube.com/user/PrimaGamesVideo'" tppabs="http://www.youtube.com/user/PrimaGamesVideo" target="_blank"><img alt="Youtube" src="youtube_new.jpg" tppabs="http://www.primagames.com/media/images/youtube_new.jpg" width="49" height="49" /></a>
+              <a href="javascript:if(confirm('http://twitter.com/primagames  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://twitter.com/primagames'" tppabs="http://twitter.com/primagames" target="_blank"><img alt="Twitter" src="twitter.jpg" tppabs="http://www.primagames.com/media/images/twitter.jpg" width="49" height="49" /></a>
+              <a href="javascript:if(confirm('http://www.primagames.com/contact  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/contact'" tppabs="http://www.primagames.com/contact"><img alt="Email" src="email.jpg" tppabs="http://www.primagames.com/media/images/email.jpg" width="49" height="49" /></a>
+              </p>
+            </div>
+          </div>
+          
+          <div class="line">&nbsp;</div>
+          
+          <div class="content_box bluegrey">
+            <h2>Prima on Twitter</h2>
+            <div id="twitter_feed">
+              <div class="wrap">
+                <p><a href="javascript:if(confirm('http://twitter.com/primagames/  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://twitter.com/primagames/'" tppabs="http://twitter.com/primagames/" target='_blank'>Error fetching Twitter feed</a><br /><br /><small>2 hours ago</small></p>
+              </div>
+            </div>
+            <br class="clear" />
+          </div>
+          
+          <div class="line">&nbsp;</div>
+          
+		  
+		  
+          <div class="content_box redlgrey">
+            <h2>Prima points <a href="javascript:if(confirm('http://www.primagames.com/accounts/  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/'" tppabs="http://www.primagames.com/accounts/" class="right">My account &raquo;</a></h2>
+            <div class="wrap">
+              <div id="points_left">
+              
+                <div class="points_block">
+                  <dl class="list">
+                    <dt><h3><a href="">fktrcfylh1982</a></h3></dt>
+                    <dd>
+                      <div class="leftblock">
+                        <img src="avatar_placeholder.jpg" tppabs="http://www.gravatar.com/avatar/49b82f5343d5552aec0c475cf069f954?d=http://www.primagames.com/media/images/avatar_placeholder.jpg" width="42" height="42" />
+                      </div>
+                      <div class="rightblock">
+                        <p class="alltime"><span class="score total_points">0</span> <span class="title">all time</span></p>
+                        <p class="thisweek"><span class="score week_points">0</span> <span class="title">this week</span></p>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+                
+                <div class="points_block light">
+                  <h2>My Badges</h2>
+                  <div class="wrap my_badges my_badges_sidebar">
+
+				
+
+                  </div>
+                </div>
+              
+                <p><a href="javascript:if(confirm('http://www.primagames.com/points  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/points'" tppabs="http://www.primagames.com/points" class="red_button_full">Get more points</a></p>
+                       
+              </div>
+            </div>
+          </div>
+		  
+          
+          <div class="line">&nbsp;</div>
+
+
+          
+          <div class="content_box redwhite">
+            <h2>Best selling guides</h2>
+			<div id="best_selling_guides" rel="1" class="dynamic_block">	
+				
+	<div class="wrap">
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/saints-row-third/primaguides/191  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/saints-row-third/primaguides/191'" tppabs="http://www.primagames.com/games/saints-row-third/primaguides/191"><img alt="Saints Row: The Third" src="saints_row_third_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/saints_row_third_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/saints-row-third/primaguides/191  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/saints-row-third/primaguides/191'" tppabs="http://www.primagames.com/games/saints-row-third/primaguides/191">Saints Row: The Third</a></h3>
+                  <p>$24.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/saints-row-third/primaguides/191  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/saints-row-third/primaguides/191'" tppabs="http://www.primagames.com/games/saints-row-third/primaguides/191" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/191  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/191'" tppabs="http://www.primagames.com/accounts/cart/add/191" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/sims-3-pets/primaguides/209  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/sims-3-pets/primaguides/209'" tppabs="http://www.primagames.com/games/sims-3-pets/primaguides/209"><img alt="The Sims 3: Pets" src="sims3_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/sims3_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/sims-3-pets/primaguides/209  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/sims-3-pets/primaguides/209'" tppabs="http://www.primagames.com/games/sims-3-pets/primaguides/209">The Sims 3: Pets</a></h3>
+                  <p>$19.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/sims-3-pets/primaguides/209  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/sims-3-pets/primaguides/209'" tppabs="http://www.primagames.com/games/sims-3-pets/primaguides/209" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/209  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/209'" tppabs="http://www.primagames.com/accounts/cart/add/209" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/saints-row-third/primaguides/238  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/saints-row-third/primaguides/238'" tppabs="http://www.primagames.com/games/saints-row-third/primaguides/238"><img alt="Saints Row: The Third - Interactive Map Pack" src="9780307891976_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/9780307891976_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/saints-row-third/primaguides/238  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/saints-row-third/primaguides/238'" tppabs="http://www.primagames.com/games/saints-row-third/primaguides/238">Saints Row: The Third - Interactive Map Pack</a></h3>
+                  <p>$9.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/saints-row-third/primaguides/238  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/saints-row-third/primaguides/238'" tppabs="http://www.primagames.com/games/saints-row-third/primaguides/238" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/238  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/238'" tppabs="http://www.primagames.com/accounts/cart/add/238" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/assassins-creed-revelations/primaguides/244  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/assassins-creed-revelations/primaguides/244'" tppabs="http://www.primagames.com/games/assassins-creed-revelations/primaguides/244"><img alt="Assassin&#39;s Creed: Revelations - Map Pack" src="acr_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/acr_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/assassins-creed-revelations/primaguides/244  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/assassins-creed-revelations/primaguides/244'" tppabs="http://www.primagames.com/games/assassins-creed-revelations/primaguides/244">Assassin&#39;s Creed: Revelations - Map Pack</a></h3>
+                  <p>$9.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/assassins-creed-revelations/primaguides/244  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/assassins-creed-revelations/primaguides/244'" tppabs="http://www.primagames.com/games/assassins-creed-revelations/primaguides/244" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/244  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/244'" tppabs="http://www.primagames.com/accounts/cart/add/244" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/rage/primaguides/77  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/rage/primaguides/77'" tppabs="http://www.primagames.com/games/rage/primaguides/77"><img alt="Rage" src="rage_cover_1_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/rage_cover_1_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/rage/primaguides/77  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/rage/primaguides/77'" tppabs="http://www.primagames.com/games/rage/primaguides/77">Rage</a></h3>
+                  <p>$19.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/rage/primaguides/77  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/rage/primaguides/77'" tppabs="http://www.primagames.com/games/rage/primaguides/77" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/77  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/77'" tppabs="http://www.primagames.com/accounts/cart/add/77" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+              <br class="clear" />
+            </div>
+
+					<p class="center">
+
+					
+						&nbsp;&nbsp;&nbsp; 
+							1 - 5 of 9
+						&nbsp;&nbsp;&nbsp;
+					
+						<a href="#" class="homepage_next">Next &raquo;</a>
+					
+					
+					</p>  
+			</div>
+          </div>
+
+		            
+          <div class="line">&nbsp;</div>
+          <div class="content_box redwhite">
+            <h2>Top guide pre-orders</h2>
+			<div id="best_preorder_guides" rel="1" class="dynamic_block">	
+				
+	<div class="wrap">
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251'" tppabs="http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251"><img alt="Tom Clancy&#39;s Ghost Recon Future Soldier" src="future_solder_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/future_solder_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251'" tppabs="http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251">Tom Clancy&#39;s Ghost Recon Future Soldier</a></h3>
+                  <p>$19.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251'" tppabs="http://www.primagames.com/games/ghost-recon-future-soldier/primaguides/251" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/251  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/251'" tppabs="http://www.primagames.com/accounts/cart/add/251" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/wwe-2012/primaguides/217  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/wwe-2012/primaguides/217'" tppabs="http://www.primagames.com/games/wwe-2012/primaguides/217"><img alt="WWE &#39;12" src="wwe_1_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/wwe_1_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/wwe-2012/primaguides/217  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/wwe-2012/primaguides/217'" tppabs="http://www.primagames.com/games/wwe-2012/primaguides/217">WWE &#39;12</a></h3>
+                  <p>$19.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/wwe-2012/primaguides/217  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/wwe-2012/primaguides/217'" tppabs="http://www.primagames.com/games/wwe-2012/primaguides/217" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/217  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/217'" tppabs="http://www.primagames.com/accounts/cart/add/217" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/mario-kart-7/primaguides/255  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/mario-kart-7/primaguides/255'" tppabs="http://www.primagames.com/games/mario-kart-7/primaguides/255"><img alt="Mario Kart 7" src="mario_kart_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/mario_kart_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/mario-kart-7/primaguides/255  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/mario-kart-7/primaguides/255'" tppabs="http://www.primagames.com/games/mario-kart-7/primaguides/255">Mario Kart 7</a></h3>
+                  <p>$19.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/mario-kart-7/primaguides/255  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/mario-kart-7/primaguides/255'" tppabs="http://www.primagames.com/games/mario-kart-7/primaguides/255" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/255  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/255'" tppabs="http://www.primagames.com/accounts/cart/add/255" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/super-mario-3d-land/primaguides/256  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/super-mario-3d-land/primaguides/256'" tppabs="http://www.primagames.com/games/super-mario-3d-land/primaguides/256"><img alt="Super Mario 3D Land" src="mario_land_3d_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/mario_land_3d_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/super-mario-3d-land/primaguides/256  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/super-mario-3d-land/primaguides/256'" tppabs="http://www.primagames.com/games/super-mario-3d-land/primaguides/256">Super Mario 3D Land</a></h3>
+                  <p>$19.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/super-mario-3d-land/primaguides/256  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/super-mario-3d-land/primaguides/256'" tppabs="http://www.primagames.com/games/super-mario-3d-land/primaguides/256" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/256  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/256'" tppabs="http://www.primagames.com/accounts/cart/add/256" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+			  <dl class="list">
+                <dt><a href="javascript:if(confirm('http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254'" tppabs="http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254"><img alt="Legend of Zelda: Skyward Sword" src="zelda_jpg_52x73_crop_q85.jpg" tppabs="http://www.primagames.com/media/images/guides/covers/zelda_jpg_52x73_crop_q85.jpg" width="52" height="73" /></a></dt>
+                <dd>
+                  <h3><a href="javascript:if(confirm('http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254'" tppabs="http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254">Legend of Zelda: Skyward Sword</a></h3>
+                  <p>$24.99</p>
+                  <a href="javascript:if(confirm('http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254'" tppabs="http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254" class="red_button">see more</a><a href="javascript:if(confirm('http://www.primagames.com/accounts/cart/add/254  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/add/254'" tppabs="http://www.primagames.com/accounts/cart/add/254" class="red_button login_required">buy guide</a>
+                </dd>
+              </dl>
+	
+              <br class="clear" />
+            </div>
+
+					<p class="center">
+
+					
+						&nbsp;&nbsp;&nbsp; 
+							1 - 5 of 5
+						&nbsp;&nbsp;&nbsp;
+					
+					
+					</p>  
+			</div>
+          </div>
+
+
+          <div class="line">&nbsp;</div>
+          
+        </div> <!-- one_q end -->
+        
+                
+        <div class="three_q">
+          
+ 
+
+		  
+		  <ul class="guide_nav clearfix">
+            <li class=''><a href="introduction.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/introduction">Introduction</a></li>
+
+<li class=' current'><a href="gameplay.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay">Essentials</a></li>
+
+
+
+            <li class=''><a href="walkthrough.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/walkthrough">Walkthrough</a></li>
+
+
+
+
+
+            <li class=''><a href="maps.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/maps">
+				
+					Maps
+				
+			</a></li>
+
+
+
+
+
+
+
+
+          </ul> 
+
+
+           
+          <div class="guide_content">
+            <div class="wrap clearfix">
+            	
+
+
+
+
+<div id="search_guide">
+        <form action="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/search" method="get"><input id="guidesearch" type="text" name="q" class="blankdefault" autocomplete="off" value="Search this guide"></form>
+      </div>
+	  <br style='clear: both;'/>
+
+
+              <div class="nextprev clearfix">
+                <div class="prev">&lt; <a href="4516.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4516">Previous section</a></div>
+                <div class="title"></div>
+                <div class="next"><a href="4518.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4518">Next section</a> &gt;</div>
+              </div>
+              
+              <h2>14.6 Appendix VI: Skill Books</h2>
+            
+              <div class="innernextprev clearfix">
+                <div class="prev"></div>
+                <div class="next"></div>
+              </div>
+            
+              <div class="guide_left box">
+                
+
+   
+
+				
+
+
+					
+						<p><strong>Appendix VI: Skill Books</strong></p>
+<p>This table lists two sample locations for each of the 90 Skill Books. Many of these books are in towns or notable dungeons, making them among the most easily accessible copies. As there are no further improvements to a skill when you find the same book again, it isn&rsquo;t necessary to find them all. But there are more copies of each book out there in the wilds....</p>
+<table class="tablesorter" cellspacing="0" cellpadding="0">
+<thead> 
+<tr>
+<th valign="bottom">
+<p>&nbsp;</p>
+</th> <th valign="bottom">
+<p>Number</p>
+</th> <th valign="bottom">
+<p>Skill</p>
+</th> <th valign="bottom">
+<p>Title</p>
+</th> <th valign="bottom">
+<p>Zone #</p>
+</th> <th valign="bottom">
+<p>Location</p>
+</th> <th valign="bottom">
+<p>Description</p>
+</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A1/10]</p>
+</td>
+<td valign="middle">
+<p>Alchemy</p>
+</td>
+<td valign="middle">
+<p>A Game at Dinner</p>
+</td>
+<td valign="middle">
+<p>[6.22]</p>
+</td>
+<td valign="middle">
+<p>Honningbrew Meadery</p>
+</td>
+<td valign="middle">
+<p>On the second floor of the Meadery, in the upstairs bedroom.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A2/10]</p>
+</td>
+<td valign="middle">
+<p>Alchemy</p>
+</td>
+<td valign="middle">
+<p>A Game at Dinner</p>
+</td>
+<td valign="middle">
+<p>[7.00]</p>
+</td>
+<td valign="middle">
+<p>Windhelm</p>
+</td>
+<td valign="middle">
+<p>In the New Gnisis Cornerclub, on a table on the second floor.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B1/10]</p>
+</td>
+<td valign="middle">
+<p>Alchemy</p>
+</td>
+<td valign="middle">
+<p>De Rerum Dirennis</p>
+</td>
+<td valign="middle">
+<p>[1.11]</p>
+</td>
+<td valign="middle">
+<p>Clearpine Pond</p>
+</td>
+<td valign="middle">
+<p>On the body of the Alchemist at Clearpine Pond.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B2/10]</p>
+</td>
+<td valign="middle">
+<p>Alchemy</p>
+</td>
+<td valign="middle">
+<p>De Rerum Dirennis</p>
+</td>
+<td valign="middle">
+<p>[4.00]</p>
+</td>
+<td valign="middle">
+<p>Winterhold</p>
+</td>
+<td valign="middle">
+<p>In the College of Winterhold Midden Dark, resting on an Alchemy Lab.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C1/10]</p>
+</td>
+<td valign="middle">
+<p>Alchemy</p>
+</td>
+<td valign="middle">
+<p>Herbalist's Guide to Skyrim</p>
+</td>
+<td valign="middle">
+<p>[5.00]</p>
+</td>
+<td valign="middle">
+<p>Markarth</p>
+</td>
+<td valign="middle">
+<p>In the Hag's Cure, on the shelf under the counter.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C2/10]</p>
+</td>
+<td valign="middle">
+<p>Alchemy</p>
+</td>
+<td valign="middle">
+<p>Herbalist's Guide to Skyrim</p>
+</td>
+<td valign="middle">
+<p>[6.00]</p>
+</td>
+<td valign="middle">
+<p>Whiterun</p>
+</td>
+<td valign="middle">
+<p>In Arcadia's Cauldron, on a large wooden table downstairs.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D1/10]</p>
+</td>
+<td valign="middle">
+<p>Alchemy</p>
+</td>
+<td valign="middle">
+<p>Mannimarco, King of Worms</p>
+</td>
+<td valign="middle">
+<p>[3.06]</p>
+</td>
+<td valign="middle">
+<p>Nightcaller Temple</p>
+</td>
+<td valign="middle">
+<p>On a table in the Alchemy Lab room.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D2/10]</p>
+</td>
+<td valign="middle">
+<p>Alchemy</p>
+</td>
+<td valign="middle">
+<p>Mannimarco, King of Worms</p>
+</td>
+<td valign="middle">
+<p>[8.10]</p>
+</td>
+<td valign="middle">
+<p>Evergreen Grove</p>
+</td>
+<td valign="middle">
+<p>On a partially submerged altar near the body of a dead mage.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E1/10]</p>
+</td>
+<td valign="middle">
+<p>Alchemy</p>
+</td>
+<td valign="middle">
+<p>Song of the Alchemists</p>
+</td>
+<td valign="middle">
+<p>[1.00]</p>
+</td>
+<td valign="middle">
+<p>Solitude</p>
+</td>
+<td valign="middle">
+<p>During Favor: Rare Item Hunt for Lami in Morthal, you can find this copy on the counter in the library of the Bards College.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E2/10]</p>
+</td>
+<td valign="middle">
+<p>Alchemy</p>
+</td>
+<td valign="middle">
+<p>Song of the Alchemists</p>
+</td>
+<td valign="middle">
+<p>[8.19]</p>
+</td>
+<td valign="middle">
+<p>Anise's Cabin</p>
+</td>
+<td valign="middle">
+<p>On the shelf at the foot of the bed inside Anise's Cabin.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A1/10]</p>
+</td>
+<td valign="middle">
+<p>Alteration</p>
+</td>
+<td valign="middle">
+<p>Breathing Water</p>
+</td>
+<td valign="middle">
+<p>[4.00]</p>
+</td>
+<td valign="middle">
+<p>Winterhold</p>
+</td>
+<td valign="middle">
+<p>Inside Kraldar's House, hidden inside the woven basket on the shelf.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A2/10]</p>
+</td>
+<td valign="middle">
+<p>Alteration</p>
+</td>
+<td valign="middle">
+<p>Breathing Water</p>
+</td>
+<td valign="middle">
+<p>[8.15]</p>
+</td>
+<td valign="middle">
+<p>Ilinalta's Deep</p>
+</td>
+<td valign="middle">
+<p>In an underwater room about halfway through the keep, next to a submerged chest.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B1/10]</p>
+</td>
+<td valign="middle">
+<p>Alteration</p>
+</td>
+<td valign="middle">
+<p>Daughter of the Niben</p>
+</td>
+<td valign="middle">
+<p>[5.00]</p>
+</td>
+<td valign="middle">
+<p>Markarth</p>
+</td>
+<td valign="middle">
+<p>Understone Keep, on a table at the top of the stairs, to the right of the Jarl's Throne Room.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B2/10]</p>
+</td>
+<td valign="middle">
+<p>Alteration</p>
+</td>
+<td valign="middle">
+<p>Daughter of the Niben</p>
+</td>
+<td valign="middle">
+<p>[7.07]</p>
+</td>
+<td valign="middle">
+<p>Brandy-Mug Farm</p>
+</td>
+<td valign="middle">
+<p>Inside the farmhouse, atop fireplace mantel.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C1/10]</p>
+</td>
+<td valign="middle">
+<p>Alteration</p>
+</td>
+<td valign="middle">
+<p>Reality &amp; Other Falsehoods</p>
+</td>
+<td valign="middle">
+<p>[4.02]</p>
+</td>
+<td valign="middle">
+<p>Yngvild</p>
+</td>
+<td valign="middle">
+<p>On a table next to the throne in the Yngvild Throne Room.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C2/10]</p>
+</td>
+<td valign="middle">
+<p>Alteration</p>
+</td>
+<td valign="middle">
+<p>Reality &amp; Other Falsehoods</p>
+</td>
+<td valign="middle">
+<p>[9.41]</p>
+</td>
+<td valign="middle">
+<p>Snow-Shod Farm</p>
+</td>
+<td valign="middle">
+<p>Inside the farmhouse, on a shelf in the basement.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D1/10]</p>
+</td>
+<td valign="middle">
+<p>Alteration</p>
+</td>
+<td valign="middle">
+<p>Sithis</p>
+</td>
+<td valign="middle">
+<p>[5.00]</p>
+</td>
+<td valign="middle">
+<p>Markarth</p>
+</td>
+<td valign="middle">
+<p>Next to Krag's corpse in Nchuand-Zel, on a metal bench in the large central cavern.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D2/10]</p>
+</td>
+<td valign="middle">
+<p>Alteration</p>
+</td>
+<td valign="middle">
+<p>Sithis</p>
+</td>
+<td valign="middle">
+<p>[8.22]</p>
+</td>
+<td valign="middle">
+<p>Dark Brotherhood Sanctuary</p>
+</td>
+<td valign="middle">
+<p>On a bookshelf pedestal in Astrid's foyer.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E1/10]</p>
+</td>
+<td valign="middle">
+<p>Alteration</p>
+</td>
+<td valign="middle">
+<p>The Lunar Lorkhan</p>
+</td>
+<td valign="middle">
+<p>[1.26]</p>
+</td>
+<td valign="middle">
+<p>Solitude Lighthouse</p>
+</td>
+<td valign="middle">
+<p>In Mazaka's quarters, on the shelf behind the bar.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E2/10]</p>
+</td>
+<td valign="middle">
+<p>Alteration</p>
+</td>
+<td valign="middle">
+<p>The Lunar Lorkhan</p>
+</td>
+<td valign="middle">
+<p>[7.24]</p>
+</td>
+<td valign="middle">
+<p>Cragwallow Slope</p>
+</td>
+<td valign="middle">
+<p>On a table among other books in the central chamber, not far from the Arcane Enchanter.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A1/10]</p>
+</td>
+<td valign="middle">
+<p>Archery</p>
+</td>
+<td valign="middle">
+<p>Father of the Niben</p>
+</td>
+<td valign="middle">
+<p>[3.02]</p>
+</td>
+<td valign="middle">
+<p>Wreck of the Brinehammer</p>
+</td>
+<td valign="middle">
+<p>On a crate near a skeleton in the ship's lower cargo hold.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A2/10]</p>
+</td>
+<td valign="middle">
+<p>Archery</p>
+</td>
+<td valign="middle">
+<p>Father of the Niben</p>
+</td>
+<td valign="middle">
+<p>[8.06]</p>
+</td>
+<td valign="middle">
+<p>Hunter's Rest</p>
+</td>
+<td valign="middle">
+<p>Lying between two bedrolls inside the shack.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B1/10]</p>
+</td>
+<td valign="middle">
+<p>Archery</p>
+</td>
+<td valign="middle">
+<p>The Black Arrow, v2</p>
+</td>
+<td valign="middle">
+<p>[6.00]</p>
+</td>
+<td valign="middle">
+<p>Whiterun</p>
+</td>
+<td valign="middle">
+<p>In the Drunken Huntsman, on the shelf under the counter.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B2/10]</p>
+</td>
+<td valign="middle">
+<p>Archery</p>
+</td>
+<td valign="middle">
+<p>The Black Arrow, v2</p>
+</td>
+<td valign="middle">
+<p>[6.33]</p>
+</td>
+<td valign="middle">
+<p>Valtheim Towers</p>
+</td>
+<td valign="middle">
+<p>On an end table near the top of the north tower.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C1/10]</p>
+</td>
+<td valign="middle">
+<p>Archery</p>
+</td>
+<td valign="middle">
+<p>The Gold Ribbon of Merit</p>
+</td>
+<td valign="middle">
+<p>[1.00]</p>
+</td>
+<td valign="middle">
+<p>Solitude</p>
+</td>
+<td valign="middle">
+<p>In the Fletcher's shop, on a small table in a corner of the room.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C2/10]</p>
+</td>
+<td valign="middle">
+<p>Archery</p>
+</td>
+<td valign="middle">
+<p>The Gold Ribbon of Merit</p>
+</td>
+<td valign="middle">
+<p>[8.29]</p>
+</td>
+<td valign="middle">
+<p>Angi's Camp</p>
+</td>
+<td valign="middle">
+<p>On the end table near the bed inside the shack.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D1/10]</p>
+</td>
+<td valign="middle">
+<p>Archery</p>
+</td>
+<td valign="middle">
+<p>The Marksmanship Lesson</p>
+</td>
+<td valign="middle">
+<p>[3.00]</p>
+</td>
+<td valign="middle">
+<p>Dawnstar Sanctuary</p>
+</td>
+<td valign="middle">
+<p>On the table with the map in the Dawnstar Sanctuary.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D2/10]</p>
+</td>
+<td valign="middle">
+<p>Archery</p>
+</td>
+<td valign="middle">
+<p>The Marksmanship Lesson</p>
+</td>
+<td valign="middle">
+<p>[7.15]</p>
+</td>
+<td valign="middle">
+<p>Mixwater Mill</p>
+</td>
+<td valign="middle">
+<p>In Gilfre's House, on the small corner table.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E1/10]</p>
+</td>
+<td valign="middle">
+<p>Archery</p>
+</td>
+<td valign="middle">
+<p>Vernaccus and Bourlor</p>
+</td>
+<td valign="middle">
+<p>[8.07]</p>
+</td>
+<td valign="middle">
+<p>Knifepoint Ridge</p>
+</td>
+<td valign="middle">
+<p>On a crude wooden table near the Blacksmith Forge.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E2/10]</p>
+</td>
+<td valign="middle">
+<p>Archery</p>
+</td>
+<td valign="middle">
+<p>Vernaccus and Bourlor</p>
+</td>
+<td valign="middle">
+<p>[9.15]</p>
+</td>
+<td valign="middle">
+<p>Froki's Shack</p>
+</td>
+<td valign="middle">
+<p>On a shelf inside the shack.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A1/10]</p>
+</td>
+<td valign="middle">
+<p>Block</p>
+</td>
+<td valign="middle">
+<p>A Dance in Fire, v2</p>
+</td>
+<td valign="middle">
+<p>[2.10]</p>
+</td>
+<td valign="middle">
+<p>Fort Snowhawk</p>
+</td>
+<td valign="middle">
+<p>On the large table in the library area.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A2/10]</p>
+</td>
+<td valign="middle">
+<p>Block</p>
+</td>
+<td valign="middle">
+<p>A Dance in Fire, v2</p>
+</td>
+<td valign="middle">
+<p>[7.10]</p>
+</td>
+<td valign="middle">
+<p>Traitor's Post</p>
+</td>
+<td valign="middle">
+<p>On a cupboard in the southwest part of the ruined inn.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B1/10]</p>
+</td>
+<td valign="middle">
+<p>Block</p>
+</td>
+<td valign="middle">
+<p>Battle of Red Mountain</p>
+</td>
+<td valign="middle">
+<p>[8.33] and [8.34]</p>
+</td>
+<td valign="middle">
+<p>Skybound Watch Pass</p>
+</td>
+<td valign="middle">
+<p>On a shelf near a chest at one end of the pass.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B2/10]</p>
+</td>
+<td valign="middle">
+<p>Block</p>
+</td>
+<td valign="middle">
+<p>Battle of Red Mountain</p>
+</td>
+<td valign="middle">
+<p>[9.23]</p>
+</td>
+<td valign="middle">
+<p>Tolvald's Crossing</p>
+</td>
+<td valign="middle">
+<p>On a stone pedestal near the remains of the decimated caravan, deep within the cave.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C1/10]</p>
+</td>
+<td valign="middle">
+<p>Block</p>
+</td>
+<td valign="middle">
+<p>Death Blow of Abernanit</p>
+</td>
+<td valign="middle">
+<p>[6.00]</p>
+</td>
+<td valign="middle">
+<p>Whiterun</p>
+</td>
+<td valign="middle">
+<p>In the Hall of the Dead catacombs, inside a small chamber lined with candles.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C2/10]</p>
+</td>
+<td valign="middle">
+<p>Block</p>
+</td>
+<td valign="middle">
+<p>Death Blow of Abernanit</p>
+</td>
+<td valign="middle">
+<p>[8.00]</p>
+</td>
+<td valign="middle">
+<p>Falkreath</p>
+</td>
+<td valign="middle">
+<p>On a side table in the war room.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D1/10]</p>
+</td>
+<td valign="middle">
+<p>Block</p>
+</td>
+<td valign="middle">
+<p>The Mirror</p>
+</td>
+<td valign="middle">
+<p>[5.18]</p>
+</td>
+<td valign="middle">
+<p>Broken Tower Redoubt</p>
+</td>
+<td valign="middle">
+<p>On a shelf in the sleeping area.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D2/10]</p>
+</td>
+<td valign="middle">
+<p>Block</p>
+</td>
+<td valign="middle">
+<p>The Mirror</p>
+</td>
+<td valign="middle">
+<p>[7.00]</p>
+</td>
+<td valign="middle">
+<p>Windhelm</p>
+</td>
+<td valign="middle">
+<p>During Favor: Rare Item Hunt for Captain Aldis of Solitude, you can find this book in Ulfric's bedroom in Windhelm's Palace of the Kings.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E1/10]</p>
+</td>
+<td valign="middle">
+<p>Block</p>
+</td>
+<td valign="middle">
+<p>Warrior</p>
+</td>
+<td valign="middle">
+<p>[4.07]</p>
+</td>
+<td valign="middle">
+<p>Driftshade Refuge</p>
+</td>
+<td valign="middle">
+<p>On a small table near the fireplace, in the boss's chamber. Collect it on your way out.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E2/10]</p>
+</td>
+<td valign="middle">
+<p>Block</p>
+</td>
+<td valign="middle">
+<p>Warrior</p>
+</td>
+<td valign="middle">
+<p>[4.19]</p>
+</td>
+<td valign="middle">
+<p>Fort Kastav</p>
+</td>
+<td valign="middle">
+<p>In the Captain's Quarters, on a bedside table.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A1/10]</p>
+</td>
+<td valign="middle">
+<p>Conjuration</p>
+</td>
+<td valign="middle">
+<p>2920, Frostfall, v10</p>
+</td>
+<td valign="middle">
+<p>[7.00]</p>
+</td>
+<td valign="middle">
+<p>Windhelm</p>
+</td>
+<td valign="middle">
+<p>In Belyn Hlaalu's House, hidden in a dark corner behind the dresser in the upstairs bedroom.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A2/10]</p>
+</td>
+<td valign="middle">
+<p>Conjuration</p>
+</td>
+<td valign="middle">
+<p>2920, Frostfall, v10</p>
+</td>
+<td valign="middle">
+<p>[8.02]</p>
+</td>
+<td valign="middle">
+<p>Sunderstone Gorge</p>
+</td>
+<td valign="middle">
+<p>On a pedestal in the final chamber with the Word Wall.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B1/10]</p>
+</td>
+<td valign="middle">
+<p>Conjuration</p>
+</td>
+<td valign="middle">
+<p>2920, Hearth Fire, v9</p>
+</td>
+<td valign="middle">
+<p>[1.02]</p>
+</td>
+<td valign="middle">
+<p>Rimerock Burrow</p>
+</td>
+<td valign="middle">
+<p>On an end table in the final cavern with the large chest.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B2/10]</p>
+</td>
+<td valign="middle">
+<p>Conjuration</p>
+</td>
+<td valign="middle">
+<p>2920, Hearth Fire, v9</p>
+</td>
+<td valign="middle">
+<p>[3.00]</p>
+</td>
+<td valign="middle">
+<p>Dawnstar</p>
+</td>
+<td valign="middle">
+<p>In the Mortar and Pestle, under the counter.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C1/10]</p>
+</td>
+<td valign="middle">
+<p>Conjuration</p>
+</td>
+<td valign="middle">
+<p>Liminal Bridges</p>
+</td>
+<td valign="middle">
+<p>[2.23]</p>
+</td>
+<td valign="middle">
+<p>Labyrinthian</p>
+</td>
+<td valign="middle">
+<p>In Shalidor's Maze, on the ground at a short dead end within the maze (must enter from the north).</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C2/10]</p>
+</td>
+<td valign="middle">
+<p>Conjuration</p>
+</td>
+<td valign="middle">
+<p>Liminal Bridges</p>
+</td>
+<td valign="middle">
+<p>[8.24]</p>
+</td>
+<td valign="middle">
+<p>Falkreath Watchtower</p>
+</td>
+<td valign="middle">
+<p>In the tent atop the tower.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D1/10]</p>
+</td>
+<td valign="middle">
+<p>Conjuration</p>
+</td>
+<td valign="middle">
+<p>The Doors of Oblivion</p>
+</td>
+<td valign="middle">
+<p>[5.41]</p>
+</td>
+<td valign="middle">
+<p>Reachcliff Cave</p>
+</td>
+<td valign="middle">
+<p>Inside the cave's ruins, partially covered by other books on a shelf in the small room with the sarcophagi.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D2/10]</p>
+</td>
+<td valign="middle">
+<p>Conjuration</p>
+</td>
+<td valign="middle">
+<p>The Doors of Oblivion</p>
+</td>
+<td valign="middle">
+<p>[6.29]</p>
+</td>
+<td valign="middle">
+<p>Fellglow Keep</p>
+</td>
+<td valign="middle">
+<p>On the pedestal in the chapel area.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E1/10]</p>
+</td>
+<td valign="middle">
+<p>Conjuration</p>
+</td>
+<td valign="middle">
+<p>The Warrior's Charge</p>
+</td>
+<td valign="middle">
+<p>[5.00]</p>
+</td>
+<td valign="middle">
+<p>Markarth</p>
+</td>
+<td valign="middle">
+<p>On the table next to the bed in the Jarl's Quarters.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E2/10]</p>
+</td>
+<td valign="middle">
+<p>Conjuration</p>
+</td>
+<td valign="middle">
+<p>The Warrior's Charge</p>
+</td>
+<td valign="middle">
+<p>[8.13] and [8.14]</p>
+</td>
+<td valign="middle">
+<p>Brittleshin Pass</p>
+</td>
+<td valign="middle">
+<p>On the sacrificial altar near the Arcane Enchanter.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A1/10]</p>
+</td>
+<td valign="middle">
+<p>Destruction</p>
+</td>
+<td valign="middle">
+<p>A Hypothetical Treachery</p>
+</td>
+<td valign="middle">
+<p>[3.01]</p>
+</td>
+<td valign="middle">
+<p>High Gate Ruins</p>
+</td>
+<td valign="middle">
+<p>Lying next to a skeleton in a dark corner of the large central chamber.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A2/10]</p>
+</td>
+<td valign="middle">
+<p>Destruction</p>
+</td>
+<td valign="middle">
+<p>A Hypothetical Treachery</p>
+</td>
+<td valign="middle">
+<p>[7.00]</p>
+</td>
+<td valign="middle">
+<p>Windhelm</p>
+</td>
+<td valign="middle">
+<p>In the main room of the Aretino Residence, hidden behind a shelf.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B1/10]</p>
+</td>
+<td valign="middle">
+<p>Destruction</p>
+</td>
+<td valign="middle">
+<p>Horrors of Castle Xyr</p>
+</td>
+<td valign="middle">
+<p>[6.09]</p>
+</td>
+<td valign="middle">
+<p>Rannveig's Fast</p>
+</td>
+<td valign="middle">
+<p>On the table with the Alchemy Lab in the prison area.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B2/10]</p>
+</td>
+<td valign="middle">
+<p>Destruction</p>
+</td>
+<td valign="middle">
+<p>Horrors of Castle Xyr</p>
+</td>
+<td valign="middle">
+<p>[8.03]</p>
+</td>
+<td valign="middle">
+<p>Glenmoril Coven</p>
+</td>
+<td valign="middle">
+<p>Hidden in a crate in a tent near the large chest.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C1/10]</p>
+</td>
+<td valign="middle">
+<p>Destruction</p>
+</td>
+<td valign="middle">
+<p>Mystery of Talara, v3</p>
+</td>
+<td valign="middle">
+<p>[1.05]</p>
+</td>
+<td valign="middle">
+<p>Upper Steepfall Burrow</p>
+</td>
+<td valign="middle">
+<p>Next to a skeleton in the cave with the large chest.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C2/10]</p>
+</td>
+<td valign="middle">
+<p>Destruction</p>
+</td>
+<td valign="middle">
+<p>Mystery of Talara, v3</p>
+</td>
+<td valign="middle">
+<p>[4.00]</p>
+</td>
+<td valign="middle">
+<p>Winterhold</p>
+</td>
+<td valign="middle">
+<p>On a dresser on the second floor.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D1/10]</p>
+</td>
+<td valign="middle">
+<p>Destruction</p>
+</td>
+<td valign="middle">
+<p>Response to Bero's Speech</p>
+</td>
+<td valign="middle">
+<p>[3.00]</p>
+</td>
+<td valign="middle">
+<p>Dawnstar</p>
+</td>
+<td valign="middle">
+<p>In Iron Breaker Mine, sitting atop a barrel near a bedroll.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D2/10]</p>
+</td>
+<td valign="middle">
+<p>Destruction</p>
+</td>
+<td valign="middle">
+<p>Response to Bero's Speech</p>
+</td>
+<td valign="middle">
+<p>[8.37]</p>
+</td>
+<td valign="middle">
+<p>Haemar's Shame</p>
+</td>
+<td valign="middle">
+<p>In Haemar's Cavern, on a table in a nook surrounded by shelves, opposite the passage leading down to Haemar's Shame.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E1/10]</p>
+</td>
+<td valign="middle">
+<p>Destruction</p>
+</td>
+<td valign="middle">
+<p>The Art of War Magic</p>
+</td>
+<td valign="middle">
+<p>[1.12]</p>
+</td>
+<td valign="middle">
+<p>Ravenscar Hollow</p>
+</td>
+<td valign="middle">
+<p>On a table near the large chest.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E2/10]</p>
+</td>
+<td valign="middle">
+<p>Destruction</p>
+</td>
+<td valign="middle">
+<p>The Art of War Magic</p>
+</td>
+<td valign="middle">
+<p>[3.00]</p>
+</td>
+<td valign="middle">
+<p>Dawnstar</p>
+</td>
+<td valign="middle">
+<p>In the White Hall, on a small table on the upstairs landing.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A1/10]</p>
+</td>
+<td valign="middle">
+<p>Enchanting</p>
+</td>
+<td valign="middle">
+<p>A Tragedy in Black</p>
+</td>
+<td valign="middle">
+<p>[8.03]</p>
+</td>
+<td valign="middle">
+<p>Glenmoril Coven</p>
+</td>
+<td valign="middle">
+<p>On the table with the Arcane Enchanter.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A2/10]</p>
+</td>
+<td valign="middle">
+<p>Enchanting</p>
+</td>
+<td valign="middle">
+<p>A Tragedy in Black</p>
+</td>
+<td valign="middle">
+<p>[8.15]</p>
+</td>
+<td valign="middle">
+<p>Ilinalta's Deep</p>
+</td>
+<td valign="middle">
+<p>On a table across from the Arcane Enchanter and Alchemy Lab.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B1/10]</p>
+</td>
+<td valign="middle">
+<p>Enchanting</p>
+</td>
+<td valign="middle">
+<p>Catalogue of Armor Enchantments</p>
+</td>
+<td valign="middle">
+<p>[2.00]</p>
+</td>
+<td valign="middle">
+<p>Morthal</p>
+</td>
+<td valign="middle">
+<p>On the shelf in Falion's house.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B2/10]</p>
+</td>
+<td valign="middle">
+<p>Enchanting</p>
+</td>
+<td valign="middle">
+<p>Catalogue of Armor Enchantments</p>
+</td>
+<td valign="middle">
+<p>[7.05]</p>
+</td>
+<td valign="middle">
+<p>Kynsegrove</p>
+</td>
+<td valign="middle">
+<p>In Steamscorch Mine, on a table at the tunnel junction.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C1/10]</p>
+</td>
+<td valign="middle">
+<p>Enchanting</p>
+</td>
+<td valign="middle">
+<p>Catalogue of Weapon Enchantments</p>
+</td>
+<td valign="middle">
+<p>[3.00]</p>
+</td>
+<td valign="middle">
+<p>Dawnstar</p>
+</td>
+<td valign="middle">
+<p>In the White Hall, between a large barrel and a mead barrel, in the room with the training dummy.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C2/10]</p>
+</td>
+<td valign="middle">
+<p>Enchanting</p>
+</td>
+<td valign="middle">
+<p>Catalogue of Weapon Enchantments</p>
+</td>
+<td valign="middle">
+<p>[8.23]</p>
+</td>
+<td valign="middle">
+<p>Roadside Ruins</p>
+</td>
+<td valign="middle">
+<p>Leaned up against the chest in the center of the ruins.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D1/10]</p>
+</td>
+<td valign="middle">
+<p>Enchanting</p>
+</td>
+<td valign="middle">
+<p>Enchanter's Primer</p>
+</td>
+<td valign="middle">
+<p>[4.05]</p>
+</td>
+<td valign="middle">
+<p>Hob's Fall Cave</p>
+</td>
+<td valign="middle">
+<p>On the Arcane Enchanter in the ritual room.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D2/10]</p>
+</td>
+<td valign="middle">
+<p>Enchanting</p>
+</td>
+<td valign="middle">
+<p>Enchanter's Primer</p>
+</td>
+<td valign="middle">
+<p>[6.00]</p>
+</td>
+<td valign="middle">
+<p>Whiterun</p>
+</td>
+<td valign="middle">
+<p>In Carlotta Valentia's House, on the floor between the upstairs bed and the end table.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E1/10]</p>
+</td>
+<td valign="middle">
+<p>Enchanting</p>
+</td>
+<td valign="middle">
+<p>Twin Secrets</p>
+</td>
+<td valign="middle">
+<p>[6.03]</p>
+</td>
+<td valign="middle">
+<p>Serpent's Bluff Redoubt</p>
+</td>
+<td valign="middle">
+<p>In the Hagraven's chamber inside the ruins, on the Arcane Enchanter.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E2/10]</p>
+</td>
+<td valign="middle">
+<p>Enchanting</p>
+</td>
+<td valign="middle">
+<p>Twin Secrets</p>
+</td>
+<td valign="middle">
+<p>[9.16]</p>
+</td>
+<td valign="middle">
+<p>Treva's Watch</p>
+</td>
+<td valign="middle">
+<p>On a table in the bandit chief's room at the top of the tower.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A1/10]</p>
+</td>
+<td valign="middle">
+<p>Heavy Armor</p>
+</td>
+<td valign="middle">
+<p>2920, MidYear, v6</p>
+</td>
+<td valign="middle">
+<p>[2.00]</p>
+</td>
+<td valign="middle">
+<p>Morthal</p>
+</td>
+<td valign="middle">
+<p>In the Morthal Guardhouse, hidden behind a basket and a barrel near the fireplace.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A2/10]</p>
+</td>
+<td valign="middle">
+<p>Heavy Armor</p>
+</td>
+<td valign="middle">
+<p>2920, MidYear, v6</p>
+</td>
+<td valign="middle">
+<p>[3.10]</p>
+</td>
+<td valign="middle">
+<p>Fort Dunstad</p>
+</td>
+<td valign="middle">
+<p>In the Fort Dunstad Prison, in the upper-level cell block, on a shelf next to the Alchemy Lab.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B1/10]</p>
+</td>
+<td valign="middle">
+<p>Heavy Armor</p>
+</td>
+<td valign="middle">
+<p>Chimarvamidium</p>
+</td>
+<td valign="middle">
+<p>[5.00]</p>
+</td>
+<td valign="middle">
+<p>Markarth</p>
+</td>
+<td valign="middle">
+<p>During Thieves Guild Quest: Hard Answers, on the the desk in Calcelmo's Tower.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B2/10]</p>
+</td>
+<td valign="middle">
+<p>Heavy Armor</p>
+</td>
+<td valign="middle">
+<p>Chimarvamidium</p>
+</td>
+<td valign="middle">
+<p>[7.31]</p>
+</td>
+<td valign="middle">
+<p>Darkwater Crossing</p>
+</td>
+<td valign="middle">
+<p>Atop a barrel near the bedroll in a small dead end.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C1/10]</p>
+</td>
+<td valign="middle">
+<p>Heavy Armor</p>
+</td>
+<td valign="middle">
+<p>Hallgerd's Tale</p>
+</td>
+<td valign="middle">
+<p>[6.00]</p>
+</td>
+<td valign="middle">
+<p>Whiterun</p>
+</td>
+<td valign="middle">
+<p>In Jorrvaskr, on a low shelf in the main hall.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C2/10]</p>
+</td>
+<td valign="middle">
+<p>Heavy Armor</p>
+</td>
+<td valign="middle">
+<p>Hallgerd's Tale</p>
+</td>
+<td valign="middle">
+<p>[9.08]</p>
+</td>
+<td valign="middle">
+<p>Rift Watchtower</p>
+</td>
+<td valign="middle">
+<p>On a table atop the tower.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D1/10]</p>
+</td>
+<td valign="middle">
+<p>Heavy Armor</p>
+</td>
+<td valign="middle">
+<p>Orsinium and the Orcs</p>
+</td>
+<td valign="middle">
+<p>[2.22]</p>
+</td>
+<td valign="middle">
+<p>Stonehills</p>
+</td>
+<td valign="middle">
+<p>On a short table atop the mine scaffolding.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D2/10]</p>
+</td>
+<td valign="middle">
+<p>Heavy Armor</p>
+</td>
+<td valign="middle">
+<p>Orsinium and the Orcs</p>
+</td>
+<td valign="middle">
+<p>[5.38]</p>
+</td>
+<td valign="middle">
+<p>Dushnikh Yal</p>
+</td>
+<td valign="middle">
+<p>In the cellar of the longhouse, atop a low shelf at the base of the wooden ramp.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E1/10]</p>
+</td>
+<td valign="middle">
+<p>Heavy Armor</p>
+</td>
+<td valign="middle">
+<p>The Knights of the Nine</p>
+</td>
+<td valign="middle">
+<p>[3.09]</p>
+</td>
+<td valign="middle">
+<p>Hall of the Vigilant</p>
+</td>
+<td valign="middle">
+<p>Inside the Hall, atop the short table near the wall map downstairs.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E2/10]</p>
+</td>
+<td valign="middle">
+<p>Heavy Armor</p>
+</td>
+<td valign="middle">
+<p>The Knights of the Nine</p>
+</td>
+<td valign="middle">
+<p>[7.00]</p>
+</td>
+<td valign="middle">
+<p>Windhelm</p>
+</td>
+<td valign="middle">
+<p>On the top shelf of the cupboard in the dining area.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A1/10]</p>
+</td>
+<td valign="middle">
+<p>Illusion</p>
+</td>
+<td valign="middle">
+<p>2920, Sun's Dawn, v2</p>
+</td>
+<td valign="middle">
+<p>[5.00]</p>
+</td>
+<td valign="middle">
+<p>Markarth</p>
+</td>
+<td valign="middle">
+<p>In the Inner Sanctum of the Temple of Dibella, on a shelf among many other books.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A2/10]</p>
+</td>
+<td valign="middle">
+<p>Illusion</p>
+</td>
+<td valign="middle">
+<p>2920, Sun's Dawn, v2</p>
+</td>
+<td valign="middle">
+<p>[9.37]</p>
+</td>
+<td valign="middle">
+<p>Darklight Tower</p>
+</td>
+<td valign="middle">
+<p>On the table near Hagraven's tent, just before the entrance to the Darklight Chambers area.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B1/10]</p>
+</td>
+<td valign="middle">
+<p>Illusion</p>
+</td>
+<td valign="middle">
+<p>Before the Ages of Man</p>
+</td>
+<td valign="middle">
+<p>[6.00]</p>
+</td>
+<td valign="middle">
+<p>Whiterun</p>
+</td>
+<td valign="middle">
+<p>In the Dragonsreach Jarl's Quarters, on the large desk in the study.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B2/10]</p>
+</td>
+<td valign="middle">
+<p>Illusion</p>
+</td>
+<td valign="middle">
+<p>Before the Ages of Man</p>
+</td>
+<td valign="middle">
+<p>[9.02]</p>
+</td>
+<td valign="middle">
+<p>Shroud Hearth Barrow</p>
+</td>
+<td valign="middle">
+<p>In Shroud Hearth Barrow, on the altar in the catacombs chamber with the four levers.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C1/10]</p>
+</td>
+<td valign="middle">
+<p>Illusion</p>
+</td>
+<td valign="middle">
+<p>Incident at Necrom</p>
+</td>
+<td valign="middle">
+<p>[1.10]</p>
+</td>
+<td valign="middle">
+<p>Pinemoon Cave</p>
+</td>
+<td valign="middle">
+<p>On a small table near the large chest at the cave's far end.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C2/10]</p>
+</td>
+<td valign="middle">
+<p>Illusion</p>
+</td>
+<td valign="middle">
+<p>Incident at Necrom</p>
+</td>
+<td valign="middle">
+<p>[8.40]</p>
+</td>
+<td valign="middle">
+<p>Bloodlet Throne</p>
+</td>
+<td valign="middle">
+<p>On a small table in the locked area near the Alchemy Lab.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D1/10]</p>
+</td>
+<td valign="middle">
+<p>Illusion</p>
+</td>
+<td valign="middle">
+<p>Mystery of Talara, Part 4</p>
+</td>
+<td valign="middle">
+<p>[5.00]</p>
+</td>
+<td valign="middle">
+<p>Markarth</p>
+</td>
+<td valign="middle">
+<p>In Nepos's House, on a stone shelf in Nepos's bedroom.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D2/10]</p>
+</td>
+<td valign="middle">
+<p>Illusion</p>
+</td>
+<td valign="middle">
+<p>Mystery of Talara, Part 4</p>
+</td>
+<td valign="middle">
+<p>[6.07]</p>
+</td>
+<td valign="middle">
+<p>Broken Fang Cave</p>
+</td>
+<td valign="middle">
+<p>On the small shelf near the Arcane Enchanter.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E1/10]</p>
+</td>
+<td valign="middle">
+<p>Illusion</p>
+</td>
+<td valign="middle">
+<p>The Black Arts on Trial</p>
+</td>
+<td valign="middle">
+<p>[7.00]</p>
+</td>
+<td valign="middle">
+<p>Windhelm</p>
+</td>
+<td valign="middle">
+<p>In the White Phial, on the shelf under the counter.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E2/10]</p>
+</td>
+<td valign="middle">
+<p>Illusion</p>
+</td>
+<td valign="middle">
+<p>The Black Arts on Trial</p>
+</td>
+<td valign="middle">
+<p>[8.00]</p>
+</td>
+<td valign="middle">
+<p>Falkreath</p>
+</td>
+<td valign="middle">
+<p>In Falkreath Jail, tucked between some crates and a small wall in the jail area.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A1/10]</p>
+</td>
+<td valign="middle">
+<p>Light Armor</p>
+</td>
+<td valign="middle">
+<p>Ice and Chitin</p>
+</td>
+<td valign="middle">
+<p>[5.00]</p>
+</td>
+<td valign="middle">
+<p>Markarth</p>
+</td>
+<td valign="middle">
+<p>In the Guard Tower, on a table hidden behind a pillar in the sleeping area.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A2/10]</p>
+</td>
+<td valign="middle">
+<p>Light Armor</p>
+</td>
+<td valign="middle">
+<p>Ice and Chitin</p>
+</td>
+<td valign="middle">
+<p>[7.00]</p>
+</td>
+<td valign="middle">
+<p>Windhelm</p>
+</td>
+<td valign="middle">
+<p>On a table in the guard room under the bridge that leads to the city's south gate.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B1/10]</p>
+</td>
+<td valign="middle">
+<p>Light Armor</p>
+</td>
+<td valign="middle">
+<p>Jornibret's Last Dance</p>
+</td>
+<td valign="middle">
+<p>[8.42]</p>
+</td>
+<td valign="middle">
+<p>Fort Neugrad</p>
+</td>
+<td valign="middle">
+<p>On a table in the Fort Neugrad library.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B2/10]</p>
+</td>
+<td valign="middle">
+<p>Light Armor</p>
+</td>
+<td valign="middle">
+<p>Jornibret's Last Dance</p>
+</td>
+<td valign="middle">
+<p>[9.14]</p>
+</td>
+<td valign="middle">
+<p>Autumnwatch Tower</p>
+</td>
+<td valign="middle">
+<p>On a small wooden crate atop the smaller of the two towers.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C1/10]</p>
+</td>
+<td valign="middle">
+<p>Light Armor</p>
+</td>
+<td valign="middle">
+<p>Rislav the Righteous</p>
+</td>
+<td valign="middle">
+<p>[6.15]</p>
+</td>
+<td valign="middle">
+<p>Fort Greymoor</p>
+</td>
+<td valign="middle">
+<p>On the podium in the second-floor training room.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C2/10]</p>
+</td>
+<td valign="middle">
+<p>Light Armor</p>
+</td>
+<td valign="middle">
+<p>Rislav the Righteous</p>
+</td>
+<td valign="middle">
+<p>[8.20]</p>
+</td>
+<td valign="middle">
+<p>Cracked Tusk Keep</p>
+</td>
+<td valign="middle">
+<p>On a bench in one of the side rooms in the Cracked Tusk Keep Vaults.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D1/10]</p>
+</td>
+<td valign="middle">
+<p>Light Armor</p>
+</td>
+<td valign="middle">
+<p>The Rear Guard</p>
+</td>
+<td valign="middle">
+<p>[1.00]</p>
+</td>
+<td valign="middle">
+<p>Solitude</p>
+</td>
+<td valign="middle">
+<p>In Castle Dour, on a table downstairs in the barracks.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D2/10]</p>
+</td>
+<td valign="middle">
+<p>Light Armor</p>
+</td>
+<td valign="middle">
+<p>The Rear Guard</p>
+</td>
+<td valign="middle">
+<p>[5.07]</p>
+</td>
+<td valign="middle">
+<p>Druadach Redoubt</p>
+</td>
+<td valign="middle">
+<p>On a shelf near the fire pit, at the back of the cavern.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E1/10]</p>
+</td>
+<td valign="middle">
+<p>Light Armor</p>
+</td>
+<td valign="middle">
+<p>The Refugees</p>
+</td>
+<td valign="middle">
+<p>[1.00]</p>
+</td>
+<td valign="middle">
+<p>Solitude</p>
+</td>
+<td valign="middle">
+<p>In the Solitude Blacksmith's shop, atop the high wall shelf in the second-floor bedroom.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E2/10]</p>
+</td>
+<td valign="middle">
+<p>Light Armor</p>
+</td>
+<td valign="middle">
+<p>The Refugees</p>
+</td>
+<td valign="middle">
+<p>[5.24]</p>
+</td>
+<td valign="middle">
+<p>Blind Cliff Cave</p>
+</td>
+<td valign="middle">
+<p>Sitting atop the chest in an alcove on the collapsed tower.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A1/10]</p>
+</td>
+<td valign="middle">
+<p>Lockpicking</p>
+</td>
+<td valign="middle">
+<p>Advances in Lockpicking</p>
+</td>
+<td valign="middle">
+<p>[9.00]</p>
+</td>
+<td valign="middle">
+<p>Riften</p>
+</td>
+<td valign="middle">
+<p>In the Ragged Flagon Cistern, atop a barrel in the training room.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A2/10]</p>
+</td>
+<td valign="middle">
+<p>Lockpicking</p>
+</td>
+<td valign="middle">
+<p>Advances in Lockpicking</p>
+</td>
+<td valign="middle">
+<p>[9.00]</p>
+</td>
+<td valign="middle">
+<p>Riften</p>
+</td>
+<td valign="middle">
+<p>When escaping from Riften Jail through the sewers, on a barrel in a dark nook behind where you enter the sewers.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B1/10]</p>
+</td>
+<td valign="middle">
+<p>Lockpicking</p>
+</td>
+<td valign="middle">
+<p>Proper Lock Design</p>
+</td>
+<td valign="middle">
+<p>[5.00]</p>
+</td>
+<td valign="middle">
+<p>Markarth</p>
+</td>
+<td valign="middle">
+<p>In Cidhna Mine, on a shelf next to the Evidence Chest and Prisoner Belongings Chest.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B2/10]</p>
+</td>
+<td valign="middle">
+<p>Lockpicking</p>
+</td>
+<td valign="middle">
+<p>Proper Lock Design</p>
+</td>
+<td valign="middle">
+<p>[9.28]</p>
+</td>
+<td valign="middle">
+<p>Faldar's Tooth</p>
+</td>
+<td valign="middle">
+<p>Make your way through the keep to reach the ramparts, then climb the tower to reach the shack on top. On a table near the shack.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C1/10]</p>
+</td>
+<td valign="middle">
+<p>Lockpicking</p>
+</td>
+<td valign="middle">
+<p>Surfeit of Thieves</p>
+</td>
+<td valign="middle">
+<p>[4.31]</p>
+</td>
+<td valign="middle">
+<p>Wreck of the Winter War</p>
+</td>
+<td valign="middle">
+<p>On a crate on the second level of the War Winter.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C2/10]</p>
+</td>
+<td valign="middle">
+<p>Lockpicking</p>
+</td>
+<td valign="middle">
+<p>Surfeit of Thieves</p>
+</td>
+<td valign="middle">
+<p>[9.00]</p>
+</td>
+<td valign="middle">
+<p>Riften</p>
+</td>
+<td valign="middle">
+<p>On the end table near the bed in the Jarl's Chambers.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D1/10]</p>
+</td>
+<td valign="middle">
+<p>Lockpicking</p>
+</td>
+<td valign="middle">
+<p>The Locked Room</p>
+</td>
+<td valign="middle">
+<p>[2.00]</p>
+</td>
+<td valign="middle">
+<p>Morthal</p>
+</td>
+<td valign="middle">
+<p>Inside Highmoon Hall, on the top shelf of Joric's bedroom on the second floor.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D2/10]</p>
+</td>
+<td valign="middle">
+<p>Lockpicking</p>
+</td>
+<td valign="middle">
+<p>The Locked Room</p>
+</td>
+<td valign="middle">
+<p>[4.13]</p>
+</td>
+<td valign="middle">
+<p>Alftand</p>
+</td>
+<td valign="middle">
+<p>In the Animonculory's locked treasure room, in a locked alcove next to a skeleton.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E1/10]</p>
+</td>
+<td valign="middle">
+<p>Lockpicking</p>
+</td>
+<td valign="middle">
+<p>The Wolf Queen, v1</p>
+</td>
+<td valign="middle">
+<p>[3.00]</p>
+</td>
+<td valign="middle">
+<p>Dawnstar</p>
+</td>
+<td valign="middle">
+<p>In Dawnstar Jail, in a corner of the jail cell, behind a wooden pillar.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E2/10]</p>
+</td>
+<td valign="middle">
+<p>Lockpicking</p>
+</td>
+<td valign="middle">
+<p>The Wolf Queen, v1</p>
+</td>
+<td valign="middle">
+<p>[7.37]</p>
+</td>
+<td valign="middle">
+<p>Cragslane Cavern</p>
+</td>
+<td valign="middle">
+<p>Underneath the bar in Cragslane Cavern.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A1/10]</p>
+</td>
+<td valign="middle">
+<p>One-Handed</p>
+</td>
+<td valign="middle">
+<p>2920, Morning Star, v1</p>
+</td>
+<td valign="middle">
+<p>[1.01]</p>
+</td>
+<td valign="middle">
+<p>Northwatch Keep</p>
+</td>
+<td valign="middle">
+<p>On the shelf behind the bar in the bar area.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A2/10]</p>
+</td>
+<td valign="middle">
+<p>One-Handed</p>
+</td>
+<td valign="middle">
+<p>2920, Morning Star, v1</p>
+</td>
+<td valign="middle">
+<p>[1.06]</p>
+</td>
+<td valign="middle">
+<p>Lost Echo Cave</p>
+</td>
+<td valign="middle">
+<p>On the altar in the ruins chamber.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B1/10]</p>
+</td>
+<td valign="middle">
+<p>One-Handed</p>
+</td>
+<td valign="middle">
+<p>Fire and Darkness</p>
+</td>
+<td valign="middle">
+<p>[2.08]</p>
+</td>
+<td valign="middle">
+<p>Folgunthur</p>
+</td>
+<td valign="middle">
+<p>On the lower level of the large central chamber, next to a corpse.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B2/10]</p>
+</td>
+<td valign="middle">
+<p>One-Handed</p>
+</td>
+<td valign="middle">
+<p>Fire and Darkness</p>
+</td>
+<td valign="middle">
+<p>[9.00]</p>
+</td>
+<td valign="middle">
+<p>Riften</p>
+</td>
+<td valign="middle">
+<p>In Esbern's room in the Ratway Warrens.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C1/10]</p>
+</td>
+<td valign="middle">
+<p>One-Handed</p>
+</td>
+<td valign="middle">
+<p>Mace Etiquette</p>
+</td>
+<td valign="middle">
+<p>[2.06]</p>
+</td>
+<td valign="middle">
+<p>Orotheim</p>
+</td>
+<td valign="middle">
+<p>On a crate near the grindstone.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C2/10]</p>
+</td>
+<td valign="middle">
+<p>One-Handed</p>
+</td>
+<td valign="middle">
+<p>Mace Etiquette</p>
+</td>
+<td valign="middle">
+<p>[9.26]</p>
+</td>
+<td valign="middle">
+<p>Fort Greenwall</p>
+</td>
+<td valign="middle">
+<p>In the Fort Greenwall Captain's Quarters, on a shelf in the bedroom.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D1/10]</p>
+</td>
+<td valign="middle">
+<p>One-Handed</p>
+</td>
+<td valign="middle">
+<p>Night Falls on Sentinel</p>
+</td>
+<td valign="middle">
+<p>[6.05]</p>
+</td>
+<td valign="middle">
+<p>Swindler's Den</p>
+</td>
+<td valign="middle">
+<p>During Favor: Rare Item Hunt for Rustleif in Dawnstar, you can find this copy on the a crate overlooking the cave's dining area.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D2/10]</p>
+</td>
+<td valign="middle">
+<p>One-Handed</p>
+</td>
+<td valign="middle">
+<p>Night Falls on Sentinel</p>
+</td>
+<td valign="middle">
+<p>[8.X]</p>
+</td>
+<td valign="middle">
+<p>Bandit Camp: Ilinalta Foothills</p>
+</td>
+<td valign="middle">
+<p>On a small shelf in one of the tents.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E1/10]</p>
+</td>
+<td valign="middle">
+<p>One-Handed</p>
+</td>
+<td valign="middle">
+<p>The Importance of Where</p>
+</td>
+<td valign="middle">
+<p>[5.00]</p>
+</td>
+<td valign="middle">
+<p>Markarth</p>
+</td>
+<td valign="middle">
+<p>In the Guard Tower, on a stone table to one side of the sleeping area.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E2/10]</p>
+</td>
+<td valign="middle">
+<p>One-Handed</p>
+</td>
+<td valign="middle">
+<p>The Importance of Where</p>
+</td>
+<td valign="middle">
+<p>[6.23]</p>
+</td>
+<td valign="middle">
+<p>Chillfurrow Farm</p>
+</td>
+<td valign="middle">
+<p>Inside the farmhouse, on a dresser in the bedroom.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A1/10]</p>
+</td>
+<td valign="middle">
+<p>Pickpocket</p>
+</td>
+<td valign="middle">
+<p>Aevar Stone-Singer</p>
+</td>
+<td valign="middle">
+<p>[2.00]</p>
+</td>
+<td valign="middle">
+<p>Morthal</p>
+</td>
+<td valign="middle">
+<p>In Thonnir's House, on a shelf in the corner, hidden beneath a basket.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A2/10]</p>
+</td>
+<td valign="middle">
+<p>Pickpocket</p>
+</td>
+<td valign="middle">
+<p>Aevar Stone-Singer</p>
+</td>
+<td valign="middle">
+<p>[2.24]</p>
+</td>
+<td valign="middle">
+<p>Lost Valkygg</p>
+</td>
+<td valign="middle">
+<p>On the floor in the south holding cell, which is opened by a lever.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B1/10]</p>
+</td>
+<td valign="middle">
+<p>Pickpocket</p>
+</td>
+<td valign="middle">
+<p>Beggar</p>
+</td>
+<td valign="middle">
+<p>[9.00]</p>
+</td>
+<td valign="middle">
+<p>Riften</p>
+</td>
+<td valign="middle">
+<p>In the Ratway, on a table near the entrance to the Ragged Flagon.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B2/10]</p>
+</td>
+<td valign="middle">
+<p>Pickpocket</p>
+</td>
+<td valign="middle">
+<p>Beggar</p>
+</td>
+<td valign="middle">
+<p>[9.00]</p>
+</td>
+<td valign="middle">
+<p>Riften</p>
+</td>
+<td valign="middle">
+<p>In Haelga's Bunkhouse, on the dresser in the nook on the top floor.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C1/10]</p>
+</td>
+<td valign="middle">
+<p>Pickpocket</p>
+</td>
+<td valign="middle">
+<p>Purloined Shadows</p>
+</td>
+<td valign="middle">
+<p>[3.19]</p>
+</td>
+<td valign="middle">
+<p>Duskglow Crevice</p>
+</td>
+<td valign="middle">
+<p>On a table in the junk room in Duskglow Crevice.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C2/10]</p>
+</td>
+<td valign="middle">
+<p>Pickpocket</p>
+</td>
+<td valign="middle">
+<p>Purloined Shadows</p>
+</td>
+<td valign="middle">
+<p>[9.00]</p>
+</td>
+<td valign="middle">
+<p>Riften</p>
+</td>
+<td valign="middle">
+<p>In Honorhall Orphanage, tucked between the end table and bed in Constance's small bedroom.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D1/10]</p>
+</td>
+<td valign="middle">
+<p>Pickpocket</p>
+</td>
+<td valign="middle">
+<p>Thief</p>
+</td>
+<td valign="middle">
+<p>[7.00]</p>
+</td>
+<td valign="middle">
+<p>Windhelm</p>
+</td>
+<td valign="middle">
+<p>In the Argonian Assemblage; on the edge of a dresser.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D2/10]</p>
+</td>
+<td valign="middle">
+<p>Pickpocket</p>
+</td>
+<td valign="middle">
+<p>Thief</p>
+</td>
+<td valign="middle">
+<p>[8.18]</p>
+</td>
+<td valign="middle">
+<p>Bleak Falls Barrow</p>
+</td>
+<td valign="middle">
+<p>Inside the barrow, on the stone table near the chest just beyond the first glyph puzzle.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E1/10]</p>
+</td>
+<td valign="middle">
+<p>Pickpocket</p>
+</td>
+<td valign="middle">
+<p>Wulfmare's Guide to Better Thieving</p>
+</td>
+<td valign="middle">
+<p>[5.47]</p>
+</td>
+<td valign="middle">
+<p>Fort Sungard</p>
+</td>
+<td valign="middle">
+<p>At the bottom of the Fort Sunguard Oubliette.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E2/10]</p>
+</td>
+<td valign="middle">
+<p>Pickpocket</p>
+</td>
+<td valign="middle">
+<p>Wulfmare's Guide to Better Thieving</p>
+</td>
+<td valign="middle">
+<p>[7.03]</p>
+</td>
+<td valign="middle">
+<p>Mara's Eye Pond</p>
+</td>
+<td valign="middle">
+<p>Inside the cave, mixed in with other books in a small crate near the watery pond.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A1/10]</p>
+</td>
+<td valign="middle">
+<p>Restoration</p>
+</td>
+<td valign="middle">
+<p>2920, Rain's Hand, v4</p>
+</td>
+<td valign="middle">
+<p>[2.00]</p>
+</td>
+<td valign="middle">
+<p>Morthal</p>
+</td>
+<td valign="middle">
+<p>On the bedside table in Falion's house.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A2/10]</p>
+</td>
+<td valign="middle">
+<p>Restoration</p>
+</td>
+<td valign="middle">
+<p>2920, Rain's Hand, v4</p>
+</td>
+<td valign="middle">
+<p>[5.00]</p>
+</td>
+<td valign="middle">
+<p>Markarth</p>
+</td>
+<td valign="middle">
+<p>In the Hall of the Dead, on a stone shelf above the bed.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B1/10]</p>
+</td>
+<td valign="middle">
+<p>Restoration</p>
+</td>
+<td valign="middle">
+<p>Mystery of Talara, v 2</p>
+</td>
+<td valign="middle">
+<p>[2.16]</p>
+</td>
+<td valign="middle">
+<p>Ustengrav</p>
+</td>
+<td valign="middle">
+<p>On a stone shelf in the small room that's filled with urns.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B2/10]</p>
+</td>
+<td valign="middle">
+<p>Restoration</p>
+</td>
+<td valign="middle">
+<p>Mystery of Talara, v 2</p>
+</td>
+<td valign="middle">
+<p>[4.06]</p>
+</td>
+<td valign="middle">
+<p>Frostflow Lighthouse</p>
+</td>
+<td valign="middle">
+<p>On a dresser in the Lighthouse's Master Bedroom.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C1/10]</p>
+</td>
+<td valign="middle">
+<p>Restoration</p>
+</td>
+<td valign="middle">
+<p>Racial Phylogeny</p>
+</td>
+<td valign="middle">
+<p>[2.00]</p>
+</td>
+<td valign="middle">
+<p>Morthal</p>
+</td>
+<td valign="middle">
+<p>In the Moorside Inn, hidden in a woven basket that sits atop a dresser in one of the two small rooms.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C2/10]</p>
+</td>
+<td valign="middle">
+<p>Restoration</p>
+</td>
+<td valign="middle">
+<p>Racial Phylogeny</p>
+</td>
+<td valign="middle">
+<p>[8.00]</p>
+</td>
+<td valign="middle">
+<p>Falkreath</p>
+</td>
+<td valign="middle">
+<p>In Corpselight Farm, mixed in with other books on the shelf.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D1/10]</p>
+</td>
+<td valign="middle">
+<p>Restoration</p>
+</td>
+<td valign="middle">
+<p>The Exodus</p>
+</td>
+<td valign="middle">
+<p>[4.00]</p>
+</td>
+<td valign="middle">
+<p>Winterhold</p>
+</td>
+<td valign="middle">
+<p>In the Frozen Hearth, hidden among a collection of crates and sacks in the cellar.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D2/10]</p>
+</td>
+<td valign="middle">
+<p>Restoration</p>
+</td>
+<td valign="middle">
+<p>The Exodus</p>
+</td>
+<td valign="middle">
+<p>[9.46]</p>
+</td>
+<td valign="middle">
+<p>Stendarr's Beacon</p>
+</td>
+<td valign="middle">
+<p>Lying on one of the bedrolls inside the tower.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E1/10]</p>
+</td>
+<td valign="middle">
+<p>Restoration</p>
+</td>
+<td valign="middle">
+<p>Withershins</p>
+</td>
+<td valign="middle">
+<p>[6.00]</p>
+</td>
+<td valign="middle">
+<p>Whiterun</p>
+</td>
+<td valign="middle">
+<p>In the Temple of Kynareth, on the shelf next to the chest.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E2/10]</p>
+</td>
+<td valign="middle">
+<p>Restoration</p>
+</td>
+<td valign="middle">
+<p>Withershins</p>
+</td>
+<td valign="middle">
+<p>[9.13]</p>
+</td>
+<td valign="middle">
+<p>Arcwind Point</p>
+</td>
+<td valign="middle">
+<p>On a pedestal at the top of the tower at the end of Arcwind Point.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A1/10]</p>
+</td>
+<td valign="middle">
+<p>Smithing</p>
+</td>
+<td valign="middle">
+<p>Cherim's Heart</p>
+</td>
+<td valign="middle">
+<p>[3.00]</p>
+</td>
+<td valign="middle">
+<p>Dawnstar</p>
+</td>
+<td valign="middle">
+<p>In Quicksilver Mine, hidden in a small crate on the ground floor of the deepest mine cavern.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A2/10]</p>
+</td>
+<td valign="middle">
+<p>Smithing</p>
+</td>
+<td valign="middle">
+<p>Cherim's Heart</p>
+</td>
+<td valign="middle">
+<p>[7.04]</p>
+</td>
+<td valign="middle">
+<p>Morvunskar</p>
+</td>
+<td valign="middle">
+<p>On a table in the room with the forge.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B1/10]</p>
+</td>
+<td valign="middle">
+<p>Smithing</p>
+</td>
+<td valign="middle">
+<p>Heavy Armor Forging</p>
+</td>
+<td valign="middle">
+<p>[6.16]</p>
+</td>
+<td valign="middle">
+<p>Silent Moons Camp</p>
+</td>
+<td valign="middle">
+<p>On a broken stone table within the domed ruin at the top of the camp.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B2/10]</p>
+</td>
+<td valign="middle">
+<p>Smithing</p>
+</td>
+<td valign="middle">
+<p>Heavy Armor Forging</p>
+</td>
+<td valign="middle">
+<p>[7.23]</p>
+</td>
+<td valign="middle">
+<p>Gloombound Mine</p>
+</td>
+<td valign="middle">
+<p>On a table in the open-air hut just outside the mine entrance.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C1/10]</p>
+</td>
+<td valign="middle">
+<p>Smithing</p>
+</td>
+<td valign="middle">
+<p>Last Scabbard of Akrash</p>
+</td>
+<td valign="middle">
+<p>[5.47]</p>
+</td>
+<td valign="middle">
+<p>Fort Sungard</p>
+</td>
+<td valign="middle">
+<p>In the Fort Sungard Muster, on a small table in the armory.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C2/10]</p>
+</td>
+<td valign="middle">
+<p>Smithing</p>
+</td>
+<td valign="middle">
+<p>Last Scabbard of Akrash</p>
+</td>
+<td valign="middle">
+<p>[7.02]</p>
+</td>
+<td valign="middle">
+<p>Gallows Rock</p>
+</td>
+<td valign="middle">
+<p>On a table in the room with the large fireplace near the sleeping quarters.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D1/10]</p>
+</td>
+<td valign="middle">
+<p>Smithing</p>
+</td>
+<td valign="middle">
+<p>Light Armor Forging</p>
+</td>
+<td valign="middle">
+<p>[8.00]</p>
+</td>
+<td valign="middle">
+<p>Falkreath</p>
+</td>
+<td valign="middle">
+<p>On a barrel in the basement of Lod's house.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D2/10]</p>
+</td>
+<td valign="middle">
+<p>Smithing</p>
+</td>
+<td valign="middle">
+<p>Light Armor Forging</p>
+</td>
+<td valign="middle">
+<p>[8.31]</p>
+</td>
+<td valign="middle">
+<p>Embershard Mine</p>
+</td>
+<td valign="middle">
+<p>On a table in the forge area.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E1/10]</p>
+</td>
+<td valign="middle">
+<p>Smithing</p>
+</td>
+<td valign="middle">
+<p>The Armorer's Challenge</p>
+</td>
+<td valign="middle">
+<p>[5.01]</p>
+</td>
+<td valign="middle">
+<p>Mor Khazgur</p>
+</td>
+<td valign="middle">
+<p>On the shelf near the Blacksmith's Forge.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E2/10]</p>
+</td>
+<td valign="middle">
+<p>Smithing</p>
+</td>
+<td valign="middle">
+<p>The Armorer's Challenge</p>
+</td>
+<td valign="middle">
+<p>[9.00]</p>
+</td>
+<td valign="middle">
+<p>Whiterun</p>
+</td>
+<td valign="middle">
+<p>On the low platform next to the Skyforge.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A1/10]</p>
+</td>
+<td valign="middle">
+<p>Sneak</p>
+</td>
+<td valign="middle">
+<p>2920, Last Seed, v8</p>
+</td>
+<td valign="middle">
+<p>[3.32]</p>
+</td>
+<td valign="middle">
+<p>Raldbthar</p>
+</td>
+<td valign="middle">
+<p>In the large chamber with Alain, on the long counter under the metal bars.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A2/10]</p>
+</td>
+<td valign="middle">
+<p>Sneak</p>
+</td>
+<td valign="middle">
+<p>2920, Last Seed, v8</p>
+</td>
+<td valign="middle">
+<p>[6.14]</p>
+</td>
+<td valign="middle">
+<p>Redoran's Retreat</p>
+</td>
+<td valign="middle">
+<p>Lying on a crate in the back cavern with the large chest.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B1/10]</p>
+</td>
+<td valign="middle">
+<p>Sneak</p>
+</td>
+<td valign="middle">
+<p>Legend of Krately House</p>
+</td>
+<td valign="middle">
+<p>[3.25]</p>
+</td>
+<td valign="middle">
+<p>Nightgate Inn</p>
+</td>
+<td valign="middle">
+<p>In the cellar, on the end table near the large bed.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B2/10]</p>
+</td>
+<td valign="middle">
+<p>Sneak</p>
+</td>
+<td valign="middle">
+<p>Legend of Krately House</p>
+</td>
+<td valign="middle">
+<p>[9.35]</p>
+</td>
+<td valign="middle">
+<p>Black-Briar Lodge</p>
+</td>
+<td valign="middle">
+<p>On a shelf in the upstairs master bedroom.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C1/10]</p>
+</td>
+<td valign="middle">
+<p>Sneak</p>
+</td>
+<td valign="middle">
+<p>Sacred Witness</p>
+</td>
+<td valign="middle">
+<p>[5.02]</p>
+</td>
+<td valign="middle">
+<p>Deepwood Redoubt</p>
+</td>
+<td valign="middle">
+<p>In Deepwood Vale, on a shelf in the tent with the Alchemy Lab.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C2/10]</p>
+</td>
+<td valign="middle">
+<p>Sneak</p>
+</td>
+<td valign="middle">
+<p>Sacred Witness</p>
+</td>
+<td valign="middle">
+<p>[8.22]</p>
+</td>
+<td valign="middle">
+<p>Dark Brotherhood Sanctuary</p>
+</td>
+<td valign="middle">
+<p>On the counter in Babette's room.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D1/10]</p>
+</td>
+<td valign="middle">
+<p>Sneak</p>
+</td>
+<td valign="middle">
+<p>The Red Kitchen Reader</p>
+</td>
+<td valign="middle">
+<p>[3.08]</p>
+</td>
+<td valign="middle">
+<p>Frostmere Crypt</p>
+</td>
+<td valign="middle">
+<p>Inside the ruins, on a bookshelf pedestal in the hall just before the dining room.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D2/10]</p>
+</td>
+<td valign="middle">
+<p>Sneak</p>
+</td>
+<td valign="middle">
+<p>The Red Kitchen Reader</p>
+</td>
+<td valign="middle">
+<p>[7.00]</p>
+</td>
+<td valign="middle">
+<p>Windhelm</p>
+</td>
+<td valign="middle">
+<p>In the New Gnisis Cornerclub, tucked between the barrels beneath the stairs on the first floor.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E1/10]</p>
+</td>
+<td valign="middle">
+<p>Sneak</p>
+</td>
+<td valign="middle">
+<p>Three Thieves</p>
+</td>
+<td valign="middle">
+<p>[4.28]</p>
+</td>
+<td valign="middle">
+<p>Snow Veil Sanctum</p>
+</td>
+<td valign="middle">
+<p>During Thieves Guild Quest: Speaking with Silence, on a shelf in the room filled with hanging rattles.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E2/10]</p>
+</td>
+<td valign="middle">
+<p>Sneak</p>
+</td>
+<td valign="middle">
+<p>Three Thieves</p>
+</td>
+<td valign="middle">
+<p>[6.22]</p>
+</td>
+<td valign="middle">
+<p>Honningbrew Meadery</p>
+</td>
+<td valign="middle">
+<p>During Thieves Guild Quest: Dampened Spirits, lying on the chest near the Alchemy Lab in the basement cavern.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A1/10]</p>
+</td>
+<td valign="middle">
+<p>Speech</p>
+</td>
+<td valign="middle">
+<p>2920, Second Seed, v5</p>
+</td>
+<td valign="middle">
+<p>[2.22]</p>
+</td>
+<td valign="middle">
+<p>Stonehills</p>
+</td>
+<td valign="middle">
+<p>In Sorli's House, atop the fireplace mantel.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A2/10]</p>
+</td>
+<td valign="middle">
+<p>Speech</p>
+</td>
+<td valign="middle">
+<p>2920, Second Seed, v5</p>
+</td>
+<td valign="middle">
+<p>[7.00]</p>
+</td>
+<td valign="middle">
+<p>Windhelm</p>
+</td>
+<td valign="middle">
+<p>In Sadri's Used Wares, on the shelf under the counter.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B1/10]</p>
+</td>
+<td valign="middle">
+<p>Speech</p>
+</td>
+<td valign="middle">
+<p>A Dance in Fire, v6</p>
+</td>
+<td valign="middle">
+<p>[2.01]</p>
+</td>
+<td valign="middle">
+<p>Meeko's Shack</p>
+</td>
+<td valign="middle">
+<p>On a barrel inside the shack.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B2/10]</p>
+</td>
+<td valign="middle">
+<p>Speech</p>
+</td>
+<td valign="middle">
+<p>A Dance in Fire, v6</p>
+</td>
+<td valign="middle">
+<p>[8.00]</p>
+</td>
+<td valign="middle">
+<p>Falkreath</p>
+</td>
+<td valign="middle">
+<p>In Dead Man's Drink, on the shelf under the counter.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C1/10]</p>
+</td>
+<td valign="middle">
+<p>Speech</p>
+</td>
+<td valign="middle">
+<p>A Dance in Fire, v7</p>
+</td>
+<td valign="middle">
+<p>[5.00]</p>
+</td>
+<td valign="middle">
+<p>Markarth</p>
+</td>
+<td valign="middle">
+<p>In Arnleif and Sons Trading Company, on a crate near the counter.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C2/10]</p>
+</td>
+<td valign="middle">
+<p>Speech</p>
+</td>
+<td valign="middle">
+<p>A Dance in Fire, v7</p>
+</td>
+<td valign="middle">
+<p>[9.00]</p>
+</td>
+<td valign="middle">
+<p>Riften</p>
+</td>
+<td valign="middle">
+<p>In Beggar's Row, lying on the ground in a nook, partially covered by a red fern.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D1/10]</p>
+</td>
+<td valign="middle">
+<p>Speech</p>
+</td>
+<td valign="middle">
+<p>Biography of the Wolf Queen</p>
+</td>
+<td valign="middle">
+<p>[1.00]</p>
+</td>
+<td valign="middle">
+<p>Solitude</p>
+</td>
+<td valign="middle">
+<p>In the Blue Palace, on a shelf in the Jarl's bedchamber upstairs.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D2/10]</p>
+</td>
+<td valign="middle">
+<p>Speech</p>
+</td>
+<td valign="middle">
+<p>Biography of the Wolf Queen</p>
+</td>
+<td valign="middle">
+<p>[6.00]</p>
+</td>
+<td valign="middle">
+<p>Whiterun</p>
+</td>
+<td valign="middle">
+<p>In Belethor's General Goods store, on the cupboard shelf near the counter.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E1/10]</p>
+</td>
+<td valign="middle">
+<p>Speech</p>
+</td>
+<td valign="middle">
+<p>The Buying Game</p>
+</td>
+<td valign="middle">
+<p>[1.00]</p>
+</td>
+<td valign="middle">
+<p>Solitude</p>
+</td>
+<td valign="middle">
+<p>In one of the Bards College second floor classrooms, mixed in with a short stack of other books on the highest tier of a tall shelf.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E2/10]</p>
+</td>
+<td valign="middle">
+<p>Speech</p>
+</td>
+<td valign="middle">
+<p>The Buying Game</p>
+</td>
+<td valign="middle">
+<p>[5.16]</p>
+</td>
+<td valign="middle">
+<p>Shrine to Peryite</p>
+</td>
+<td valign="middle">
+<p>On the table near the Alchemy Lab.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A1/10]</p>
+</td>
+<td valign="middle">
+<p>Two-Handed</p>
+</td>
+<td valign="middle">
+<p>Battle of Sancre Tor</p>
+</td>
+<td valign="middle">
+<p>[5.34]</p>
+</td>
+<td valign="middle">
+<p>Old Hroldan</p>
+</td>
+<td valign="middle">
+<p>On an end table in the large bedroom.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[A2/10]</p>
+</td>
+<td valign="middle">
+<p>Two-Handed</p>
+</td>
+<td valign="middle">
+<p>Battle of Sancre Tor</p>
+</td>
+<td valign="middle">
+<p>[6.12]</p>
+</td>
+<td valign="middle">
+<p>Dustman's Cairn</p>
+</td>
+<td valign="middle">
+<p>On a table in the entry chamber.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B1/10]</p>
+</td>
+<td valign="middle">
+<p>Two-Handed</p>
+</td>
+<td valign="middle">
+<p>King</p>
+</td>
+<td valign="middle">
+<p>[1.17]</p>
+</td>
+<td valign="middle">
+<p>Dragon Bridge</p>
+</td>
+<td valign="middle">
+<p>In the Penitus Oculatus Outpost, on a bedside table.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[B2/10]</p>
+</td>
+<td valign="middle">
+<p>Two-Handed</p>
+</td>
+<td valign="middle">
+<p>King</p>
+</td>
+<td valign="middle">
+<p>[5.33]</p>
+</td>
+<td valign="middle">
+<p>Bleakwind Bluff</p>
+</td>
+<td valign="middle">
+<p>Inside the tower, lying on the ground next to the cairn.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C1/10]</p>
+</td>
+<td valign="middle">
+<p>Two-Handed</p>
+</td>
+<td valign="middle">
+<p>Song of Hrormir</p>
+</td>
+<td valign="middle">
+<p>[1.00]</p>
+</td>
+<td valign="middle">
+<p>Solitude</p>
+</td>
+<td valign="middle">
+<p>On the first floor of Jala's House, lying on the ground in some hay.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[C2/10]</p>
+</td>
+<td valign="middle">
+<p>Two-Handed</p>
+</td>
+<td valign="middle">
+<p>Song of Hrormir</p>
+</td>
+<td valign="middle">
+<p>[6.00]</p>
+</td>
+<td valign="middle">
+<p>Whiterun</p>
+</td>
+<td valign="middle">
+<p>In Jorrvaskar, on the table with the map in Kodlak's study.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D1/10]</p>
+</td>
+<td valign="middle">
+<p>Two-Handed</p>
+</td>
+<td valign="middle">
+<p>The Legendary Sancre Tor</p>
+</td>
+<td valign="middle">
+<p>[1.01]</p>
+</td>
+<td valign="middle">
+<p>Northwatch Keep</p>
+</td>
+<td valign="middle">
+<p>On a crate in the bedroom on the lower level of the large central chamber.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[D2/10]</p>
+</td>
+<td valign="middle">
+<p>Two-Handed</p>
+</td>
+<td valign="middle">
+<p>The Legendary Sancre Tor</p>
+</td>
+<td valign="middle">
+<p>[8.00]</p>
+</td>
+<td valign="middle">
+<p>Falkreath</p>
+</td>
+<td valign="middle">
+<p>In the Barracks, atop a chest in the sleeping area upstairs.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E1/10]</p>
+</td>
+<td valign="middle">
+<p>Two-Handed</p>
+</td>
+<td valign="middle">
+<p>Words and Philosophy</p>
+</td>
+<td valign="middle">
+<p>[7.26]</p>
+</td>
+<td valign="middle">
+<p>Lost Knife Hideout</p>
+</td>
+<td valign="middle">
+<p>On the table on the central wooden lookout in the large, watery cavern.</p>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<p>&nbsp;</p>
+</td>
+<td valign="middle">
+<p>[E2/10]</p>
+</td>
+<td valign="middle">
+<p>Two-Handed</p>
+</td>
+<td valign="middle">
+<p>Words and Philosophy</p>
+</td>
+<td valign="middle">
+<p>[9.00]</p>
+</td>
+<td valign="middle">
+<p>Riften</p>
+</td>
+<td valign="middle">
+<p>On a dresser on the second floor of the Barracks.</p>
+</td>
+</tr>
+</tbody>
+</table>
+					
+
+					
+
+                
+
+
+			  
+                
+              </div> <!-- guide_left end -->
+
+
+            
+
+            
+			  
+              
+              <div class="guide_right side">
+              
+
+
+				
+                <h4 class="first">Related gameplay</h4>
+                <ul>
+					
+						<li><a href="4510.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4510">Appendix III: Shrines</a></li>
+				    
+						<li><a href="4509.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4509">Appendix II: Traders</a></li>
+				    
+						<li><a href="4508.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4508">Appendix I: Achievements and Trophies</a></li>
+				    
+						<li><a href="4518.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4518">Appendix VII Other Reference</a></li>
+				    
+						<li><a href="4517.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4517">Appendix VI: Skill Books</a></li>
+				    
+						<li><a href="4516.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4516">Appendix V: Unique Armor and Items</a></li>
+				    
+						<li><a href="4515.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4515">Appendix IV: Unique Weapons</a></li>
+				    
+                </ul>
+				
+
+                
+
+				
+
+				
+                
+
+				
+              
+              </div> <!-- guide_right end -->
+              
+
+              <div class="innernextprev clearfix">
+                <div class="prev"></div>
+                <div class="next"></div>
+              </div>
+
+              <div class="nextprev clearfix">
+                <div class="prev">&lt; <a href="4516.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4516">Previous section</a></div>
+                <div class="title"></div>
+                <div class="next"><a href="4518.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232/gameplay/4518">Next section</a> &gt;</div>
+              </div>
+                            
+              
+            </div>
+
+
+			
+
+          </div> <!-- guide_content end -->
+     
+
+
+     
+        </div> <!-- end three_q -->
+      
+
+      </div>
+      
+      
+      <br class="clear" />
+
+
+
+
+
+
+
+
+<div id="offsitefeature_lightbox">
+  <div id="lightbox">
+  
+    <div id="lightbox_container">
+  
+			<div id="loginbox">
+			            <span class="close"><a href='javascript:$.fancybox.close();'>close</a></span>
+						<iframe src='about:blank' style='width: 100%; height: 500px; margin-top: 35px;' id='offsitefeature_iframe'></iframe>
+			</div>
+      
+      
+  
+    </div> <!-- end lightbox_container -->
+    
+  </div> <!-- end lightbox -->
+</div> <!-- end #login_lightbox -->
+<a href='#offsitefeature_lightbox' id='offsitefeature_link'></a>
+
+
+
+
+	
+	</div> <!-- end content -->
+
+    <div id="footer">
+    
+      <div class="block">
+        <div class="wrap">
+          <h4>By console</h4>
+          <ul>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/?platform=PS3  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/?platform=PS3'" tppabs="http://www.primagames.com/games/?platform=PS3">PS3 Games Strategy Guides</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=Xbox+360  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=Xbox+360'" tppabs="http://www.primagames.com/games?platform=Xbox+360">Xbox 360 Games Strategy Guides</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=Wii  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=Wii'" tppabs="http://www.primagames.com/games?platform=Wii">Wii Games Strategy Guides</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=PC  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=PC'" tppabs="http://www.primagames.com/games?platform=PC">PC Games Strategy Guides</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games?platform=DS  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=DS'" tppabs="http://www.primagames.com/games?platform=DS">DS Strategy Guides</a></li>
+		  
+            <li><a href=" javascript:if(confirm('http://www.primagames.com/games?platform=PSP  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games?platform=PSP'" tppabs="http://www.primagames.com/games?platform=PSP">PSP Strategy Guides</a></li>
+		  
+          </ul>    
+        </div>
+      </div>
+      
+      <div class="block">
+        <div class="wrap">
+          <h4>Strategy guides</h4>
+          <ul>
+		  
+            <li><a href="232.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/232">The Elder Scrolls V: Skyrim Strategy Guide</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/assassins-creed-revelations/primaguides/212  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/assassins-creed-revelations/primaguides/212'" tppabs="http://www.primagames.com/games/assassins-creed-revelations/primaguides/212">Assassin&#39;s Creed: Revelations Strategy Guide</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/saints-row-third/primaguides/191  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/saints-row-third/primaguides/191'" tppabs="http://www.primagames.com/games/saints-row-third/primaguides/191">Saints Row: The Third Strategy Guide</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/battlefield-3/primaguides/95  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/battlefield-3/primaguides/95'" tppabs="http://www.primagames.com/games/battlefield-3/primaguides/95">Battlefield 3 Strategy Guide</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254'" tppabs="http://www.primagames.com/games/legend-zelda-skyward-sword/primaguides/254">Legend of Zelda: Skyward Sword Strategy Guide</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/mario-kart-7/primaguides/255  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/mario-kart-7/primaguides/255'" tppabs="http://www.primagames.com/games/mario-kart-7/primaguides/255">Mario Kart 7 Strategy Guide</a></li>
+		  
+            <li><a href="243.htm" tppabs="http://www.primagames.com/games/elder-scrolls-v-skyrim/primaguides/243">Elder Scrolls V: Skyrim Maps</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/rage/primaguides/77  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/rage/primaguides/77'" tppabs="http://www.primagames.com/games/rage/primaguides/77">Rage Strategy Guide</a></li>
+		  
+          </ul>    
+        </div>
+      </div>
+      
+      
+      <div class="block last">
+        <div class="wrap">
+          <h4>Top stories</h4>
+          <ul>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/need-speed-run/news/need-for-speed-the-run-screenshots-1420179  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/need-speed-run/news/need-for-speed-the-run-screenshots-1420179'" tppabs="http://www.primagames.com/games/need-speed-run/news/need-for-speed-the-run-screenshots-1420179">Need for Speed: The Run screenshots</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/assassins-creed-ii/news/previously-on-assassins-creed-trailer-112538  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/assassins-creed-ii/news/previously-on-assassins-creed-trailer-112538'" tppabs="http://www.primagames.com/games/assassins-creed-ii/news/previously-on-assassins-creed-trailer-112538">Previously on Assassin&#39;s Creed trailer</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/games/la-noire/news/la-forensic-brendan-mcnamara-on-la-noire-1420971  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/games/la-noire/news/la-forensic-brendan-mcnamara-on-la-noire-1420971'" tppabs="http://www.primagames.com/games/la-noire/news/la-forensic-brendan-mcnamara-on-la-noire-1420971">L.A. Forensic: Brendan McNamara on L.A. Noire</a></li>
+		  
+          </ul>
+          <h4>Blog Articles</h4>
+          <ul>   
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/blog/skyrim-official-strategy-guide-blog-2-sanity-sappi  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/blog/skyrim-official-strategy-guide-blog-2-sanity-sappi'" tppabs="http://www.primagames.com/blog/skyrim-official-strategy-guide-blog-2-sanity-sappi">Skyrim Official Strategy Guide Blog #2: Sanity-Sapping Mapping</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/blog/something-to-shout-about-1  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/blog/something-to-shout-about-1'" tppabs="http://www.primagames.com/blog/something-to-shout-about-1">Skyrim Official Strategy Guide Blog #1: Something to Shout About</a></li>
+		  
+            <li><a href="javascript:if(confirm('http://www.primagames.com/blog/battlefield-3-game-changers  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/blog/battlefield-3-game-changers'" tppabs="http://www.primagames.com/blog/battlefield-3-game-changers">Battlefield 3: Game Changers</a></li>
+		  
+          </ul>
+          
+        </div>
+      </div>
+      
+      <div class="line">&nbsp;</div>
+      
+      <ul class="fnav">
+        <li><a href="javascript:if(confirm('http://www.primagames.com/pages/terms-of-use  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/pages/terms-of-use'" tppabs="http://www.primagames.com/pages/terms-of-use">Terms of Service</a> | </li>
+        <li><a href="javascript:if(confirm('http://www.primagames.com/pages/privacy-policy  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/pages/privacy-policy'" tppabs="http://www.primagames.com/pages/privacy-policy">Privacy Policy</a> | </li>
+        <li><a href="javascript:if(confirm('http://www.primagames.com/pages/about-us  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/pages/about-us'" tppabs="http://www.primagames.com/pages/about-us">About Prima Games</a> | </li>
+        
+        <li><a href="javascript:if(confirm('http://www.primagames.com/pages/frequently-asked-questions  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/pages/frequently-asked-questions'" tppabs="http://www.primagames.com/pages/frequently-asked-questions">Frequently Asked Questions</a> |</li>
+		<li><a href="javascript:if(confirm('http://www.primagames.com/pages/contact-us  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/pages/contact-us'" tppabs="http://www.primagames.com/pages/contact-us">Contact Us</a></li>
+
+        <li class="right"><a href="javascript:if(confirm('http://www.mediaclash.co.uk/  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.mediaclash.co.uk/'" tppabs="http://www.mediaclash.co.uk/" target="_blank">Website by MediaClash</a></li>
+      </ul>
+    
+    </div> <!-- end footer -->
+
+  </div> <!-- end container -->
+
+
+
+
+
+	<div id="cart_lightbox">
+  <div id="lightbox">
+  
+    <div id="lightbox_container">
+      <div id="cartbox">
+        <div class="wrap clearfix">
+          <span class="close"><a href='javascript:$.fancybox.close();'>close</a></span>
+          <h3>Your Cart</h3>
+
+
+
+
+		  <div class="cart_subtotal">
+            <p><span>Sub total:</span> $0</p>
+          </div>
+          
+          <a class="checkout" href="javascript:if(confirm('http://www.primagames.com/accounts/cart/checkout  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/cart/checkout'" tppabs="http://www.primagames.com/accounts/cart/checkout">continue to checkout</a>
+          
+        </div>
+      </div> <!-- end cartbox -->
+	</div>
+  </div>
+</div>
+
+	
+		
+		
+	
+
+
+
+<div id="report_lightbox">
+  <div id="lightbox">
+  
+    <div id="lightbox_container">
+  
+      <div id="loginbox">
+        <div class="wrap">
+          <div class="vert_line clearfix">
+            <span class="close"><a href='javascript:$.fancybox.close();'>close</a></span>
+            <div class="leftside" style="width: 500px;">
+			<form action="javascript:if(confirm('http://www.primagames.com/accounts/report?content_type=&content_pk=&ajax=true  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.primagames.com/accounts/report?content_type=&content_pk=&ajax=true'" tppabs="http://www.primagames.com/accounts/report?content_type=&content_pk=&ajax=true" method="post">
+				
+				
+				<input type="hidden" name="content_type" value="" id="report_content_type"/>
+				<input type="hidden" name="content_pk" value="" id="report_content_pk"/>
+
+
+
+				<input type='hidden' name='ajax' value='true'/>
+              <h3>Report this content</h3>
+			  <p class='errors'></p>
+              <label>Please enter a brief reason for your report:</label>
+              <textarea name="reason" style="color: #000; font-size: 13px; padding: 5px; padding: 10px; width: 250px; height: 150px;"></textarea>
+
+				<br style='clear: both;'/>
+
+              <button type="submit" style='float: left;'>Submit report</button>
+			</form>
+            </div>
+        </div>
+      </div> <!-- end loginbox -->
+      
+      
+  
+    </div> <!-- end lightbox_container -->
+    
+  </div> <!-- end lightbox -->
+</div> <!-- end #login_lightbox -->
+</div>
+
+
+
+
+
+
+
+<script type="text/javascript" charset="utf-8">
+  var is_ssl = ("https:" == document.location.protocol);
+  var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
+  document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  var feedback_widget_options = {};
+
+  feedback_widget_options.display = "overlay";  
+  feedback_widget_options.company = "primagamesonline";
+  feedback_widget_options.placement = "left";
+  feedback_widget_options.color = "#222";
+  feedback_widget_options.style = "idea";
+  
+  
+  
+  
+  
+  
+  
+
+  var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
+</script>
+
+
+
+<!-- SiteCatalyst Code version: H.17.
+Copyright 1997-2008 Omniture, Inc. More info available at http://www.omniture.com --> <script language="JavaScript" type="text/javascript" src="s_code.js" tppabs="http://www.randomhouse.com/js/s_code.js"></script>
+<script language="JavaScript" type="text/javascript"><!-- /*If your site resides on its own domain (i.e. www.owndomain.com), the hompage should be given a custom page name below. Other pages should omit it. */ s.pageName="";
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/ var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><a href="javascript:if(confirm('http://www.omniture.com/  \n\nThis file was not retrieved by Teleport VLX, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.omniture.com/'" tppabs="http://www.omniture.com/" title="Web Analytics"><img src="0.gif" tppabs="http://code.randomhouse.com/b/ss/ranhrollup/1/H.17--NS/0"
+height="1" width="1" border="0" alt="" /></a></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.17. -->
+
+</body>
+</html>
