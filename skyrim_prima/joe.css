@@ -1889,6 +1889,7 @@ ol.gameplay_contents li ol li {
 	list-style:disc outside;
 }
 .guide_left img {
+	text-align:center;
 }
 .nextprev {
 	margin:10px 0;
@@ -1984,7 +1985,7 @@ ol.gameplay_contents li ol li {
 
 .gameplay_image {
 	position:relative;
-	width:600px;
+	text-align:center;
 	margin:10px 0 30px;
 }
 
