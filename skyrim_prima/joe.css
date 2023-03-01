@@ -1756,10 +1756,10 @@ div.clear {
 .guide_right { width:100%; float:bottom; }
 
 .guide_content .intro p { font-size:21px; font-weight:bold; color:#fff; }
-.guide_content p { font-size:15px; color:#fff; margin:0 0 20px 0; }
+.guide_content p { font-size:16px; color:#fff; margin:0 0 20px 0; }
 .guide_content p { 
   font-family: arial,sans-serif;
-	font-size:14px;
+	font-size:16px;
 	font-weight:400;
 	font-style: normal;
 	font-size-adjust: none;
